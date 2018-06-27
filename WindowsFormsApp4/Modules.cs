@@ -43,12 +43,30 @@ namespace WindowsFormsApp4
 
         private void exitBut_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            RegistrarStudManagForm registrarObject = new RegistrarStudManagForm();
+            registrarObject.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            StaffManagForm staffManagForm1 = new StaffManagForm();
+            staffManagForm1.Show();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PACEInventorySubsytem PACEInventorySubsytemObject = new PACEInventorySubsytem();
+            PACEInventorySubsytemObject.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SupervisorStudManagForm supervisorStudManagFormObject1 = new SupervisorStudManagForm();
+            supervisorStudManagFormObject1.Show();
         }
     }
 }

@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PACEInventorySubsytem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PACEInventorySubsytem.Designer.cs">
+      <DependentUpon>PACEInventorySubsytem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffManagForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffManagForm.Designer.cs">
+      <DependentUpon>StaffManagForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +72,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrarStudManagForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarStudManagForm.Designer.cs">
+      <DependentUpon>RegistrarStudManagForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supervisorLineupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supervisorLineupForm.Designer.cs">
+      <DependentUpon>supervisorLineupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupervisorStudManagForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupervisorStudManagForm.Designer.cs">
+      <DependentUpon>SupervisorStudManagForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeachListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeachListForm.Designer.cs">
+      <DependentUpon>TeachListForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PACEInventorySubsytem.resx">
+      <DependentUpon>PACEInventorySubsytem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffManagForm.resx">
+      <DependentUpon>StaffManagForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modules.resx">
       <DependentUpon>Modules.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +117,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegistrarStudManagForm.resx">
+      <DependentUpon>RegistrarStudManagForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupervisorStudManagForm.resx">
+      <DependentUpon>SupervisorStudManagForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeachListForm.resx">
+      <DependentUpon>TeachListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

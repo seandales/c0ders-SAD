@@ -37,31 +37,33 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(165, 208);
+            this.button1.Location = new System.Drawing.Point(92, 237);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 158);
+            this.button1.Size = new System.Drawing.Size(195, 158);
             this.button1.TabIndex = 0;
-            this.button1.Text = "module1";
+            this.button1.Text = "PACE Inventory Subsytem";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(122, 544);
+            this.button2.Location = new System.Drawing.Point(764, 237);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(183, 158);
             this.button2.TabIndex = 0;
-            this.button2.Text = "module2";
+            this.button2.Text = "Staff Manag Form";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(449, 567);
+            this.button3.Location = new System.Drawing.Point(92, 510);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(183, 158);
+            this.button3.Size = new System.Drawing.Size(195, 158);
             this.button3.TabIndex = 0;
-            this.button3.Text = "module3";
+            this.button3.Text = "Superivor Student Management Form";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
@@ -75,11 +77,11 @@
             // 
             // exitBut
             // 
-            this.exitBut.Location = new System.Drawing.Point(478, 237);
+            this.exitBut.Location = new System.Drawing.Point(420, 237);
             this.exitBut.Name = "exitBut";
-            this.exitBut.Size = new System.Drawing.Size(145, 129);
+            this.exitBut.Size = new System.Drawing.Size(196, 158);
             this.exitBut.TabIndex = 2;
-            this.exitBut.Text = "exit";
+            this.exitBut.Text = "Registrar Student Management Form";
             this.exitBut.UseVisualStyleBackColor = true;
             this.exitBut.Click += new System.EventHandler(this.exitBut_Click);
             // 
