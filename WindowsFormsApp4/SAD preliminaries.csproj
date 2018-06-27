@@ -120,6 +120,9 @@
     <EmbeddedResource Include="RegistrarStudManagForm.resx">
       <DependentUpon>RegistrarStudManagForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="supervisorLineupForm.resx">
+      <DependentUpon>supervisorLineupForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SupervisorStudManagForm.resx">
       <DependentUpon>SupervisorStudManagForm.cs</DependentUpon>
     </EmbeddedResource>
