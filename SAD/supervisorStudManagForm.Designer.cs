@@ -61,7 +61,7 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(70, 149);
+            this.dataGridView1.Location = new System.Drawing.Point(42, 153);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 40;
             this.dataGridView1.Size = new System.Drawing.Size(1455, 711);
@@ -70,31 +70,37 @@
             // 
             // Column1
             // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column1.HeaderText = "Student Name";
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.HeaderText = "Supervisor";
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column3.HeaderText = "Gender";
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column4.HeaderText = "Grade Level";
             this.Column4.Name = "Column4";
             // 
             // Column5
             // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column5.HeaderText = "PACE Progression";
             this.Column5.Name = "Column5";
             // 
             // Column6
             // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column6.HeaderText = "PACE Prescription Status";
             this.Column6.Name = "Column6";
             // 
@@ -149,14 +155,14 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }

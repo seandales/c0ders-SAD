@@ -78,6 +78,12 @@
     <Compile Include="RegistrarStudManagForm.Designer.cs">
       <DependentUpon>RegistrarStudManagForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SupervisorLineup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupervisorLineup.Designer.cs">
+      <DependentUpon>SupervisorLineup.cs</DependentUpon>
+    </Compile>
     <Compile Include="supervisorLineupForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </Compile>
     <EmbeddedResource Include="RegistrarStudManagForm.resx">
       <DependentUpon>RegistrarStudManagForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupervisorLineup.resx">
+      <DependentUpon>SupervisorLineup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="supervisorLineupForm.resx">
       <DependentUpon>supervisorLineupForm.cs</DependentUpon>

@@ -61,24 +61,27 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(568, 74);
+            this.dataGridView1.Location = new System.Drawing.Point(509, 74);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(679, 786);
+            this.dataGridView1.Size = new System.Drawing.Size(738, 786);
             this.dataGridView1.TabIndex = 2;
             // 
             // Column1
             // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column1.HeaderText = "Student Name";
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.HeaderText = "grade Level";
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column3.HeaderText = "PACE Progression";
             this.Column3.Name = "Column3";
             // 

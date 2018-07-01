@@ -406,51 +406,61 @@
             // 
             // Column3
             // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column3.HeaderText = "Middle Name";
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column4.HeaderText = "Birthdate";
             this.Column4.Name = "Column4";
             // 
             // Column5
             // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column5.HeaderText = "Gender";
             this.Column5.Name = "Column5";
             // 
             // Column6
             // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column6.HeaderText = "Address";
             this.Column6.Name = "Column6";
             // 
             // Column7
             // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column7.HeaderText = "Nationality";
             this.Column7.Name = "Column7";
             // 
             // Column8
             // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column8.HeaderText = "Civil Status";
             this.Column8.Name = "Column8";
             // 
             // Column9
             // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column9.HeaderText = "Address";
             this.Column9.Name = "Column9";
             // 
             // Column10
             // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column10.HeaderText = "Nationality";
             this.Column10.Name = "Column10";
             // 
             // Column11
             // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column11.HeaderText = "Email";
             this.Column11.Name = "Column11";
             // 
             // Column12
             // 
+            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column12.HeaderText = "Religion";
             this.Column12.Name = "Column12";
             // 
@@ -458,7 +468,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1702, 1255);
+            this.ClientSize = new System.Drawing.Size(2144, 1255);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
