@@ -52,6 +52,18 @@
     <Compile Include="PACEInventorySubsytem.Designer.cs">
       <DependentUpon>PACEInventorySubsytem.cs</DependentUpon>
     </Compile>
+    <Compile Include="RecordDeliveryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordDeliveryForm.Designer.cs">
+      <DependentUpon>RecordDeliveryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffLineupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffLineupForm.Designer.cs">
+      <DependentUpon>StaffLineupForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StaffManagForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,17 +90,11 @@
     <Compile Include="RegistrarStudManagForm.Designer.cs">
       <DependentUpon>RegistrarStudManagForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SupervisorLineup.cs">
+    <Compile Include="SupervisorLineupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SupervisorLineup.Designer.cs">
-      <DependentUpon>SupervisorLineup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="supervisorLineupForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="supervisorLineupForm.Designer.cs">
-      <DependentUpon>supervisorLineupForm.cs</DependentUpon>
+    <Compile Include="SupervisorLineupForm.Designer.cs">
+      <DependentUpon>SupervisorLineupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SupervisorStudManagForm.cs">
       <SubType>Form</SubType>
@@ -104,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="PACEInventorySubsytem.resx">
       <DependentUpon>PACEInventorySubsytem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffLineupForm.resx">
+      <DependentUpon>StaffLineupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffManagForm.resx">
       <DependentUpon>StaffManagForm.cs</DependentUpon>
@@ -126,11 +135,8 @@
     <EmbeddedResource Include="RegistrarStudManagForm.resx">
       <DependentUpon>RegistrarStudManagForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SupervisorLineup.resx">
-      <DependentUpon>SupervisorLineup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="supervisorLineupForm.resx">
-      <DependentUpon>supervisorLineupForm.cs</DependentUpon>
+    <EmbeddedResource Include="SupervisorLineupForm.resx">
+      <DependentUpon>SupervisorLineupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SupervisorStudManagForm.resx">
       <DependentUpon>SupervisorStudManagForm.cs</DependentUpon>

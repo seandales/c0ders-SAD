@@ -19,6 +19,9 @@ namespace WindowsFormsApp4
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            StaffLineupForm staffLineupFormObject1 = new StaffLineupForm();
+            staffLineupFormObject1.Show();
 
         }
 
@@ -40,7 +43,14 @@ namespace WindowsFormsApp4
 
         private void StaffManagForm_Load(object sender, EventArgs e)
         {
+           
+        }
 
+        private void supervisorLineUpBut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SupervisorLineupForm supervisorLineupFormObject1 = new SupervisorLineupForm();
+            supervisorLineupFormObject1.Show();
         }
     }
 }

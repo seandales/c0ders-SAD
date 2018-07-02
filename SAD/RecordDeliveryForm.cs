@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp4
 {
-    public partial class SupervisorLineup : Form
+    public partial class RecordDeliveryForm : Form
     {
-        public SupervisorLineup()
+        public RecordDeliveryForm()
         {
             InitializeComponent();
         }

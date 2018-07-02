@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp4
 {
-    public partial class SupervisorLineupForm : Form
+    public partial class StaffLineupForm : Form
     {
-        public SupervisorLineupForm()
+        public StaffLineupForm()
         {
             InitializeComponent();
         }
 
-        private void SupervisorLineupForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void StaffLineupForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StaffLineupForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             StaffManagForm staffManagFormObject1 = new StaffManagForm();
             staffManagFormObject1.Show();

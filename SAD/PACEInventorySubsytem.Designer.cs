@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,9 +40,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recordDeliveryBut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +58,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(938, 607);
             this.dataGridView1.TabIndex = 0;
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "PACENumber";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "PACESubject";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "NumofPACES";
+            this.Column3.Name = "Column3";
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(1145, 687);
@@ -65,6 +84,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "View Inventory Report";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -123,23 +143,15 @@
             this.textBox3.Size = new System.Drawing.Size(267, 38);
             this.textBox3.TabIndex = 5;
             // 
-            // Column1
+            // recordDeliveryBut
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "PACENumber";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "PACESubject";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "NumofPACES";
-            this.Column3.Name = "Column3";
+            this.recordDeliveryBut.Location = new System.Drawing.Point(824, 687);
+            this.recordDeliveryBut.Name = "recordDeliveryBut";
+            this.recordDeliveryBut.Size = new System.Drawing.Size(236, 121);
+            this.recordDeliveryBut.TabIndex = 1;
+            this.recordDeliveryBut.Text = "Record Delivery";
+            this.recordDeliveryBut.UseVisualStyleBackColor = true;
+            this.recordDeliveryBut.Click += new System.EventHandler(this.recordDeliveryBut_Click);
             // 
             // PACEInventorySubsytem
             // 
@@ -153,6 +165,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.recordDeliveryBut);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "PACEInventorySubsytem";
@@ -179,5 +192,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Button recordDeliveryBut;
     }
 }

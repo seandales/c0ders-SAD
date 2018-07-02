@@ -28,5 +28,17 @@ namespace WindowsFormsApp4
             moduleObject.Show();
 
         }
+
+        private void recordDeliveryBut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RecordDeliveryForm recordDeliveryObject1 = new RecordDeliveryForm();
+            recordDeliveryObject1.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
