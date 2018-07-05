@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp4
 {
-    public partial class TeachListForm : Form
+    public partial class TeacherStudentView : Form
     {
-        public TeachListForm()
+        public TeacherStudentView()
         {
             InitializeComponent();
         }

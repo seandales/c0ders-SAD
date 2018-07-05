@@ -91,7 +91,7 @@
             this.supervisorLineUpBut.Name = "supervisorLineUpBut";
             this.supervisorLineUpBut.Size = new System.Drawing.Size(345, 79);
             this.supervisorLineUpBut.TabIndex = 0;
-            this.supervisorLineUpBut.Text = "Superivsor lineup";
+            this.supervisorLineUpBut.Text = "Faculty lineup";
             this.supervisorLineUpBut.UseVisualStyleBackColor = true;
             this.supervisorLineUpBut.Click += new System.EventHandler(this.supervisorLineUpBut_Click);
             // 

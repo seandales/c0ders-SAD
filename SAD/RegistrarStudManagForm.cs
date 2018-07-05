@@ -31,7 +31,7 @@ namespace WindowsFormsApp4
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TeachListForm teachListFormObject1 = new TeachListForm();
+            TeacherStudentView teachListFormObject1 = new TeacherStudentView();
             teachListFormObject1.Show();
         }
     }
