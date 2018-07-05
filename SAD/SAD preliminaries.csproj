@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PACEInventorySubsytem.cs">
+    <Compile Include="PACEInventorySubForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PACEInventorySubsytem.Designer.cs">
-      <DependentUpon>PACEInventorySubsytem.cs</DependentUpon>
+    <Compile Include="PACEInventorySubForm.Designer.cs">
+      <DependentUpon>PACEInventorySubForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RecordDeliveryForm.cs">
       <SubType>Form</SubType>
@@ -108,8 +108,11 @@
     <Compile Include="TeachListForm.Designer.cs">
       <DependentUpon>TeachListForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="PACEInventorySubsytem.resx">
-      <DependentUpon>PACEInventorySubsytem.cs</DependentUpon>
+    <EmbeddedResource Include="PACEInventorySubForm.resx">
+      <DependentUpon>PACEInventorySubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordDeliveryForm.resx">
+      <DependentUpon>RecordDeliveryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffLineupForm.resx">
       <DependentUpon>StaffLineupForm.cs</DependentUpon>

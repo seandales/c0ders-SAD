@@ -58,7 +58,7 @@ namespace WindowsFormsApp4
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PACEInventorySubsytem PACEInventorySubsytemObject = new PACEInventorySubsytem();
+            PACEInventorySubForm PACEInventorySubsytemObject = new PACEInventorySubForm();
             PACEInventorySubsytemObject.Show();
         }
 

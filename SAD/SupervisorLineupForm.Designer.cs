@@ -78,7 +78,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 94);
+            this.label1.Location = new System.Drawing.Point(55, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 32);
             this.label1.TabIndex = 0;
@@ -448,7 +448,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 1546);
+            this.ClientSize = new System.Drawing.Size(968, 1516);
             this.Controls.Add(this.textBox18);
             this.Controls.Add(this.textBox16);
             this.Controls.Add(this.textBox14);
@@ -495,8 +495,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "SupervisorLineupForm";
-            this.Text = "SupervisorLineup";
+            this.Text = "Supervisor Lineup";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SupervisorLineupForm_FormClosed);
+            this.Load += new System.EventHandler(this.SupervisorLineupForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

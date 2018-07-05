@@ -22,5 +22,10 @@ namespace WindowsFormsApp4
             StaffManagForm staffManagFormObject1 = new StaffManagForm();
             staffManagFormObject1.Show();
         }
+
+        private void SupervisorLineupForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

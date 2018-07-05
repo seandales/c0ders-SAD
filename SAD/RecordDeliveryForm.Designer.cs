@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // RecordDeliveryForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "RecordDeliveryForm";
             this.Text = "RecordDeliveryForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RecordDeliveryForm_FormClosing);
+            this.Load += new System.EventHandler(this.RecordDeliveryForm_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

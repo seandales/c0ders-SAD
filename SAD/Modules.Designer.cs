@@ -49,7 +49,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(764, 237);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(183, 158);
+            this.button2.Size = new System.Drawing.Size(190, 158);
             this.button2.TabIndex = 0;
             this.button2.Text = "Staff Manag Form";
             this.button2.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@
             // 
             this.exitBut.Location = new System.Drawing.Point(420, 237);
             this.exitBut.Name = "exitBut";
-            this.exitBut.Size = new System.Drawing.Size(196, 158);
+            this.exitBut.Size = new System.Drawing.Size(208, 158);
             this.exitBut.TabIndex = 2;
             this.exitBut.Text = "Registrar Student Management Form";
             this.exitBut.UseVisualStyleBackColor = true;

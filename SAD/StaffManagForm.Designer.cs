@@ -52,8 +52,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -113,7 +111,7 @@
             this.Column10,
             this.Column11,
             this.Column12});
-            this.dataGridView1.Location = new System.Drawing.Point(-3, 563);
+            this.dataGridView1.Location = new System.Drawing.Point(-3, 566);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 40;
             this.dataGridView1.Size = new System.Drawing.Size(1574, 611);
@@ -235,8 +233,6 @@
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.textBox11);
-            this.panel1.Controls.Add(this.textBox10);
-            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.textBox9);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.textBox8);
@@ -267,7 +263,7 @@
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(1105, 418);
+            this.textBox12.Location = new System.Drawing.Point(1105, 350);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(250, 38);
             this.textBox12.TabIndex = 11;
@@ -275,7 +271,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(937, 415);
+            this.label13.Location = new System.Drawing.Point(937, 347);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(120, 32);
             this.label13.TabIndex = 10;
@@ -284,7 +280,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(937, 357);
+            this.label12.Location = new System.Drawing.Point(937, 289);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(87, 32);
             this.label12.TabIndex = 9;
@@ -292,26 +288,10 @@
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(1105, 353);
+            this.textBox11.Location = new System.Drawing.Point(1105, 285);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(250, 38);
             this.textBox11.TabIndex = 8;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(1105, 288);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(250, 38);
-            this.textBox10.TabIndex = 7;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(937, 288);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(150, 32);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Nationality";
             // 
             // textBox9
             // 
@@ -325,9 +305,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(937, 223);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(116, 32);
+            this.label10.Size = new System.Drawing.Size(119, 32);
             this.label10.TabIndex = 6;
-            this.label10.Text = "address";
+            this.label10.Text = "Address";
             // 
             // textBox8
             // 
@@ -357,9 +337,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(937, 109);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(162, 32);
+            this.label8.Size = new System.Drawing.Size(150, 32);
             this.label8.TabIndex = 6;
-            this.label8.Text = "nationaliaty";
+            this.label8.Text = "Nationality";
             // 
             // textBox6
             // 
@@ -382,9 +362,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(457, 354);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 32);
+            this.label6.Size = new System.Drawing.Size(110, 32);
             this.label6.TabIndex = 6;
-            this.label6.Text = "gender";
+            this.label6.Text = "Gender";
             // 
             // label5
             // 
@@ -511,8 +491,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox8;
