@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp4
 {
-    partial class StaffLineupForm
+    partial class Staff_Lineup_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -53,14 +53,14 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 39);
             this.comboBox1.TabIndex = 1;
             // 
-            // StaffLineupForm
+            // Staff_Lineup_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 1425);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.listView1);
-            this.Name = "StaffLineupForm";
+            this.Name = "Staff_Lineup_Form";
             this.Text = "StaffLineupForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StaffLineupForm_FormClosing);
             this.Load += new System.EventHandler(this.StaffLineupForm_Load);

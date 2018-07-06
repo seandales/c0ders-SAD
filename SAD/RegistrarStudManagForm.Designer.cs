@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp4
 {
-    partial class RegistrarStudManagForm
+    partial class Registrar_Stud_ManagForm
     {
         /// <summary>
         /// Required designer variable.
@@ -301,7 +301,7 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // RegistrarStudManagForm
+            // Registrar_Stud_ManagForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -328,7 +328,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "RegistrarStudManagForm";
+            this.Name = "Registrar_Stud_ManagForm";
             this.Text = "registrarManag";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegistrarStudManagForm_FormClosing);
             this.Load += new System.EventHandler(this.RegistrarStudManagForm_Load);

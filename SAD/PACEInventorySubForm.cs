@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp4
 {
-    public partial class PACEInventorySubForm : Form
+    public partial class PACE_Inventory_Sub_Form : Form
     {
-        public PACEInventorySubForm()
+        public PACE_Inventory_Sub_Form()
         {
             InitializeComponent();
         }

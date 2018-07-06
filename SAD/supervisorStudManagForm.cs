@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp4
 {
-    public partial class SupervisorStudManagForm : Form
+    public partial class Supervisor_Stud_Manag_Form : Form
     {
-        public SupervisorStudManagForm()
+        public Supervisor_Stud_Manag_Form()
         {
             InitializeComponent();
         }

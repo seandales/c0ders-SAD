@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp4
 {
-    public partial class TeacherStudentView : Form
+    public partial class Teacher_Student_View : Form
     {
-        public TeacherStudentView()
+        public Teacher_Student_View()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace WindowsFormsApp4
 
         private void TeachListForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            RegistrarStudManagForm registrarStudManagFormObject1 = new RegistrarStudManagForm();
+            Registrar_Stud_ManagForm registrarStudManagFormObject1 = new Registrar_Stud_ManagForm();
             registrarStudManagFormObject1.Show();
         }
     }

@@ -24,8 +24,13 @@ namespace WindowsFormsApp4
 
         private void RecordDeliveryForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            PACEInventorySubForm PACEInventoryObject1 = new PACEInventorySubForm();
+            PACE_Inventory_Sub_Form PACEInventoryObject1 = new PACE_Inventory_Sub_Form();
             PACEInventoryObject1.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

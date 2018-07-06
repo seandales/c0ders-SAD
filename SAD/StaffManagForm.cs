@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp4
 {
-    public partial class StaffManagForm : Form
+    public partial class Staff_Manag_Form : Form
     {
-        public StaffManagForm()
+        public Staff_Manag_Form()
         {
             InitializeComponent();
         }
@@ -20,7 +20,7 @@ namespace WindowsFormsApp4
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            StaffLineupForm staffLineupFormObject1 = new StaffLineupForm();
+            Staff_Lineup_Form staffLineupFormObject1 = new Staff_Lineup_Form();
             staffLineupFormObject1.Show();
 
         }
@@ -49,7 +49,7 @@ namespace WindowsFormsApp4
         private void supervisorLineUpBut_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SupervisorLineupForm supervisorLineupFormObject1 = new SupervisorLineupForm();
+            Supervisor_Lineup_Form supervisorLineupFormObject1 = new Supervisor_Lineup_Form();
             supervisorLineupFormObject1.Show();
         }
     }

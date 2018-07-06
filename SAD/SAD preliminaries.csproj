@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PACE Progression Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PACE Progression Form.Designer.cs">
+      <DependentUpon>PACE Progression Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="PACEInventorySubForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PACEInventorySubForm.Designer.cs">
       <DependentUpon>PACEInventorySubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PACEPrescriptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PACEPrescriptionForm.Designer.cs">
+      <DependentUpon>PACEPrescriptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Record Delivery Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Record Delivery Form.Designer.cs">
+      <DependentUpon>Record Delivery Form.cs</DependentUpon>
     </Compile>
     <Compile Include="RecordDeliveryForm.cs">
       <SubType>Form</SubType>
@@ -108,8 +126,17 @@
     <Compile Include="TeacherStudentView.Designer.cs">
       <DependentUpon>TeacherStudentView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PACE Progression Form.resx">
+      <DependentUpon>PACE Progression Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PACEInventorySubForm.resx">
       <DependentUpon>PACEInventorySubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PACEPrescriptionForm.resx">
+      <DependentUpon>PACEPrescriptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Record Delivery Form.resx">
+      <DependentUpon>Record Delivery Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecordDeliveryForm.resx">
       <DependentUpon>RecordDeliveryForm.cs</DependentUpon>

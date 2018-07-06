@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp4
 {
-    partial class StaffManagForm
+    partial class Staff_Manag_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -445,7 +445,7 @@
             this.textBox1.Size = new System.Drawing.Size(250, 38);
             this.textBox1.TabIndex = 1;
             // 
-            // StaffManagForm
+            // Staff_Manag_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -454,7 +454,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.supervisorLineUpBut);
             this.Controls.Add(this.staffLineUpBut);
-            this.Name = "StaffManagForm";
+            this.Name = "Staff_Manag_Form";
             this.Text = "staffManag";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StaffManagForm_FormClosing);
             this.Load += new System.EventHandler(this.StaffManagForm_Load);

@@ -47,9 +47,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(764, 237);
+            this.button2.Location = new System.Drawing.Point(420, 510);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(190, 158);
+            this.button2.Size = new System.Drawing.Size(208, 158);
             this.button2.TabIndex = 0;
             this.button2.Text = "Staff Manag Form";
             this.button2.UseVisualStyleBackColor = true;
@@ -68,7 +68,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(135, 98);
+            this.label1.Location = new System.Drawing.Point(86, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 32);
             this.label1.TabIndex = 1;
@@ -89,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 848);
+            this.ClientSize = new System.Drawing.Size(740, 848);
             this.Controls.Add(this.exitBut);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);

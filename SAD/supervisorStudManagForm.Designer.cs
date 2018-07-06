@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp4
 {
-    partial class SupervisorStudManagForm
+    partial class Supervisor_Stud_Manag_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -107,7 +107,7 @@
             this.button1.Text = "View PACE Prescription Report";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // SupervisorStudManagForm
+            // Supervisor_Stud_Manag_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -117,7 +117,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.Name = "SupervisorStudManagForm";
+            this.Name = "Supervisor_Stud_Manag_Form";
             this.Text = "supervisorStudManagForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SupervisorStudManagForm_FormClosing);
             this.Load += new System.EventHandler(this.SupervisorStudManagForm_Load);

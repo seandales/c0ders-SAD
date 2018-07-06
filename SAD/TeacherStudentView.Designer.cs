@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp4
 {
-    partial class TeacherStudentView
+    partial class Teacher_Student_View
     {
         /// <summary>
         /// Required designer variable.
@@ -33,6 +33,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,15 +78,25 @@
             this.Column2.HeaderText = "grade Level";
             this.Column2.Name = "Column2";
             // 
-            // TeachListForm
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(30, 893);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(264, 84);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Exit";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // Teacher_Student_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1313, 906);
+            this.ClientSize = new System.Drawing.Size(1257, 989);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
-            this.Name = "TeachListForm";
+            this.Name = "Teacher_Student_View";
             this.Text = "teacherListForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TeachListForm_FormClosing);
             this.Load += new System.EventHandler(this.TeachListForm_Load);
@@ -102,5 +113,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Button button1;
     }
 }

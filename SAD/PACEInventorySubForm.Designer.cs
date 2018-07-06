@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp4
 {
-    partial class PACEInventorySubForm
+    partial class PACE_Inventory_Sub_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -158,7 +158,7 @@
             this.comboBox2.Size = new System.Drawing.Size(267, 39);
             this.comboBox2.TabIndex = 6;
             // 
-            // PACEInventorySubForm
+            // PACE_Inventory_Sub_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,7 +173,7 @@
             this.Controls.Add(this.recordDeliveryBut);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "PACEInventorySubForm";
+            this.Name = "PACE_Inventory_Sub_Form";
             this.Text = "PACEInventorySubsytem";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PACEInventorySubsytem_FormClosing);
             this.Load += new System.EventHandler(this.PACEInventorySubsytem_Load);

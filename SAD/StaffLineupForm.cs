@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp4
 {
-    public partial class StaffLineupForm : Form
+    public partial class Staff_Lineup_Form : Form
     {
-        public StaffLineupForm()
+        public Staff_Lineup_Form()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace WindowsFormsApp4
 
         private void StaffLineupForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            StaffManagForm staffManagFormObject1 = new StaffManagForm();
+            Staff_Manag_Form staffManagFormObject1 = new Staff_Manag_Form();
             staffManagFormObject1.Show();
         }
     }
