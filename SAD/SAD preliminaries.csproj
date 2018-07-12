@@ -64,12 +64,6 @@
     <Compile Include="PACEPrescriptionForm.Designer.cs">
       <DependentUpon>PACEPrescriptionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Record Delivery Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Record Delivery Form.Designer.cs">
-      <DependentUpon>Record Delivery Form.cs</DependentUpon>
-    </Compile>
     <Compile Include="RecordDeliveryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,9 +128,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PACEPrescriptionForm.resx">
       <DependentUpon>PACEPrescriptionForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Record Delivery Form.resx">
-      <DependentUpon>Record Delivery Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecordDeliveryForm.resx">
       <DependentUpon>RecordDeliveryForm.cs</DependentUpon>

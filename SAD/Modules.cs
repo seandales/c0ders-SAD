@@ -34,7 +34,6 @@ namespace WindowsFormsApp4
         private void Modules_FormClosing(object sender, FormClosingEventArgs e)
         {
             Login loginObject = new Login();
-           
             loginObject.Show();
             
 
@@ -50,21 +49,21 @@ namespace WindowsFormsApp4
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             Staff_Manag_Form staffManagForm1 = new Staff_Manag_Form();
             staffManagForm1.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             PACE_Inventory_Sub_Form PACEInventorySubsytemObject = new PACE_Inventory_Sub_Form();
             PACEInventorySubsytemObject.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             Supervisor_Stud_Manag_Form supervisorStudManagFormObject1 = new Supervisor_Stud_Manag_Form();
             supervisorStudManagFormObject1.Show();
         }

@@ -203,6 +203,7 @@
             this.Controls.Add(this.comboBox1);
             this.Name = "PACE_Prescription_Form";
             this.Text = " PACE Prescription Form";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PACE_Prescription_Form_FormClosing);
             this.Load += new System.EventHandler(this.PACEPrescriptionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

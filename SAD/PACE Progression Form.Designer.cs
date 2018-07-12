@@ -33,9 +33,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,15 +93,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(541, 410);
             this.dataGridView1.TabIndex = 2;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(728, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(292, 32);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Subjects Being Taken";
-            // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -113,6 +104,15 @@
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.HeaderText = "PACE Number";
             this.Column2.Name = "Column2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(728, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(292, 32);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Subjects Being Taken";
             // 
             // dataGridView2
             // 
@@ -167,7 +167,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1313, 1423);
+            this.ClientSize = new System.Drawing.Size(1313, 1434);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label3);
@@ -178,6 +178,8 @@
             this.Controls.Add(this.label1);
             this.Name = "PACE_Progression_Form";
             this.Text = "PACE_Progressionn_Form";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PACE_Progression_Form_FormClosing);
+            this.Load += new System.EventHandler(this.PACE_Progression_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);

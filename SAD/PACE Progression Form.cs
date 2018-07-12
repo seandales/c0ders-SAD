@@ -16,5 +16,16 @@ namespace WindowsFormsApp4
         {
             InitializeComponent();
         }
+
+        private void PACE_Progression_Form_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PACE_Progression_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Supervisor_Stud_Manag_Form object1 = new Supervisor_Stud_Manag_Form();
+            object1.Show();
+        }
     }
 }

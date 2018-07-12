@@ -26,5 +26,11 @@ namespace WindowsFormsApp4
         {
 
         }
+
+        private void PACE_Prescription_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Supervisor_Stud_Manag_Form object1 = new Supervisor_Stud_Manag_Form();
+            object1.Show();
+        }
     }
 }

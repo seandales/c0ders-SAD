@@ -38,7 +38,7 @@ namespace WindowsFormsApp4
             sda.Fill(dt);
             if (dt.Rows.Count >= 1)
             {
-                this.Hide();
+                //this.Hide();
                 Modules place = new Modules(dt.Rows[0][0].ToString());
                 ((Form)place).Controls["label1"].Text = dt.Rows[0][0].ToString();
                 place.Show();
@@ -54,6 +54,16 @@ namespace WindowsFormsApp4
         private void exitBut_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void loginBut_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
