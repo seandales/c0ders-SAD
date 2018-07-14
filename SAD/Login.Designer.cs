@@ -79,7 +79,7 @@
             // 
             // loginBut
             // 
-            this.loginBut.BackColor = System.Drawing.Color.Crimson;
+            this.loginBut.BackColor = System.Drawing.Color.Purple;
             this.loginBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginBut.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBut.ForeColor = System.Drawing.Color.White;
@@ -94,7 +94,7 @@
             // 
             // exitBut
             // 
-            this.exitBut.BackColor = System.Drawing.Color.OliveDrab;
+            this.exitBut.BackColor = System.Drawing.Color.YellowGreen;
             this.exitBut.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBut.ForeColor = System.Drawing.Color.White;
             this.exitBut.Location = new System.Drawing.Point(701, 517);
