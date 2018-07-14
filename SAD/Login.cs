@@ -18,18 +18,6 @@ namespace WindowsFormsApp4
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-
-
-        private void userNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void loginBut_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection("server=localhost; user id =root; database=sad_db; password=root;");
@@ -56,14 +44,38 @@ namespace WindowsFormsApp4
             this.Close();
         }
 
-        private void loginBut_Paint(object sender, PaintEventArgs e)
+        private void passwordTextBox_MouseEnter(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty(passwordTextBox.Text))
+            {
+                passwordTextBox.Text = "";
+            }
+            
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void passwordTextBox_MouseLeave(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(passwordTextBox.Text))
+            {
+                passwordTextBox.Text = "PASSWORD";
+            }
+        }
 
+        private void userNameTextBox_MouseEnter(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(userNameTextBox.Text))
+            {
+                userNameTextBox.Text = "";
+            }
+            
+        }
+
+        private void userNameTextBox_MouseLeave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(userNameTextBox.Text))
+            {
+                userNameTextBox.Text = "USERNAME";
+            }
         }
     }
 }
