@@ -83,7 +83,7 @@
             this.loginBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginBut.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBut.ForeColor = System.Drawing.Color.White;
-            this.loginBut.Location = new System.Drawing.Point(698, 397);
+            this.loginBut.Location = new System.Drawing.Point(701, 97);
             this.loginBut.Name = "loginBut";
             this.loginBut.Size = new System.Drawing.Size(239, 67);
             this.loginBut.TabIndex = 4;
