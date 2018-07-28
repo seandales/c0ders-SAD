@@ -44,6 +44,7 @@
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.fontDialog2 = new System.Windows.Forms.FontDialog();
             this.fontDialog3 = new System.Windows.Forms.FontDialog();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,11 +159,22 @@
             this.comboBox2.Size = new System.Drawing.Size(267, 39);
             this.comboBox2.TabIndex = 6;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(215, 784);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(413, 201);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // PACE_Inventory_Sub_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1832, 1097);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox3);
@@ -201,5 +213,6 @@
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.FontDialog fontDialog2;
         private System.Windows.Forms.FontDialog fontDialog3;
+        private System.Windows.Forms.Button button3;
     }
 }

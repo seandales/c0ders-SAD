@@ -41,10 +41,10 @@
             this.userNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.userNameTextBox.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.userNameTextBox.Location = new System.Drawing.Point(501, 301);
-            this.userNameTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.userNameTextBox.Location = new System.Drawing.Point(165, 490);
+            this.userNameTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.userNameTextBox.Name = "userNameTextBox";
-            this.userNameTextBox.Size = new System.Drawing.Size(256, 41);
+            this.userNameTextBox.Size = new System.Drawing.Size(454, 63);
             this.userNameTextBox.TabIndex = 0;
             this.userNameTextBox.Text = "USERNAME";
             this.userNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -55,10 +55,10 @@
             // 
             this.passwordTextBox.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.passwordTextBox.Location = new System.Drawing.Point(501, 378);
-            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.passwordTextBox.Location = new System.Drawing.Point(165, 609);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(256, 41);
+            this.passwordTextBox.Size = new System.Drawing.Size(452, 63);
             this.passwordTextBox.TabIndex = 1;
             this.passwordTextBox.Text = "PASSWORD";
             this.passwordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -67,10 +67,12 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::WindowsFormsApp4.Properties.Resources.Welcome;
-            this.pictureBox1.Location = new System.Drawing.Point(428, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(35, 42);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(498, 268);
+            this.pictureBox1.Size = new System.Drawing.Size(885, 415);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
@@ -83,10 +85,10 @@
             this.exitBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBut.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBut.ForeColor = System.Drawing.Color.White;
-            this.exitBut.Location = new System.Drawing.Point(793, 376);
-            this.exitBut.Margin = new System.Windows.Forms.Padding(2);
+            this.exitBut.Location = new System.Drawing.Point(684, 606);
+            this.exitBut.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.exitBut.Name = "exitBut";
-            this.exitBut.Size = new System.Drawing.Size(102, 43);
+            this.exitBut.Size = new System.Drawing.Size(181, 67);
             this.exitBut.TabIndex = 3;
             this.exitBut.UseVisualStyleBackColor = false;
             this.exitBut.Click += new System.EventHandler(this.exitBut_Click);
@@ -100,28 +102,29 @@
             this.loginBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginBut.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBut.ForeColor = System.Drawing.Color.White;
-            this.loginBut.Location = new System.Drawing.Point(790, 301);
-            this.loginBut.Margin = new System.Windows.Forms.Padding(2);
+            this.loginBut.Location = new System.Drawing.Point(678, 490);
+            this.loginBut.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.loginBut.Name = "loginBut";
-            this.loginBut.Size = new System.Drawing.Size(105, 43);
+            this.loginBut.Size = new System.Drawing.Size(187, 67);
             this.loginBut.TabIndex = 2;
             this.loginBut.UseVisualStyleBackColor = false;
             this.loginBut.Click += new System.EventHandler(this.loginBut_Click);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(938, 664);
+            this.ClientSize = new System.Drawing.Size(1700, 1103);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.exitBut);
             this.Controls.Add(this.loginBut);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.userNameTextBox);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Login";
             this.Text = " Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
