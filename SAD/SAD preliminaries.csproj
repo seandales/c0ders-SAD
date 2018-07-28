@@ -116,6 +116,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RegistrarStudManagForm.resx">
       <DependentUpon>RegistrarStudManagForm.cs</DependentUpon>
@@ -141,6 +142,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_up.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_up1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_up2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui login final.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scroll %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_up3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
