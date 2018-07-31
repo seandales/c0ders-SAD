@@ -12,26 +12,27 @@ namespace WindowsFormsApp4
 {
     public partial class Login : Form
     {
-
+        private MySqlConnection con;
       
         public Login()
         {
+            con = new MySqlConnection("server=localhost; user id =root; database=sad_db; password=root;");
             InitializeComponent();
         }
 
         private void loginBut_Click(object sender, EventArgs e)
         {
             //using(var con = new MySqlConnection(conClass.connectionString))
-            MySqlConnection con = new MySqlConnection("server=localhost; user id =root; database=sad_db; password=root;");
-            MySqlDataAdapter sda = new MySqlDataAdapter("Select role From users Where first_name='"+ userNameTextBox.Text + "' And password='" + passwordTextBox.Text + "'", con);
+            MySqlDataAdapter sda = new MySqlDataAdapter("Select role From user Where user_name='"+ userNameTextBox.Text + "' And password='" + passwordTextBox.Text + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if (dt.Rows.Count >= 1)
             {
                 this.Hide();
-                Modules place = new Modules(dt.Rows[0][0].ToString());
-                ((Form)place).Controls["label1"].Text = dt.Rows[0][0].ToString();
-                place.Show();
+                Modules modFrm = new Modules(dt.Rows[0][0].ToString());
+                modFrm.reference = this;
+                modFrm.Show();
+          
                
             }
             else
@@ -84,10 +85,11 @@ namespace WindowsFormsApp4
         {
 
         }
+        /*
         public class conClass
         {
             public static readonly string connectionString = "Server=localhost;Port=3306;Database=sad_db;Uid=root:Pwd=root";
         }
-
+        */
     }
 }

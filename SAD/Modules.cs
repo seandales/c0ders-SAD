@@ -12,18 +12,22 @@ namespace WindowsFormsApp4
 {
     public partial class Modules : Form
     {
-        public PACE_Inventory_Sub_Form reference { get; set; }
-
+        public Login reference { get; set; }
+        private string loginName;
         public Modules(String role)
         {
             InitializeComponent();
-            label1.Text = role;
+            loginName = role;
+        }
+        public Modules()
+        {
+            InitializeComponent();
         }
       
         
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            label1.Text = loginName;
 
         }
 
@@ -51,8 +55,10 @@ namespace WindowsFormsApp4
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Staff_Manag_Form staffManagForm1 = new Staff_Manag_Form();
-            staffManagForm1.Show();
+            Staff_Manag_Form staffManagFrom = new Staff_Manag_Form();
+            staffManagFrom.reference = this;
+            staffManagFrom.Show();
+
         }
 
         private void button1_Click(object sender, EventArgs e)

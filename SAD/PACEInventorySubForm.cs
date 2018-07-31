@@ -26,11 +26,7 @@ namespace WindowsFormsApp4
 
         private void PACEInventorySubsytem_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Modules object1 = new Modules(null);
-            object1.reference = this;
-            object1.Show();
-            this.Hide();
-            
+           
 
         }
 
