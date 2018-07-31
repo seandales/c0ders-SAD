@@ -12,6 +12,8 @@ namespace WindowsFormsApp4
 {
     public partial class PACE_Inventory_Sub_Form : Form
     {
+
+        public Modules reference { get; set; }
         public PACE_Inventory_Sub_Form()
         {
             InitializeComponent();
@@ -24,8 +26,11 @@ namespace WindowsFormsApp4
 
         private void PACEInventorySubsytem_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Modules moduleObject = new Modules(null);
-            moduleObject.Show();
+            Modules object1 = new Modules(null);
+            object1.reference = this;
+            object1.Show();
+            this.Hide();
+            
 
         }
 
@@ -39,6 +44,12 @@ namespace WindowsFormsApp4
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            reference.Show();
+            this.Close();
         }
     }
 }
