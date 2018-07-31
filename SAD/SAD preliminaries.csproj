@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.10.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -64,11 +64,19 @@
     <Compile Include="PACEPrescriptionForm.Designer.cs">
       <DependentUpon>PACEPrescriptionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RecordDeliveryForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RecordDeliveryForm.Designer.cs">
       <DependentUpon>RecordDeliveryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoundedButtons.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="StaffLineupForm.cs">
       <SubType>Form</SubType>
@@ -146,14 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="RegistrarStudManagForm.resx">
       <DependentUpon>RegistrarStudManagForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,19 +183,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Welcome.png" />
+    <None Include="Resources\WelcomeHD.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Login.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Exit.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Login1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Exit1.jpg" />
+    <None Include="Resources\WelcomeHD1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

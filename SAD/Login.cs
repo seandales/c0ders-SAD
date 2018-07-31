@@ -18,6 +18,7 @@ namespace WindowsFormsApp4
             InitializeComponent();
         }
 
+        ////-------->Login Button<--------
         private void loginBut_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection("server=localhost; user id =root; database=sad_db; password=root;");
@@ -39,42 +40,47 @@ namespace WindowsFormsApp4
             
         }
 
+        //-------->Exit Button<--------
         private void exitBut_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void passwordTextBox_MouseEnter(object sender, EventArgs e)
+        //-------->Password Textbox<--------
+        private void passwordTextBox_Enter(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(passwordTextBox.Text))
+            if (passwordTextBox.Text == "pass")
             {
                 passwordTextBox.Text = "";
+                passwordTextBox.ForeColor = Color.Black;
             }
-            
         }
-
-        private void passwordTextBox_MouseLeave(object sender, EventArgs e)
+        private void passwordTextBox_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(passwordTextBox.Text))
+            if (passwordTextBox.Text == "")
             {
-                passwordTextBox.Text = "PASSWORD";
+                passwordTextBox.Text = "pass";
+                passwordTextBox.ForeColor = Color.Silver;
             }
         }
 
-        private void userNameTextBox_MouseEnter(object sender, EventArgs e)
+        //-------->Username Textbox<--------
+
+        private void userNameTextBox_Enter(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(userNameTextBox.Text))
+            if (userNameTextBox.Text == "username")
             {
                 userNameTextBox.Text = "";
+                userNameTextBox.ForeColor = Color.Black;
             }
-            
         }
 
-        private void userNameTextBox_MouseLeave(object sender, EventArgs e)
+        private void userNameTextBox_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(userNameTextBox.Text))
+            if (userNameTextBox.Text == "")
             {
-                userNameTextBox.Text = "USERNAME";
+                userNameTextBox.Text = "username";
+                userNameTextBox.ForeColor = Color.Silver;
             }
         }
     }
