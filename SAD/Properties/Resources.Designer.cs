@@ -63,6 +63,16 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AnotherPanel {
+            get {
+                object obj = ResourceManager.GetObject("AnotherPanel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SidePanel {
             get {
                 object obj = ResourceManager.GetObject("SidePanel", resourceCulture);

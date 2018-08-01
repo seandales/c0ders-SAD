@@ -97,10 +97,10 @@
     <Compile Include="StaffManagForm.Designer.cs">
       <DependentUpon>StaffManagForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules.cs">
+    <Compile Include="Admin\Modules.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules.Designer.cs">
+    <Compile Include="Admin\Modules.Designer.cs">
       <DependentUpon>Modules.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
@@ -156,7 +156,7 @@
     <EmbeddedResource Include="StaffManagForm.resx">
       <DependentUpon>StaffManagForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules.resx">
+    <EmbeddedResource Include="Admin\Modules.resx">
       <DependentUpon>Modules.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
@@ -206,6 +206,31 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TopPanel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Faculty\" />
+    <Folder Include="HRM\" />
+    <Folder Include="Principal\" />
+    <Folder Include="Registrar\" />
+    <Folder Include="SC\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanelBG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanelBG2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanelBG21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanelBG22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnotherPanel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnotherPanel1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
