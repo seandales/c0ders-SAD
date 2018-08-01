@@ -40,9 +40,9 @@
             this.ExitButton = new System.Windows.Forms.Button();
             this.dashboardLabel = new System.Windows.Forms.Label();
             this.sidePanel = new System.Windows.Forms.Panel();
+            this.accountsButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
             this.signOutButton = new System.Windows.Forms.Button();
-            this.accountsButton = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             this.sidePanel.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +71,7 @@
             this.button2.TabIndex = 0;
             this.button2.Text = "Staff Manag Form";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -146,7 +147,7 @@
             this.ExitButton.Size = new System.Drawing.Size(60, 60);
             this.ExitButton.TabIndex = 5;
             this.ExitButton.UseVisualStyleBackColor = false;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            this.ExitButton.Click += new System.EventHandler(this.signOutButton_Click);
             // 
             // dashboardLabel
             // 
@@ -171,6 +172,28 @@
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(125, 675);
             this.sidePanel.TabIndex = 4;
+            // 
+            // accountsButton
+            // 
+            this.accountsButton.BackColor = System.Drawing.Color.Transparent;
+            this.accountsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.accountsButton.FlatAppearance.BorderSize = 0;
+            this.accountsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
+            this.accountsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.accountsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.accountsButton.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountsButton.ForeColor = System.Drawing.Color.Black;
+            this.accountsButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.accountsButton.ImageKey = "Accounts.png";
+            this.accountsButton.ImageList = this.Icons;
+            this.accountsButton.Location = new System.Drawing.Point(0, 125);
+            this.accountsButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.accountsButton.Name = "accountsButton";
+            this.accountsButton.Size = new System.Drawing.Size(125, 125);
+            this.accountsButton.TabIndex = 6;
+            this.accountsButton.Text = "\r\nAccounts";
+            this.accountsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.accountsButton.UseVisualStyleBackColor = false;
             // 
             // homeButton
             // 
@@ -215,28 +238,6 @@
             this.signOutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.signOutButton.UseVisualStyleBackColor = false;
             this.signOutButton.Click += new System.EventHandler(this.signOutButton_Click);
-            // 
-            // accountsButton
-            // 
-            this.accountsButton.BackColor = System.Drawing.Color.Transparent;
-            this.accountsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.accountsButton.FlatAppearance.BorderSize = 0;
-            this.accountsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.accountsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.accountsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.accountsButton.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accountsButton.ForeColor = System.Drawing.Color.Black;
-            this.accountsButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.accountsButton.ImageKey = "Accounts.png";
-            this.accountsButton.ImageList = this.Icons;
-            this.accountsButton.Location = new System.Drawing.Point(0, 125);
-            this.accountsButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.accountsButton.Name = "accountsButton";
-            this.accountsButton.Size = new System.Drawing.Size(125, 125);
-            this.accountsButton.TabIndex = 6;
-            this.accountsButton.Text = "\r\nAccounts";
-            this.accountsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.accountsButton.UseVisualStyleBackColor = false;
             // 
             // Modules
             // 

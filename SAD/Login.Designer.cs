@@ -152,6 +152,7 @@
             this.AcceptButton = this.loginBut;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.SidePanel1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.exitBut;
             this.ClientSize = new System.Drawing.Size(375, 375);

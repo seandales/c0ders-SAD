@@ -41,7 +41,7 @@ namespace WindowsFormsApp4
             Registrar_Stud_ManagForm registrarObject = new Registrar_Stud_ManagForm();
             registrarObject.Show();
         }
-        /*
+        
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -50,7 +50,7 @@ namespace WindowsFormsApp4
             staffManagFrom.Show();
 
         }
-        */
+        
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -70,10 +70,6 @@ namespace WindowsFormsApp4
         private void Modules_FormClosing(object sender, FormClosingEventArgs e)
         {
             reference.Show();
-        }
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
         private void signOutButton_Click(object sender, EventArgs e)
         {
