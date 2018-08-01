@@ -117,6 +117,7 @@
             this.exitBut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.exitBut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exitBut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitBut.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.exitBut.FlatAppearance.BorderSize = 0;
             this.exitBut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Khaki;
             this.exitBut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold;
@@ -132,6 +133,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.exitBut);
@@ -140,19 +142,19 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.userNameTextBox);
             this.panel1.Controls.Add(this.passwordTextBox);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 350);
             this.panel1.TabIndex = 12;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.AcceptButton = this.loginBut;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(350, 350);
+            this.CancelButton = this.exitBut;
+            this.ClientSize = new System.Drawing.Size(375, 375);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(1);

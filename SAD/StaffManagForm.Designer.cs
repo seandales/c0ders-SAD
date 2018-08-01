@@ -102,8 +102,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(2321, 611);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.ColumnRemoved += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dataGridView1_ColumnRemoved);
             // 
             // buttViewArchive
             // 
@@ -161,7 +159,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(2302, 505);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtStatus
             // 
@@ -260,7 +257,6 @@
             this.txtNationality.Name = "txtNationality";
             this.txtNationality.Size = new System.Drawing.Size(565, 63);
             this.txtNationality.TabIndex = 7;
-            this.txtNationality.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label8
             // 
@@ -347,7 +343,6 @@
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(666, 63);
             this.txtAge.TabIndex = 2;
-            this.txtAge.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtGender
             // 
@@ -356,7 +351,6 @@
             this.txtGender.Name = "txtGender";
             this.txtGender.Size = new System.Drawing.Size(666, 63);
             this.txtGender.TabIndex = 2;
-            this.txtGender.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtBirthDate
             // 
@@ -365,7 +359,6 @@
             this.txtBirthDate.Name = "txtBirthDate";
             this.txtBirthDate.Size = new System.Drawing.Size(666, 63);
             this.txtBirthDate.TabIndex = 2;
-            this.txtBirthDate.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtMn
             // 
@@ -374,7 +367,6 @@
             this.txtMn.Name = "txtMn";
             this.txtMn.Size = new System.Drawing.Size(666, 63);
             this.txtMn.TabIndex = 2;
-            this.txtMn.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtLn
             // 
@@ -383,7 +375,6 @@
             this.txtLn.Name = "txtLn";
             this.txtLn.Size = new System.Drawing.Size(666, 63);
             this.txtLn.TabIndex = 2;
-            this.txtLn.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtFn
             // 
@@ -392,7 +383,6 @@
             this.txtFn.Name = "txtFn";
             this.txtFn.Size = new System.Drawing.Size(666, 63);
             this.txtFn.TabIndex = 1;
-            this.txtFn.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 

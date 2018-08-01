@@ -12,18 +12,20 @@ namespace WindowsFormsApp4
 {
     public partial class Login : Form
     {
-        private MySqlConnection con;
+        //private MySqlConnection con;
       
         public Login()
         {
-            con = new MySqlConnection("server=localhost; user id =root; database=sad_db; password=root;");
+            //con = new MySqlConnection("server=localhost; user id =root; database=sad_db; password=root;");
             InitializeComponent();
         }
-
-        ////-------->Login Button<--------
+        //
+        //-------->Login Button<--------
+        //
         private void loginBut_Click(object sender, EventArgs e)
         {
-            //using(var con = new MySqlConnection(conClass.connectionString))
+            /*
+            using(var con = new MySqlConnection(conClass.connectionString))
             MySqlDataAdapter sda = new MySqlDataAdapter("Select role From user Where user_name='"+ userNameTextBox.Text + "' And password='" + passwordTextBox.Text + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -33,23 +35,27 @@ namespace WindowsFormsApp4
                 Modules modFrm = new Modules(dt.Rows[0][0].ToString());
                 modFrm.reference = this;
                 modFrm.Show();
-          
-               
             }
             else
             {
                 MessageBox.Show("login credentials are incorrect");
             }
-            
+            */
+            this.Hide();
+            Modules modFrm = new Modules();
+            modFrm.reference = this;
+            modFrm.Show();
         }
-
+        //
         //-------->Exit Button<--------
+        //
         private void exitBut_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        //
         //-------->Password Textbox<--------
+        //
         private void passwordTextBox_Enter(object sender, EventArgs e)
         {
             if (passwordTextBox.Text == "pass")
@@ -66,9 +72,9 @@ namespace WindowsFormsApp4
                 passwordTextBox.ForeColor = Color.Silver;
             }
         }
-
+        //
         //-------->Username Textbox<--------
-
+        //
         private void userNameTextBox_Enter(object sender, EventArgs e)
         {
             if (userNameTextBox.Text == "username")
@@ -86,16 +92,11 @@ namespace WindowsFormsApp4
                 userNameTextBox.ForeColor = Color.Silver;
             }
         }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
         /*
-        public class conClass
-        {
-            public static readonly string connectionString = "Server=localhost;Port=3306;Database=sad_db;Uid=root:Pwd=root";
-        }
-        */
+public class conClass
+{
+   public static readonly string connectionString = "Server=localhost;Port=3306;Database=sad_db;Uid=root:Pwd=root";
+}
+*/
     }
 }

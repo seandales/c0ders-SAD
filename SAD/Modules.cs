@@ -13,37 +13,27 @@ namespace WindowsFormsApp4
     public partial class Modules : Form
     {
         public Login reference { get; set; }
+
         private string loginName;
+
         public Modules(String role)
         {
             InitializeComponent();
             loginName = role;
         }
+
         public Modules()
         {
             InitializeComponent();
         }
       
         
-        private void Form1_Load(object sender, EventArgs e)
+        private void Modules_Load(object sender, EventArgs e)
         {
             label1.Text = loginName;
-
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Modules_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Login loginObject = new Login();
-            loginObject.Show();
-            
-
-            
-        }
+        
 
         private void exitBut_Click(object sender, EventArgs e)
         {
@@ -51,7 +41,7 @@ namespace WindowsFormsApp4
             Registrar_Stud_ManagForm registrarObject = new Registrar_Stud_ManagForm();
             registrarObject.Show();
         }
-
+        /*
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -60,7 +50,7 @@ namespace WindowsFormsApp4
             staffManagFrom.Show();
 
         }
-
+        */
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -73,6 +63,21 @@ namespace WindowsFormsApp4
             this.Hide();
             Supervisor_Stud_Manag_Form supervisorStudManagFormObject1 = new Supervisor_Stud_Manag_Form();
             supervisorStudManagFormObject1.Show();
+        }
+        //
+        //-------->Exit Buttons<--------
+        //
+        private void Modules_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            reference.Show();
+        }
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void signOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

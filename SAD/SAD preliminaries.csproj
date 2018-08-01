@@ -198,5 +198,14 @@
   <ItemGroup>
     <None Include="Resources\WelcomeHD1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SidePanel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SidePanel1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopPanel.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

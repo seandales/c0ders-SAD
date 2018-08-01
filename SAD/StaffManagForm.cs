@@ -29,16 +29,6 @@ namespace WindowsFormsApp4
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_ColumnRemoved(object sender, DataGridViewColumnEventArgs e)
-        {
-
-        }
-
         private void StaffManagForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Hide();
@@ -55,41 +45,6 @@ namespace WindowsFormsApp4
             this.Hide();
             Supervisor_Lineup_Form supervisorLineupFormObject1 = new Supervisor_Lineup_Form();
             supervisorLineupFormObject1.Show();
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void butAddStaff(object sender, EventArgs e)
