@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp4
 {
-    partial class SupervisorStudManagForm
+    partial class Supervisor_Stud_Manag_Form
     {
         /// <summary>
         /// Required designer variable.

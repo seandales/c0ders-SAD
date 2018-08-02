@@ -50,10 +50,8 @@
             this.clearButton = new System.Windows.Forms.Button();
             this.lnTextbox = new System.Windows.Forms.TextBox();
             this.mnTextbox = new System.Windows.Forms.TextBox();
-            this.fnTextbox = new System.Windows.Forms.TextBox();
             this.lnLabel = new System.Windows.Forms.Label();
             this.mnLabel = new System.Windows.Forms.Label();
-            this.fnLabel = new System.Windows.Forms.Label();
             this.editButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.searchLabel = new System.Windows.Forms.Label();
@@ -67,6 +65,8 @@
             this.accountsButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
             this.signOutButton = new System.Windows.Forms.Button();
+            this.fnLabel = new System.Windows.Forms.Label();
+            this.fnTextbox = new System.Windows.Forms.TextBox();
             this.accountsPanel.SuspendLayout();
             this.addPanel.SuspendLayout();
             this.displayPanel.SuspendLayout();
@@ -83,7 +83,7 @@
             this.label1.Location = new System.Drawing.Point(34, 51);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 16);
+            this.label1.Size = new System.Drawing.Size(161, 40);
             this.label1.TabIndex = 1;
             this.label1.Text = "Status";
             // 
@@ -105,9 +105,9 @@
             this.accountsPanel.Controls.Add(this.textBox1);
             this.accountsPanel.Controls.Add(this.searchLabel);
             this.accountsPanel.Controls.Add(this.displayPanel);
-            this.accountsPanel.Location = new System.Drawing.Point(330, 209);
+            this.accountsPanel.Location = new System.Drawing.Point(187, 111);
             this.accountsPanel.Name = "accountsPanel";
-            this.accountsPanel.Size = new System.Drawing.Size(870, 466);
+            this.accountsPanel.Size = new System.Drawing.Size(1213, 716);
             this.accountsPanel.TabIndex = 7;
             // 
             // addUserLabel
@@ -117,7 +117,7 @@
             this.addUserLabel.ForeColor = System.Drawing.Color.Black;
             this.addUserLabel.Location = new System.Drawing.Point(843, 16);
             this.addUserLabel.Name = "addUserLabel";
-            this.addUserLabel.Size = new System.Drawing.Size(148, 27);
+            this.addUserLabel.Size = new System.Drawing.Size(365, 68);
             this.addUserLabel.TabIndex = 16;
             this.addUserLabel.Text = "Add User";
             // 
@@ -162,7 +162,7 @@
             "Monitor"});
             this.comboBox1.Location = new System.Drawing.Point(121, 430);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(116, 24);
+            this.comboBox1.Size = new System.Drawing.Size(116, 48);
             this.comboBox1.TabIndex = 28;
             // 
             // roleLabel
@@ -172,7 +172,7 @@
             this.roleLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roleLabel.Location = new System.Drawing.Point(52, 433);
             this.roleLabel.Name = "roleLabel";
-            this.roleLabel.Size = new System.Drawing.Size(63, 16);
+            this.roleLabel.Size = new System.Drawing.Size(142, 40);
             this.roleLabel.TabIndex = 27;
             this.roleLabel.Text = "Role:";
             // 
@@ -180,7 +180,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(33, 385);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(222, 23);
+            this.textBox2.Size = new System.Drawing.Size(222, 47);
             this.textBox2.TabIndex = 26;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -191,7 +191,7 @@
             this.emailLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailLabel.Location = new System.Drawing.Point(62, 360);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(173, 16);
+            this.emailLabel.Size = new System.Drawing.Size(392, 40);
             this.emailLabel.TabIndex = 25;
             this.emailLabel.Text = "E-Mail Address:";
             // 
@@ -204,7 +204,7 @@
             "Married"});
             this.civilStatusComboBox.Location = new System.Drawing.Point(90, 325);
             this.civilStatusComboBox.Name = "civilStatusComboBox";
-            this.civilStatusComboBox.Size = new System.Drawing.Size(116, 24);
+            this.civilStatusComboBox.Size = new System.Drawing.Size(116, 48);
             this.civilStatusComboBox.TabIndex = 24;
             // 
             // civilStatusLabel
@@ -214,7 +214,7 @@
             this.civilStatusLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.civilStatusLabel.Location = new System.Drawing.Point(74, 300);
             this.civilStatusLabel.Name = "civilStatusLabel";
-            this.civilStatusLabel.Size = new System.Drawing.Size(151, 16);
+            this.civilStatusLabel.Size = new System.Drawing.Size(342, 40);
             this.civilStatusLabel.TabIndex = 23;
             this.civilStatusLabel.Text = "Civil Status:";
             // 
@@ -227,7 +227,7 @@
             "Female"});
             this.genderComboBox.Location = new System.Drawing.Point(139, 262);
             this.genderComboBox.Name = "genderComboBox";
-            this.genderComboBox.Size = new System.Drawing.Size(116, 24);
+            this.genderComboBox.Size = new System.Drawing.Size(116, 48);
             this.genderComboBox.TabIndex = 22;
             // 
             // genderLabel
@@ -237,7 +237,7 @@
             this.genderLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genderLabel.Location = new System.Drawing.Point(37, 265);
             this.genderLabel.Name = "genderLabel";
-            this.genderLabel.Size = new System.Drawing.Size(96, 16);
+            this.genderLabel.Size = new System.Drawing.Size(217, 40);
             this.genderLabel.TabIndex = 21;
             this.genderLabel.Text = "Gender: ";
             // 
@@ -247,7 +247,7 @@
             this.bdayDate.MaxDate = new System.DateTime(2018, 8, 2, 0, 0, 0, 0);
             this.bdayDate.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.bdayDate.Name = "bdayDate";
-            this.bdayDate.Size = new System.Drawing.Size(222, 23);
+            this.bdayDate.Size = new System.Drawing.Size(222, 47);
             this.bdayDate.TabIndex = 20;
             this.bdayDate.Value = new System.DateTime(2018, 8, 2, 0, 0, 0, 0);
             // 
@@ -258,7 +258,7 @@
             this.bdayLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bdayLabel.Location = new System.Drawing.Point(98, 195);
             this.bdayLabel.Name = "bdayLabel";
-            this.bdayLabel.Size = new System.Drawing.Size(118, 16);
+            this.bdayLabel.Size = new System.Drawing.Size(267, 40);
             this.bdayLabel.TabIndex = 19;
             this.bdayLabel.Text = "Birthdate:";
             // 
@@ -311,7 +311,7 @@
             // 
             this.lnTextbox.Location = new System.Drawing.Point(33, 160);
             this.lnTextbox.Name = "lnTextbox";
-            this.lnTextbox.Size = new System.Drawing.Size(222, 23);
+            this.lnTextbox.Size = new System.Drawing.Size(222, 47);
             this.lnTextbox.TabIndex = 5;
             this.lnTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -319,17 +319,9 @@
             // 
             this.mnTextbox.Location = new System.Drawing.Point(33, 100);
             this.mnTextbox.Name = "mnTextbox";
-            this.mnTextbox.Size = new System.Drawing.Size(222, 23);
+            this.mnTextbox.Size = new System.Drawing.Size(222, 47);
             this.mnTextbox.TabIndex = 4;
             this.mnTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // fnTextbox
-            // 
-            this.fnTextbox.Location = new System.Drawing.Point(33, 40);
-            this.fnTextbox.Name = "fnTextbox";
-            this.fnTextbox.Size = new System.Drawing.Size(222, 23);
-            this.fnTextbox.TabIndex = 3;
-            this.fnTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lnLabel
             // 
@@ -338,7 +330,7 @@
             this.lnLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnLabel.Location = new System.Drawing.Point(98, 135);
             this.lnLabel.Name = "lnLabel";
-            this.lnLabel.Size = new System.Drawing.Size(118, 16);
+            this.lnLabel.Size = new System.Drawing.Size(267, 40);
             this.lnLabel.TabIndex = 2;
             this.lnLabel.Text = "Last Name:";
             // 
@@ -349,20 +341,9 @@
             this.mnLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnLabel.Location = new System.Drawing.Point(87, 75);
             this.mnLabel.Name = "mnLabel";
-            this.mnLabel.Size = new System.Drawing.Size(140, 16);
+            this.mnLabel.Size = new System.Drawing.Size(317, 40);
             this.mnLabel.TabIndex = 1;
             this.mnLabel.Text = "Middle Name:";
-            // 
-            // fnLabel
-            // 
-            this.fnLabel.AutoSize = true;
-            this.fnLabel.BackColor = System.Drawing.Color.Transparent;
-            this.fnLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fnLabel.Location = new System.Drawing.Point(90, 15);
-            this.fnLabel.Name = "fnLabel";
-            this.fnLabel.Size = new System.Drawing.Size(129, 16);
-            this.fnLabel.TabIndex = 0;
-            this.fnLabel.Text = "First Name:";
             // 
             // editButton
             // 
@@ -387,7 +368,7 @@
             this.textBox1.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(138, 9);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(272, 34);
+            this.textBox1.Size = new System.Drawing.Size(272, 75);
             this.textBox1.TabIndex = 11;
             // 
             // searchLabel
@@ -397,7 +378,7 @@
             this.searchLabel.ForeColor = System.Drawing.Color.Black;
             this.searchLabel.Location = new System.Drawing.Point(6, 12);
             this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(148, 27);
+            this.searchLabel.Size = new System.Drawing.Size(365, 68);
             this.searchLabel.TabIndex = 14;
             this.searchLabel.Text = "Search: ";
             // 
@@ -437,7 +418,7 @@
             this.topPanel.Location = new System.Drawing.Point(125, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1075, 60);
+            this.topPanel.Size = new System.Drawing.Size(1305, 60);
             this.topPanel.TabIndex = 5;
             // 
             // ExitButton
@@ -465,7 +446,7 @@
             this.navigationLabel.Font = new System.Drawing.Font("Lucida Console", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navigationLabel.Location = new System.Drawing.Point(5, 9);
             this.navigationLabel.Name = "navigationLabel";
-            this.navigationLabel.Size = new System.Drawing.Size(140, 48);
+            this.navigationLabel.Size = new System.Drawing.Size(342, 120);
             this.navigationLabel.TabIndex = 0;
             this.navigationLabel.Text = "Home";
             // 
@@ -479,7 +460,7 @@
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(125, 675);
+            this.sidePanel.Size = new System.Drawing.Size(125, 823);
             this.sidePanel.TabIndex = 4;
             // 
             // accountsButton
@@ -551,11 +532,30 @@
             this.signOutButton.UseVisualStyleBackColor = false;
             this.signOutButton.Click += new System.EventHandler(this.signOutButton_Click);
             // 
+            // fnLabel
+            // 
+            this.fnLabel.AutoSize = true;
+            this.fnLabel.BackColor = System.Drawing.Color.Transparent;
+            this.fnLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fnLabel.Location = new System.Drawing.Point(90, 15);
+            this.fnLabel.Name = "fnLabel";
+            this.fnLabel.Size = new System.Drawing.Size(292, 40);
+            this.fnLabel.TabIndex = 0;
+            this.fnLabel.Text = "First Name:";
+            // 
+            // fnTextbox
+            // 
+            this.fnTextbox.Location = new System.Drawing.Point(33, 40);
+            this.fnTextbox.Name = "fnTextbox";
+            this.fnTextbox.Size = new System.Drawing.Size(222, 47);
+            this.fnTextbox.TabIndex = 3;
+            this.fnTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Modules
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 675);
+            this.ClientSize = new System.Drawing.Size(1430, 823);
             this.Controls.Add(this.accountsPanel);
             this.Controls.Add(this.homePanel);
             this.Controls.Add(this.topPanel);
@@ -609,10 +609,8 @@
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.TextBox lnTextbox;
         private System.Windows.Forms.TextBox mnTextbox;
-        private System.Windows.Forms.TextBox fnTextbox;
         private System.Windows.Forms.Label lnLabel;
         private System.Windows.Forms.Label mnLabel;
-        private System.Windows.Forms.Label fnLabel;
         private System.Windows.Forms.Label bdayLabel;
         private System.Windows.Forms.DateTimePicker bdayDate;
         private System.Windows.Forms.ComboBox genderComboBox;
@@ -624,5 +622,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label roleLabel;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox fnTextbox;
+        private System.Windows.Forms.Label fnLabel;
     }
 }

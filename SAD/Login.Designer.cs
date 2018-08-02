@@ -48,7 +48,7 @@
             this.passwordTextBox.Margin = new System.Windows.Forms.Padding(1);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(172, 23);
+            this.passwordTextBox.Size = new System.Drawing.Size(172, 47);
             this.passwordTextBox.TabIndex = 2;
             this.passwordTextBox.Text = "pass";
             this.passwordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -63,7 +63,7 @@
             this.userNameTextBox.Location = new System.Drawing.Point(33, 224);
             this.userNameTextBox.Margin = new System.Windows.Forms.Padding(1);
             this.userNameTextBox.Name = "userNameTextBox";
-            this.userNameTextBox.Size = new System.Drawing.Size(171, 23);
+            this.userNameTextBox.Size = new System.Drawing.Size(171, 47);
             this.userNameTextBox.TabIndex = 1;
             this.userNameTextBox.Text = "username";
             this.userNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -80,6 +80,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(281, 176);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -89,7 +90,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label1.Location = new System.Drawing.Point(91, 309);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 16);
+            this.label1.Size = new System.Drawing.Size(401, 40);
             this.label1.TabIndex = 5;
             this.label1.Text = "Forgot Password?";
             // 

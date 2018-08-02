@@ -12,20 +12,20 @@ namespace WindowsFormsApp4
 {
     public partial class Login : Form
     {
-        //private MySqlConnection con;
-      
+        private MySqlConnection con;
+     
         public Login()
         {
-            //con = new MySqlConnection("server=localhost; user id =root; database=sad_db; password=root;");
+            con = new MySqlConnection("server=localhost; user id =root; database=sad_db; password=root;");
             InitializeComponent();
         }
         //
         //-------->Login Button<--------
-        //
+        //``````
         private void loginBut_Click(object sender, EventArgs e)
         {
-        /*
-            using(var con = new MySqlConnection(conClass.connectionString))
+        
+            using(var con = new MySqlConnection(con.connectionString))
             MySqlDataAdapter sda = new MySqlDataAdapter("Select role From user Where user_name='"+ userNameTextBox.Text + "' And password='" + passwordTextBox.Text + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -40,7 +40,7 @@ namespace WindowsFormsApp4
             {
                 MessageBox.Show("login credentials are incorrect");
             }
-        */
+        
             
             if (userNameTextBox.Text == "admin")                                                        //If User is Admin
             {
@@ -119,11 +119,16 @@ namespace WindowsFormsApp4
                 userNameTextBox.ForeColor = Color.Silver;
             }
         }
-    /*
-        public class conClass
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-           public static readonly string connectionString = "Server=localhost;Port=3306;Database=sad_db;Uid=root:Pwd=root";
+            
         }
-    */
+        /*
+   public class conClass
+   {
+      public static readonly string connectionString = "Server=localhost;Port=3306;Database=sad_db;Uid=root:Pwd=root";
+   }
+*/
     }
 }
