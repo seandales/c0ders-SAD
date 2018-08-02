@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.10.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStaffForm.Designer.cs">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbConnect.cs" />
+    <Compile Include="HRM\HRMForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRM\HRMForm.Designer.cs">
+      <DependentUpon>HRMForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PACE Progression Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,11 +77,19 @@
     <Compile Include="PACEPrescriptionForm.Designer.cs">
       <DependentUpon>PACEPrescriptionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RecordDeliveryForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RecordDeliveryForm.Designer.cs">
       <DependentUpon>RecordDeliveryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoundedButtons.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="StaffLineupForm.cs">
       <SubType>Form</SubType>
@@ -82,10 +103,10 @@
     <Compile Include="StaffManagForm.Designer.cs">
       <DependentUpon>StaffManagForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules.cs">
+    <Compile Include="Admin\Modules.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules.Designer.cs">
+    <Compile Include="Admin\Modules.Designer.cs">
       <DependentUpon>Modules.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
@@ -120,6 +141,12 @@
     <Compile Include="TeacherStudentView.Designer.cs">
       <DependentUpon>TeacherStudentView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddStaffForm.resx">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRM\HRMForm.resx">
+      <DependentUpon>HRMForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PACE Progression Form.resx">
       <DependentUpon>PACE Progression Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,7 +165,7 @@
     <EmbeddedResource Include="StaffManagForm.resx">
       <DependentUpon>StaffManagForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modules.resx">
+    <EmbeddedResource Include="Admin\Modules.resx">
       <DependentUpon>Modules.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
@@ -146,13 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="RegistrarStudManagForm.resx">
       <DependentUpon>RegistrarStudManagForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +200,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WelcomeHD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WelcomeHD1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SidePanel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SidePanel1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopPanel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Faculty\" />
+    <Folder Include="Principal\" />
+    <Folder Include="Registrar\" />
+    <Folder Include="SC\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanelBG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanelBG2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanelBG21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanelBG22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnotherPanel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnotherPanel1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
