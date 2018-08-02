@@ -24,7 +24,7 @@ namespace WindowsFormsApp4
         private void loginBut_Click(object sender, EventArgs e)
         {
             //using(var con = new MySqlConnection(conClass.connectionString))
-            MySqlDataAdapter sda = new MySqlDataAdapter("Select role From user Where user_name='"+ userNameTextBox.Text + "' And password='" + passwordTextBox.Text + "'", con);
+            MySqlDataAdapter sda = new MySqlDataAdapter("Select role From user_table Where user_name='"+ userNameTextBox.Text + "' And password='" + passwordTextBox.Text + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if (dt.Rows.Count >= 1)
@@ -91,11 +91,16 @@ namespace WindowsFormsApp4
         {
 
         }
-        /*
-        public class conClass
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            public static readonly string connectionString = "Server=localhost;Port=3306;Database=sad_db;Uid=root:Pwd=root";
+
         }
-        */
+        /*
+public class conClass
+{
+   public static readonly string connectionString = "Server=localhost;Port=3306;Database=sad_db;Uid=root:Pwd=root";
+}
+*/
     }
 }

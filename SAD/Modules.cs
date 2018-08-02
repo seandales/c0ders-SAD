@@ -37,9 +37,14 @@ namespace WindowsFormsApp4
         }
 
         private void Modules_FormClosing(object sender, FormClosingEventArgs e)
+           
         {
+            Login newfrm = new Login();
+            newfrm.Show();
+            /*
             Login loginObject = new Login();
             loginObject.Show();
+            */
             
 
             
