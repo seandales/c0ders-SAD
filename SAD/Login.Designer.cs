@@ -111,7 +111,7 @@
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 15.9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(279, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(310, 74);
+            this.label3.Size = new System.Drawing.Size(304, 74);
             this.label3.TabIndex = 5;
             this.label3.Text = "WELCOME";
             // 
@@ -133,9 +133,9 @@
             this.label5.ForeColor = System.Drawing.Color.Gold;
             this.label5.Location = new System.Drawing.Point(169, 264);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(721, 84);
+            this.label5.Size = new System.Drawing.Size(68, 84);
             this.label5.TabIndex = 7;
-            this.label5.Text = "CHRISTIAN ACADEMY";
+            this.label5.Text = "`";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
@@ -145,7 +145,7 @@
             this.label6.ForeColor = System.Drawing.Color.DarkBlue;
             this.label6.Location = new System.Drawing.Point(612, 107);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 74);
+            this.label6.Size = new System.Drawing.Size(111, 74);
             this.label6.TabIndex = 8;
             this.label6.Text = "TO";
             // 
