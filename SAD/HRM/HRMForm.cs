@@ -10,25 +10,25 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp4
 {
-    public partial class Modules : Form
+    public partial class HRMForm : Form
     {
         public Login reference { get; set; }
 
         private string loginName;
 
-        public Modules(String role)
+        public HRMForm(String role)
         {
             InitializeComponent();
             loginName = role;
         }
-        public Modules()
+        public HRMForm()
         {
             InitializeComponent();
         }
         //
         //-------->Form Initialization<--------
         //
-        private void Modules_Load(object sender, EventArgs e)
+        private void HRMForm_Load(object sender, EventArgs e)
         {
             label1.Text = "Welcome back, " + loginName;
 
@@ -37,10 +37,10 @@ namespace WindowsFormsApp4
 
             //Sets All Panels to Fill
             homePanel.Dock = DockStyle.Fill;
-            accountsPanel.Dock = DockStyle.Fill;
+            staffsPanel.Dock = DockStyle.Fill;
 
             //Hides All Other Panels
-            accountsPanel.Visible = false;
+            staffsPanel.Visible = false;
         }
         //
         //-------->Navigation Buttons<--------
@@ -49,24 +49,23 @@ namespace WindowsFormsApp4
         {
             //Switches Button BackColors
             homeButton.BackColor = Color.FromArgb(57, 213, 255);
-            accountsButton.BackColor = Color.Transparent;
+            staffsButton.BackColor = Color.Transparent;
 
             //Switches Panel Visibility
             homePanel.Visible = true;
-            accountsPanel.Visible = false;
 
             //Changes Label
             navigationLabel.Text = "Home";
         }
-        private void accountsButton_Click(object sender, EventArgs e)
+        private void staffsButton_Click(object sender, EventArgs e)
         {
             //Switches Button BackColors
             homeButton.BackColor = Color.Transparent;
-            accountsButton.BackColor = Color.FromArgb(57, 213, 255);
+            staffsButton.BackColor = Color.FromArgb(57, 213, 255);
 
             //Switches Panel Visibility
             homePanel.Visible = false;
-            accountsPanel.Visible = true;
+            staffsPanel.Visible = true;
 
             //Changes Label
             navigationLabel.Text = "Accounts";
@@ -78,7 +77,7 @@ namespace WindowsFormsApp4
         {
             this.Close();
         }
-        private void Modules_FormClosing(object sender, FormClosingEventArgs e)
+        private void HRMForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             reference.Show();
         }

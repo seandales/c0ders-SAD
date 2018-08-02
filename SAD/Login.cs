@@ -24,7 +24,7 @@ namespace WindowsFormsApp4
         //
         private void loginBut_Click(object sender, EventArgs e)
         {
-            /*
+        /*
             using(var con = new MySqlConnection(conClass.connectionString))
             MySqlDataAdapter sda = new MySqlDataAdapter("Select role From user Where user_name='"+ userNameTextBox.Text + "' And password='" + passwordTextBox.Text + "'", con);
             DataTable dt = new DataTable();
@@ -40,11 +40,38 @@ namespace WindowsFormsApp4
             {
                 MessageBox.Show("login credentials are incorrect");
             }
-            */
-            this.Hide();
-            Modules modFrm = new Modules();
-            modFrm.reference = this;
-            modFrm.Show();
+        */
+            
+            if (userNameTextBox.Text == "admin")                                                        //If User is Admin
+            {
+                Modules modFrm = new Modules();
+                modFrm.reference = this;
+                modFrm.Show();
+                this.Hide();
+            }
+            else if (userNameTextBox.Text == "principal")                                              //If User is Principal
+            {
+
+            }else if (userNameTextBox.Text == "hrm")                                                    //If User is Human Resource Manager
+            {
+                HRMForm hrmFrm = new HRMForm();
+                hrmFrm.reference = this;
+                hrmFrm.Show();
+                this.Hide();
+            }
+            else if (userNameTextBox.Text == "registrar")                                              //If User is Registrar
+            {
+
+            }else if (userNameTextBox.Text == "sc")                                                     //If User is Supervising Custodian
+            {
+
+            }else if (userNameTextBox.Text == "supervisor" || userNameTextBox.Text == "monitor")        //If User is Faculty
+            {
+                if (userNameTextBox.Text == "monitor")
+                {
+                    //Hide PACE Prescriptions Button
+                }
+            }
         }
         //
         //-------->Exit Button<--------
@@ -92,11 +119,11 @@ namespace WindowsFormsApp4
                 userNameTextBox.ForeColor = Color.Silver;
             }
         }
-        /*
-public class conClass
-{
-   public static readonly string connectionString = "Server=localhost;Port=3306;Database=sad_db;Uid=root:Pwd=root";
-}
-*/
+    /*
+        public class conClass
+        {
+           public static readonly string connectionString = "Server=localhost;Port=3306;Database=sad_db;Uid=root:Pwd=root";
+        }
+    */
     }
 }

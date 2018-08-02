@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp4
 {
-    partial class Modules
+    partial class HRMForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Modules));
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HRMForm));
+            this.smallerIcons = new System.Windows.Forms.ImageList(this.components);
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.Icons = new System.Windows.Forms.ImageList(this.components);
-            this.accountsPanel = new System.Windows.Forms.Panel();
+            this.navigationLabel = new System.Windows.Forms.Label();
+            this.sidePanel = new System.Windows.Forms.Panel();
+            this.staffsButton = new System.Windows.Forms.Button();
+            this.homeButton = new System.Windows.Forms.Button();
+            this.signOutButton = new System.Windows.Forms.Button();
+            this.homePanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.staffsPanel = new System.Windows.Forms.Panel();
             this.addUserLabel = new System.Windows.Forms.Label();
             this.addPanel = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -46,7 +55,6 @@
             this.bdayDate = new System.Windows.Forms.DateTimePicker();
             this.bdayLabel = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
-            this.smallerIcons = new System.Windows.Forms.ImageList(this.components);
             this.clearButton = new System.Windows.Forms.Button();
             this.lnTextbox = new System.Windows.Forms.TextBox();
             this.mnTextbox = new System.Windows.Forms.TextBox();
@@ -59,22 +67,163 @@
             this.searchLabel = new System.Windows.Forms.Label();
             this.displayPanel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.homePanel = new System.Windows.Forms.Panel();
-            this.topPanel = new System.Windows.Forms.Panel();
-            this.ExitButton = new System.Windows.Forms.Button();
-            this.navigationLabel = new System.Windows.Forms.Label();
-            this.sidePanel = new System.Windows.Forms.Panel();
-            this.accountsButton = new System.Windows.Forms.Button();
-            this.homeButton = new System.Windows.Forms.Button();
-            this.signOutButton = new System.Windows.Forms.Button();
-            this.accountsPanel.SuspendLayout();
+            this.topPanel.SuspendLayout();
+            this.sidePanel.SuspendLayout();
+            this.homePanel.SuspendLayout();
+            this.staffsPanel.SuspendLayout();
             this.addPanel.SuspendLayout();
             this.displayPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.homePanel.SuspendLayout();
-            this.topPanel.SuspendLayout();
-            this.sidePanel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // smallerIcons
+            // 
+            this.smallerIcons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("smallerIcons.ImageStream")));
+            this.smallerIcons.TransparentColor = System.Drawing.Color.Transparent;
+            this.smallerIcons.Images.SetKeyName(0, "Add.png");
+            this.smallerIcons.Images.SetKeyName(1, "Edit.png");
+            this.smallerIcons.Images.SetKeyName(2, "Archive.png");
+            this.smallerIcons.Images.SetKeyName(3, "Delete.png");
+            // 
+            // topPanel
+            // 
+            this.topPanel.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.TopPanel;
+            this.topPanel.Controls.Add(this.ExitButton);
+            this.topPanel.Controls.Add(this.navigationLabel);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(125, 0);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1075, 60);
+            this.topPanel.TabIndex = 9;
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.BackColor = System.Drawing.Color.Transparent;
+            this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitButton.FlatAppearance.BorderSize = 0;
+            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButton.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.ForeColor = System.Drawing.Color.Black;
+            this.ExitButton.ImageKey = "X Icon.jpg";
+            this.ExitButton.ImageList = this.Icons;
+            this.ExitButton.Location = new System.Drawing.Point(1015, -1);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(60, 60);
+            this.ExitButton.TabIndex = 5;
+            this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.signOutButton_Click);
+            // 
+            // Icons
+            // 
+            this.Icons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("Icons.ImageStream")));
+            this.Icons.TransparentColor = System.Drawing.Color.Transparent;
+            this.Icons.Images.SetKeyName(0, "X Icon.jpg");
+            this.Icons.Images.SetKeyName(1, "Home.png");
+            this.Icons.Images.SetKeyName(2, "SignOut.png");
+            this.Icons.Images.SetKeyName(3, "Accounts.png");
+            // 
+            // navigationLabel
+            // 
+            this.navigationLabel.AutoSize = true;
+            this.navigationLabel.BackColor = System.Drawing.Color.Transparent;
+            this.navigationLabel.Font = new System.Drawing.Font("Lucida Console", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navigationLabel.Location = new System.Drawing.Point(5, 9);
+            this.navigationLabel.Name = "navigationLabel";
+            this.navigationLabel.Size = new System.Drawing.Size(140, 48);
+            this.navigationLabel.TabIndex = 0;
+            this.navigationLabel.Text = "Home";
+            // 
+            // sidePanel
+            // 
+            this.sidePanel.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.SidePanel1;
+            this.sidePanel.Controls.Add(this.staffsButton);
+            this.sidePanel.Controls.Add(this.homeButton);
+            this.sidePanel.Controls.Add(this.signOutButton);
+            this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidePanel.Location = new System.Drawing.Point(0, 0);
+            this.sidePanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.sidePanel.Name = "sidePanel";
+            this.sidePanel.Size = new System.Drawing.Size(125, 675);
+            this.sidePanel.TabIndex = 8;
+            // 
+            // staffsButton
+            // 
+            this.staffsButton.BackColor = System.Drawing.Color.Transparent;
+            this.staffsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.staffsButton.FlatAppearance.BorderSize = 0;
+            this.staffsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.staffsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.staffsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.staffsButton.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staffsButton.ForeColor = System.Drawing.Color.Black;
+            this.staffsButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.staffsButton.ImageKey = "Accounts.png";
+            this.staffsButton.ImageList = this.Icons;
+            this.staffsButton.Location = new System.Drawing.Point(0, 125);
+            this.staffsButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.staffsButton.Name = "staffsButton";
+            this.staffsButton.Size = new System.Drawing.Size(125, 125);
+            this.staffsButton.TabIndex = 6;
+            this.staffsButton.Text = "\r\nStaff";
+            this.staffsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.staffsButton.UseVisualStyleBackColor = false;
+            this.staffsButton.Click += new System.EventHandler(this.staffsButton_Click);
+            // 
+            // homeButton
+            // 
+            this.homeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.homeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeButton.FlatAppearance.BorderSize = 0;
+            this.homeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.homeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeButton.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeButton.ForeColor = System.Drawing.Color.Black;
+            this.homeButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.homeButton.ImageKey = "Home.png";
+            this.homeButton.ImageList = this.Icons;
+            this.homeButton.Location = new System.Drawing.Point(0, 0);
+            this.homeButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.homeButton.Name = "homeButton";
+            this.homeButton.Size = new System.Drawing.Size(125, 125);
+            this.homeButton.TabIndex = 5;
+            this.homeButton.Text = "\r\nHome";
+            this.homeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.homeButton.UseVisualStyleBackColor = false;
+            // 
+            // signOutButton
+            // 
+            this.signOutButton.BackColor = System.Drawing.Color.Transparent;
+            this.signOutButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.signOutButton.FlatAppearance.BorderSize = 0;
+            this.signOutButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.signOutButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.signOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signOutButton.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signOutButton.ForeColor = System.Drawing.Color.Black;
+            this.signOutButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.signOutButton.ImageKey = "SignOut.png";
+            this.signOutButton.ImageList = this.Icons;
+            this.signOutButton.Location = new System.Drawing.Point(0, 550);
+            this.signOutButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.signOutButton.Name = "signOutButton";
+            this.signOutButton.Size = new System.Drawing.Size(125, 125);
+            this.signOutButton.TabIndex = 3;
+            this.signOutButton.Text = "\r\nSign Out";
+            this.signOutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.signOutButton.UseVisualStyleBackColor = false;
+            this.signOutButton.Click += new System.EventHandler(this.signOutButton_Click);
+            // 
+            // homePanel
+            // 
+            this.homePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.homePanel.Controls.Add(this.label1);
+            this.homePanel.Location = new System.Drawing.Point(151, 83);
+            this.homePanel.Name = "homePanel";
+            this.homePanel.Size = new System.Drawing.Size(200, 100);
+            this.homePanel.TabIndex = 10;
             // 
             // label1
             // 
@@ -87,28 +236,19 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Status";
             // 
-            // Icons
+            // staffsPanel
             // 
-            this.Icons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("Icons.ImageStream")));
-            this.Icons.TransparentColor = System.Drawing.Color.Transparent;
-            this.Icons.Images.SetKeyName(0, "X Icon.jpg");
-            this.Icons.Images.SetKeyName(1, "Home.png");
-            this.Icons.Images.SetKeyName(2, "SignOut.png");
-            this.Icons.Images.SetKeyName(3, "Accounts.png");
-            // 
-            // accountsPanel
-            // 
-            this.accountsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.accountsPanel.Controls.Add(this.addUserLabel);
-            this.accountsPanel.Controls.Add(this.addPanel);
-            this.accountsPanel.Controls.Add(this.editButton);
-            this.accountsPanel.Controls.Add(this.textBox1);
-            this.accountsPanel.Controls.Add(this.searchLabel);
-            this.accountsPanel.Controls.Add(this.displayPanel);
-            this.accountsPanel.Location = new System.Drawing.Point(330, 209);
-            this.accountsPanel.Name = "accountsPanel";
-            this.accountsPanel.Size = new System.Drawing.Size(870, 466);
-            this.accountsPanel.TabIndex = 7;
+            this.staffsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.staffsPanel.Controls.Add(this.addUserLabel);
+            this.staffsPanel.Controls.Add(this.addPanel);
+            this.staffsPanel.Controls.Add(this.editButton);
+            this.staffsPanel.Controls.Add(this.textBox1);
+            this.staffsPanel.Controls.Add(this.searchLabel);
+            this.staffsPanel.Controls.Add(this.displayPanel);
+            this.staffsPanel.Location = new System.Drawing.Point(588, 219);
+            this.staffsPanel.Name = "staffsPanel";
+            this.staffsPanel.Size = new System.Drawing.Size(495, 404);
+            this.staffsPanel.TabIndex = 11;
             // 
             // addUserLabel
             // 
@@ -280,15 +420,6 @@
             this.addButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.addButton.UseVisualStyleBackColor = false;
             // 
-            // smallerIcons
-            // 
-            this.smallerIcons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("smallerIcons.ImageStream")));
-            this.smallerIcons.TransparentColor = System.Drawing.Color.Transparent;
-            this.smallerIcons.Images.SetKeyName(0, "Add.png");
-            this.smallerIcons.Images.SetKeyName(1, "Edit.png");
-            this.smallerIcons.Images.SetKeyName(2, "Archive.png");
-            this.smallerIcons.Images.SetKeyName(3, "Delete.png");
-            // 
             // clearButton
             // 
             this.clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(92)))), ((int)(((byte)(76)))));
@@ -419,192 +550,65 @@
             this.dataGridView1.Size = new System.Drawing.Size(748, 548);
             this.dataGridView1.TabIndex = 0;
             // 
-            // homePanel
-            // 
-            this.homePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.homePanel.Controls.Add(this.label1);
-            this.homePanel.Location = new System.Drawing.Point(125, 60);
-            this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(200, 100);
-            this.homePanel.TabIndex = 6;
-            // 
-            // topPanel
-            // 
-            this.topPanel.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.TopPanel;
-            this.topPanel.Controls.Add(this.ExitButton);
-            this.topPanel.Controls.Add(this.navigationLabel);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(125, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1075, 60);
-            this.topPanel.TabIndex = 5;
-            // 
-            // ExitButton
-            // 
-            this.ExitButton.BackColor = System.Drawing.Color.Transparent;
-            this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ExitButton.FlatAppearance.BorderSize = 0;
-            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitButton.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitButton.ForeColor = System.Drawing.Color.Black;
-            this.ExitButton.ImageKey = "X Icon.jpg";
-            this.ExitButton.ImageList = this.Icons;
-            this.ExitButton.Location = new System.Drawing.Point(1015, -1);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(60, 60);
-            this.ExitButton.TabIndex = 5;
-            this.ExitButton.UseVisualStyleBackColor = false;
-            this.ExitButton.Click += new System.EventHandler(this.signOutButton_Click);
-            // 
-            // navigationLabel
-            // 
-            this.navigationLabel.AutoSize = true;
-            this.navigationLabel.BackColor = System.Drawing.Color.Transparent;
-            this.navigationLabel.Font = new System.Drawing.Font("Lucida Console", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.navigationLabel.Location = new System.Drawing.Point(5, 9);
-            this.navigationLabel.Name = "navigationLabel";
-            this.navigationLabel.Size = new System.Drawing.Size(140, 48);
-            this.navigationLabel.TabIndex = 0;
-            this.navigationLabel.Text = "Home";
-            // 
-            // sidePanel
-            // 
-            this.sidePanel.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.SidePanel1;
-            this.sidePanel.Controls.Add(this.accountsButton);
-            this.sidePanel.Controls.Add(this.homeButton);
-            this.sidePanel.Controls.Add(this.signOutButton);
-            this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sidePanel.Location = new System.Drawing.Point(0, 0);
-            this.sidePanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(125, 675);
-            this.sidePanel.TabIndex = 4;
-            // 
-            // accountsButton
-            // 
-            this.accountsButton.BackColor = System.Drawing.Color.Transparent;
-            this.accountsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.accountsButton.FlatAppearance.BorderSize = 0;
-            this.accountsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
-            this.accountsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.accountsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.accountsButton.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accountsButton.ForeColor = System.Drawing.Color.Black;
-            this.accountsButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.accountsButton.ImageKey = "Accounts.png";
-            this.accountsButton.ImageList = this.Icons;
-            this.accountsButton.Location = new System.Drawing.Point(0, 125);
-            this.accountsButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.accountsButton.Name = "accountsButton";
-            this.accountsButton.Size = new System.Drawing.Size(125, 125);
-            this.accountsButton.TabIndex = 6;
-            this.accountsButton.Text = "\r\nAccounts";
-            this.accountsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.accountsButton.UseVisualStyleBackColor = false;
-            this.accountsButton.Click += new System.EventHandler(this.accountsButton_Click);
-            // 
-            // homeButton
-            // 
-            this.homeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
-            this.homeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.homeButton.FlatAppearance.BorderSize = 0;
-            this.homeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
-            this.homeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeButton.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeButton.ForeColor = System.Drawing.Color.Black;
-            this.homeButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.homeButton.ImageKey = "Home.png";
-            this.homeButton.ImageList = this.Icons;
-            this.homeButton.Location = new System.Drawing.Point(0, 0);
-            this.homeButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(125, 125);
-            this.homeButton.TabIndex = 5;
-            this.homeButton.Text = "\r\nHome";
-            this.homeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.homeButton.UseVisualStyleBackColor = false;
-            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
-            // 
-            // signOutButton
-            // 
-            this.signOutButton.BackColor = System.Drawing.Color.Transparent;
-            this.signOutButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signOutButton.FlatAppearance.BorderSize = 0;
-            this.signOutButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
-            this.signOutButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.signOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signOutButton.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signOutButton.ForeColor = System.Drawing.Color.Black;
-            this.signOutButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.signOutButton.ImageKey = "SignOut.png";
-            this.signOutButton.ImageList = this.Icons;
-            this.signOutButton.Location = new System.Drawing.Point(0, 550);
-            this.signOutButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.signOutButton.Name = "signOutButton";
-            this.signOutButton.Size = new System.Drawing.Size(125, 125);
-            this.signOutButton.TabIndex = 3;
-            this.signOutButton.Text = "\r\nSign Out";
-            this.signOutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.signOutButton.UseVisualStyleBackColor = false;
-            this.signOutButton.Click += new System.EventHandler(this.signOutButton_Click);
-            // 
-            // Modules
+            // HRMForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 675);
-            this.Controls.Add(this.accountsPanel);
+            this.Controls.Add(this.staffsPanel);
             this.Controls.Add(this.homePanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.sidePanel);
             this.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Modules";
+            this.Name = "HRMForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "---------------------------------------------------------------------------------" +
-    "---------------------";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Modules_FormClosing);
-            this.Load += new System.EventHandler(this.Modules_Load);
-            this.accountsPanel.ResumeLayout(false);
-            this.accountsPanel.PerformLayout();
+            this.Text = "HRMForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HRMForm_FormClosing);
+            this.Load += new System.EventHandler(this.HRMForm_Load);
+            this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
+            this.sidePanel.ResumeLayout(false);
+            this.homePanel.ResumeLayout(false);
+            this.homePanel.PerformLayout();
+            this.staffsPanel.ResumeLayout(false);
+            this.staffsPanel.PerformLayout();
             this.addPanel.ResumeLayout(false);
             this.addPanel.PerformLayout();
             this.displayPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.homePanel.ResumeLayout(false);
-            this.homePanel.PerformLayout();
-            this.topPanel.ResumeLayout(false);
-            this.topPanel.PerformLayout();
-            this.sidePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button signOutButton;
-        private System.Windows.Forms.Panel sidePanel;
+
+        private System.Windows.Forms.ImageList smallerIcons;
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.Label navigationLabel;
         private System.Windows.Forms.ImageList Icons;
+        private System.Windows.Forms.Label navigationLabel;
+        private System.Windows.Forms.Panel sidePanel;
+        private System.Windows.Forms.Button staffsButton;
         private System.Windows.Forms.Button homeButton;
-        private System.Windows.Forms.Button accountsButton;
+        private System.Windows.Forms.Button signOutButton;
         private System.Windows.Forms.Panel homePanel;
-        private System.Windows.Forms.Panel accountsPanel;
-        private System.Windows.Forms.Button editButton;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label searchLabel;
-        private System.Windows.Forms.Panel displayPanel;
-        private System.Windows.Forms.ImageList smallerIcons;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel staffsPanel;
         private System.Windows.Forms.Label addUserLabel;
         private System.Windows.Forms.Panel addPanel;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label roleLabel;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.ComboBox civilStatusComboBox;
+        private System.Windows.Forms.Label civilStatusLabel;
+        private System.Windows.Forms.ComboBox genderComboBox;
+        private System.Windows.Forms.Label genderLabel;
+        private System.Windows.Forms.DateTimePicker bdayDate;
+        private System.Windows.Forms.Label bdayLabel;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.TextBox lnTextbox;
@@ -613,16 +617,10 @@
         private System.Windows.Forms.Label lnLabel;
         private System.Windows.Forms.Label mnLabel;
         private System.Windows.Forms.Label fnLabel;
-        private System.Windows.Forms.Label bdayLabel;
-        private System.Windows.Forms.DateTimePicker bdayDate;
-        private System.Windows.Forms.ComboBox genderComboBox;
-        private System.Windows.Forms.Label genderLabel;
-        private System.Windows.Forms.Label civilStatusLabel;
-        private System.Windows.Forms.ComboBox civilStatusComboBox;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label emailLabel;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label roleLabel;
+        private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label searchLabel;
+        private System.Windows.Forms.Panel displayPanel;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
