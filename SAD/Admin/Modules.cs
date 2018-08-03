@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace WindowsFormsApp4
 {
@@ -41,6 +42,7 @@ namespace WindowsFormsApp4
 
             //Hides All Other Panels
             accountsPanel.Visible = false;
+            readData();
         }
         //
         //-------->Navigation Buttons<--------
@@ -84,6 +86,23 @@ namespace WindowsFormsApp4
         }
 
         private void addButton_Click(object sender, EventArgs e)
+        {
+
+        }
+        DbConnect connect = new DbConnect();
+        MySqlDataAdapter da;
+        DataTable dt;
+        public void readData()
+        {
+            MySqlConnection con = connect.connectFunc();
+            String query = "SELECT * FROM staff";
+            dt = new DataTable();
+            da = new MySqlDataAdapter(query, con);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
