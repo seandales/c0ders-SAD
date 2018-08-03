@@ -29,22 +29,24 @@ namespace WindowsFormsApp4
             MySqlDataAdapter sda = new MySqlDataAdapter("Select role From users Where user_name='"+ userNameTextBox.Text + "' And password='" + passwordTextBox.Text + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
+            
             //tring role = dt.Rows[1`][1].ToString();
             
-            if (dt>1)
-            {`
+            if (dt.Rows.Count >= 1)
+            {
                 this.Hide();
                 Modules modFrm = new Modules(dt.Rows[0][0].ToString());
                 modFrm.reference = this;
-                modFrm.Show();`
+                modFrm.Show();
             }
+            
             else
             {
                 MessageBox.Show("login credentials are incorrect");
             }
             
-        
-            
+       
+            /*
             if (role == "Admin")                                                        //If User is Admin
             {
                 Modules modFrm = new Modules();
@@ -52,10 +54,11 @@ namespace WindowsFormsApp4
                 modFrm.Show();
                 this.Hide();
             }
+            
             else if (userNameTextBox.Text == "Principal")                                              //If User is Principal
             {
 
-            }else if (userNameTextBox.Text == "HRM")                                                    //If User is Human Resource Manager
+            }else if (userNameTextBox.Text == "HRM")          ```````````````````````````````````````                                          //If User is Human Resource Manager
             {
                 HRMForm hrmFrm = new HRMForm();
                 hrmFrm.reference = this;
@@ -75,6 +78,7 @@ namespace WindowsFormsApp4
                     //Hide PACE Prescriptions Button
                 }
             }
+            */
         }
         //
         //-------->Exit Button<--------
