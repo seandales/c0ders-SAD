@@ -30,8 +30,8 @@ namespace WindowsFormsApp4
             DataTable dt = new DataTable();
             sda.Fill(dt);
             
-            //tring role = dt.Rows[1`][1].ToString();
-            
+            String role = dt.Rows[0][0].ToString();
+            /*
             if (dt.Rows.Count >= 1)
             {
                 this.Hide();
@@ -44,9 +44,9 @@ namespace WindowsFormsApp4
             {
                 MessageBox.Show("login credentials are incorrect");
             }
-            
+            */
        
-            /*
+            
             if (role == "Admin")                                                        //If User is Admin
             {
                 Modules modFrm = new Modules();
@@ -58,27 +58,27 @@ namespace WindowsFormsApp4
             else if (userNameTextBox.Text == "Principal")                                              //If User is Principal
             {
 
-            }else if (userNameTextBox.Text == "HRM")          ```````````````````````````````````````                                          //If User is Human Resource Manager
+            }else if (role == "HRM")                                                 //If User is Human Resource Manager
             {
                 HRMForm hrmFrm = new HRMForm();
                 hrmFrm.reference = this;
                 hrmFrm.Show();
                 this.Hide();
             }
-            else if (userNameTextBox.Text == "Registrar")                                              //If User is Registrar
+            else if (role == "Registrar")                                              //If User is Registrar
             {
 
-            }else if (userNameTextBox.Text == "sc")                                                     //If User is Supervising Custodian
+            }else if (role == "sc")                                                     //If User is Supervising Custodian
             {
 
-            }else if (userNameTextBox.Text == "supervisor" || userNameTextBox.Text == "monitor")        //If User is Faculty
+            }else if (role == "supervisor" || role == "monitor")        //If User is Faculty
             {
-                if (userNameTextBox.Text == "monitor")
+                if (role == "monitor")
                 {
                     //Hide PACE Prescriptions Button
                 }
             }
-            */
+            
         }
         //
         //-------->Exit Button<--------

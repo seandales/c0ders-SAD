@@ -50,8 +50,10 @@
             this.clearButton = new System.Windows.Forms.Button();
             this.lnTextbox = new System.Windows.Forms.TextBox();
             this.mnTextbox = new System.Windows.Forms.TextBox();
+            this.fnTextbox = new System.Windows.Forms.TextBox();
             this.lnLabel = new System.Windows.Forms.Label();
             this.mnLabel = new System.Windows.Forms.Label();
+            this.fnLabel = new System.Windows.Forms.Label();
             this.editButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.searchLabel = new System.Windows.Forms.Label();
@@ -65,8 +67,6 @@
             this.accountsButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
             this.signOutButton = new System.Windows.Forms.Button();
-            this.fnLabel = new System.Windows.Forms.Label();
-            this.fnTextbox = new System.Windows.Forms.TextBox();
             this.accountsPanel.SuspendLayout();
             this.addPanel.SuspendLayout();
             this.displayPanel.SuspendLayout();
@@ -105,9 +105,9 @@
             this.accountsPanel.Controls.Add(this.textBox1);
             this.accountsPanel.Controls.Add(this.searchLabel);
             this.accountsPanel.Controls.Add(this.displayPanel);
-            this.accountsPanel.Location = new System.Drawing.Point(187, 111);
+            this.accountsPanel.Location = new System.Drawing.Point(297, 184);
             this.accountsPanel.Name = "accountsPanel";
-            this.accountsPanel.Size = new System.Drawing.Size(1213, 716);
+            this.accountsPanel.Size = new System.Drawing.Size(1103, 643);
             this.accountsPanel.TabIndex = 7;
             // 
             // addUserLabel
@@ -279,6 +279,7 @@
             this.addButton.Text = "Add";
             this.addButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.addButton.UseVisualStyleBackColor = false;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // smallerIcons
             // 
@@ -323,6 +324,14 @@
             this.mnTextbox.TabIndex = 4;
             this.mnTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // fnTextbox
+            // 
+            this.fnTextbox.Location = new System.Drawing.Point(33, 40);
+            this.fnTextbox.Name = "fnTextbox";
+            this.fnTextbox.Size = new System.Drawing.Size(222, 47);
+            this.fnTextbox.TabIndex = 3;
+            this.fnTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // lnLabel
             // 
             this.lnLabel.AutoSize = true;
@@ -341,9 +350,20 @@
             this.mnLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnLabel.Location = new System.Drawing.Point(87, 75);
             this.mnLabel.Name = "mnLabel";
-            this.mnLabel.Size = new System.Drawing.Size(317, 40);
+            this.mnLabel.Size = new System.Drawing.Size(217, 40);
             this.mnLabel.TabIndex = 1;
-            this.mnLabel.Text = "Middle Name:";
+            this.mnLabel.Text = "password";
+            // 
+            // fnLabel
+            // 
+            this.fnLabel.AutoSize = true;
+            this.fnLabel.BackColor = System.Drawing.Color.Transparent;
+            this.fnLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fnLabel.Location = new System.Drawing.Point(90, 15);
+            this.fnLabel.Name = "fnLabel";
+            this.fnLabel.Size = new System.Drawing.Size(217, 40);
+            this.fnLabel.TabIndex = 0;
+            this.fnLabel.Text = "username";
             // 
             // editButton
             // 
@@ -418,7 +438,7 @@
             this.topPanel.Location = new System.Drawing.Point(125, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1305, 60);
+            this.topPanel.Size = new System.Drawing.Size(1378, 60);
             this.topPanel.TabIndex = 5;
             // 
             // ExitButton
@@ -460,7 +480,7 @@
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(125, 823);
+            this.sidePanel.Size = new System.Drawing.Size(125, 888);
             this.sidePanel.TabIndex = 4;
             // 
             // accountsButton
@@ -532,30 +552,11 @@
             this.signOutButton.UseVisualStyleBackColor = false;
             this.signOutButton.Click += new System.EventHandler(this.signOutButton_Click);
             // 
-            // fnLabel
-            // 
-            this.fnLabel.AutoSize = true;
-            this.fnLabel.BackColor = System.Drawing.Color.Transparent;
-            this.fnLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fnLabel.Location = new System.Drawing.Point(90, 15);
-            this.fnLabel.Name = "fnLabel";
-            this.fnLabel.Size = new System.Drawing.Size(292, 40);
-            this.fnLabel.TabIndex = 0;
-            this.fnLabel.Text = "First Name:";
-            // 
-            // fnTextbox
-            // 
-            this.fnTextbox.Location = new System.Drawing.Point(33, 40);
-            this.fnTextbox.Name = "fnTextbox";
-            this.fnTextbox.Size = new System.Drawing.Size(222, 47);
-            this.fnTextbox.TabIndex = 3;
-            this.fnTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // Modules
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1430, 823);
+            this.ClientSize = new System.Drawing.Size(1503, 888);
             this.Controls.Add(this.accountsPanel);
             this.Controls.Add(this.homePanel);
             this.Controls.Add(this.topPanel);
