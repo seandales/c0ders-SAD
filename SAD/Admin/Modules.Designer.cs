@@ -49,8 +49,8 @@
             this.smallerIcons = new System.Windows.Forms.ImageList(this.components);
             this.clearButton = new System.Windows.Forms.Button();
             this.lnTextbox = new System.Windows.Forms.TextBox();
-            this.mnTextbox = new System.Windows.Forms.TextBox();
-            this.fnTextbox = new System.Windows.Forms.TextBox();
+            this.txtpass = new System.Windows.Forms.TextBox();
+            this.txtfn = new System.Windows.Forms.TextBox();
             this.lnLabel = new System.Windows.Forms.Label();
             this.mnLabel = new System.Windows.Forms.Label();
             this.fnLabel = new System.Windows.Forms.Label();
@@ -138,8 +138,8 @@
             this.addPanel.Controls.Add(this.addButton);
             this.addPanel.Controls.Add(this.clearButton);
             this.addPanel.Controls.Add(this.lnTextbox);
-            this.addPanel.Controls.Add(this.mnTextbox);
-            this.addPanel.Controls.Add(this.fnTextbox);
+            this.addPanel.Controls.Add(this.txtpass);
+            this.addPanel.Controls.Add(this.txtfn);
             this.addPanel.Controls.Add(this.lnLabel);
             this.addPanel.Controls.Add(this.mnLabel);
             this.addPanel.Controls.Add(this.fnLabel);
@@ -316,21 +316,23 @@
             this.lnTextbox.TabIndex = 5;
             this.lnTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // mnTextbox
+            // txtpass
             // 
-            this.mnTextbox.Location = new System.Drawing.Point(33, 100);
-            this.mnTextbox.Name = "mnTextbox";
-            this.mnTextbox.Size = new System.Drawing.Size(222, 47);
-            this.mnTextbox.TabIndex = 4;
-            this.mnTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtpass.Location = new System.Drawing.Point(33, 100);
+            this.txtpass.Name = "txtpass";
+            this.txtpass.Size = new System.Drawing.Size(222, 47);
+            this.txtpass.TabIndex = 4;
+            this.txtpass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
             // 
-            // fnTextbox
+            // txtfn
             // 
-            this.fnTextbox.Location = new System.Drawing.Point(33, 40);
-            this.fnTextbox.Name = "fnTextbox";
-            this.fnTextbox.Size = new System.Drawing.Size(222, 47);
-            this.fnTextbox.TabIndex = 3;
-            this.fnTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtfn.Location = new System.Drawing.Point(33, 40);
+            this.txtfn.Name = "txtfn";
+            this.txtfn.Size = new System.Drawing.Size(222, 47);
+            this.txtfn.TabIndex = 3;
+            this.txtfn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtfn.TextChanged += new System.EventHandler(this.Textbox_TextChanged);
             // 
             // lnLabel
             // 
@@ -441,6 +443,7 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1378, 60);
             this.topPanel.TabIndex = 5;
+            this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
             // 
             // ExitButton
             // 
@@ -610,7 +613,7 @@
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.TextBox lnTextbox;
-        private System.Windows.Forms.TextBox mnTextbox;
+        private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.Label lnLabel;
         private System.Windows.Forms.Label mnLabel;
         private System.Windows.Forms.Label bdayLabel;
@@ -624,7 +627,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label roleLabel;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox fnTextbox;
+        private System.Windows.Forms.TextBox txtfn;
         private System.Windows.Forms.Label fnLabel;
     }
 }

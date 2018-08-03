@@ -106,5 +106,32 @@ namespace WindowsFormsApp4
         {
 
         }
+
+        private void Textbox_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(txtFn.Text))
+            {
+                butAdd.Enabled = false;
+
+            }
+
+
+
+            else
+            {
+                butAdd.Enabled = true;
+            }
+
+        }
+
+        private void topPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtpass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

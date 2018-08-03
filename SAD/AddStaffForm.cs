@@ -166,7 +166,7 @@ namespace WindowsFormsApp4
         {
             
             
-            if (String.IsNullOrWhiteSpace(txtFn.Text) || String.IsNullOrWhiteSpace(txtLn.Text) || String.IsNullOrWhiteSpace(txtMn.Text) ||
+            if (String.IsNullOrWhiteSpace(txtFn.Text) || String.IsNullOrWhiteSpace(txtpass.Text) || String.IsNullOrWhiteSpace(txtMn.Text) ||
                 String.IsNullOrWhiteSpace(txtMn.Text) || String.IsNullOrWhiteSpace(txtNationality.Text) ||
                 String.IsNullOrWhiteSpace(txtAddress.Text) || String.IsNullOrWhiteSpace(txtEmail.Text) || 
                 String.IsNullOrWhiteSpace(txtReligion.Text) || String.IsNullOrWhiteSpace(txtMn.Text))
