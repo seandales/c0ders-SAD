@@ -66,14 +66,14 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.searchLabel = new System.Windows.Forms.Label();
             this.displayPanel = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.staffListGridView = new System.Windows.Forms.DataGridView();
             this.topPanel.SuspendLayout();
             this.sidePanel.SuspendLayout();
             this.homePanel.SuspendLayout();
             this.staffsPanel.SuspendLayout();
             this.addPanel.SuspendLayout();
             this.displayPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffListGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // smallerIcons
@@ -246,7 +246,7 @@
             this.staffsPanel.Controls.Add(this.textBox1);
             this.staffsPanel.Controls.Add(this.searchLabel);
             this.staffsPanel.Controls.Add(this.displayPanel);
-            this.staffsPanel.Location = new System.Drawing.Point(588, 219);
+            this.staffsPanel.Location = new System.Drawing.Point(206, 189);
             this.staffsPanel.Name = "staffsPanel";
             this.staffsPanel.Size = new System.Drawing.Size(495, 404);
             this.staffsPanel.TabIndex = 11;
@@ -536,20 +536,20 @@
             // displayPanel
             // 
             this.displayPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.displayPanel.Controls.Add(this.dataGridView1);
+            this.displayPanel.Controls.Add(this.staffListGridView);
             this.displayPanel.Location = new System.Drawing.Point(11, 51);
             this.displayPanel.Name = "displayPanel";
             this.displayPanel.Size = new System.Drawing.Size(750, 550);
             this.displayPanel.TabIndex = 13;
             // 
-            // dataGridView1
+            // staffListGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(748, 548);
-            this.dataGridView1.TabIndex = 0;
+            this.staffListGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.staffListGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.staffListGridView.Location = new System.Drawing.Point(0, 0);
+            this.staffListGridView.Name = "staffListGridView";
+            this.staffListGridView.Size = new System.Drawing.Size(748, 548);
+            this.staffListGridView.TabIndex = 0;
             // 
             // HRMForm
             // 
@@ -579,7 +579,7 @@
             this.addPanel.ResumeLayout(false);
             this.addPanel.PerformLayout();
             this.displayPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffListGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -622,6 +622,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label searchLabel;
         private System.Windows.Forms.Panel displayPanel;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView staffListGridView;
     }
 }

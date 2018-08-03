@@ -51,7 +51,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.searchLabel = new System.Windows.Forms.Label();
             this.displayPanel = new System.Windows.Forms.Panel();
-            this.accountsGridView = new System.Windows.Forms.DataGridView();
+            this.accountListGridView = new System.Windows.Forms.DataGridView();
             this.homePanel = new System.Windows.Forms.Panel();
             this.topPanel = new System.Windows.Forms.Panel();
             this.ExitButton = new System.Windows.Forms.Button();
@@ -66,7 +66,7 @@
             this.accountsPanel.SuspendLayout();
             this.addPanel.SuspendLayout();
             this.displayPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountListGridView)).BeginInit();
             this.homePanel.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.sidePanel.SuspendLayout();
@@ -323,20 +323,20 @@
             // displayPanel
             // 
             this.displayPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.displayPanel.Controls.Add(this.accountsGridView);
+            this.displayPanel.Controls.Add(this.accountListGridView);
             this.displayPanel.Location = new System.Drawing.Point(11, 51);
             this.displayPanel.Name = "displayPanel";
             this.displayPanel.Size = new System.Drawing.Size(750, 550);
             this.displayPanel.TabIndex = 13;
             // 
-            // accountsGridView
+            // accountListGridView
             // 
-            this.accountsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.accountsGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.accountsGridView.Location = new System.Drawing.Point(0, 0);
-            this.accountsGridView.Name = "accountsGridView";
-            this.accountsGridView.Size = new System.Drawing.Size(748, 548);
-            this.accountsGridView.TabIndex = 0;
+            this.accountListGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.accountListGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.accountListGridView.Location = new System.Drawing.Point(0, 0);
+            this.accountListGridView.Name = "accountListGridView";
+            this.accountListGridView.Size = new System.Drawing.Size(748, 548);
+            this.accountListGridView.TabIndex = 0;
             // 
             // homePanel
             // 
@@ -523,7 +523,7 @@
             this.addPanel.ResumeLayout(false);
             this.addPanel.PerformLayout();
             this.displayPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.accountsGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountListGridView)).EndInit();
             this.homePanel.ResumeLayout(false);
             this.homePanel.PerformLayout();
             this.topPanel.ResumeLayout(false);
@@ -563,7 +563,7 @@
         private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.ComboBox roleComboBox;
         private System.Windows.Forms.Label roleLabel;
-        private System.Windows.Forms.DataGridView accountsGridView;
+        private System.Windows.Forms.DataGridView accountListGridView;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox email2Textbox;
         private System.Windows.Forms.TextBox emailTextbox;
