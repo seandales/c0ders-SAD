@@ -192,6 +192,7 @@
             this.homeButton.Text = "\r\nHome";
             this.homeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.homeButton.UseVisualStyleBackColor = false;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
             // signOutButton
             // 

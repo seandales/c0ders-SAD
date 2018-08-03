@@ -53,6 +53,7 @@ namespace WindowsFormsApp4
 
             //Switches Panel Visibility
             homePanel.Visible = true;
+            staffsPanel.Visible = false;
 
             //Changes Label
             navigationLabel.Text = "Home";
@@ -68,7 +69,7 @@ namespace WindowsFormsApp4
             staffsPanel.Visible = true;
 
             //Changes Label
-            navigationLabel.Text = "Accounts";
+            navigationLabel.Text = "Staffs";
         }
         //
         //-------->Exit Buttons<--------

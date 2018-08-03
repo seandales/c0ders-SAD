@@ -49,7 +49,7 @@ namespace WindowsFormsApp4
                 modFrm.Show();
                 this.Hide();
             }
-            else if (userNameTextBox.Text == "principal")                                              //If User is Principal
+            else if (userNameTextBox.Text == "principal")                                               //If User is Principal
             {
 
             }else if (userNameTextBox.Text == "hrm")                                                    //If User is Human Resource Manager
@@ -59,7 +59,7 @@ namespace WindowsFormsApp4
                 hrmFrm.Show();
                 this.Hide();
             }
-            else if (userNameTextBox.Text == "registrar")                                              //If User is Registrar
+            else if (userNameTextBox.Text == "registrar")                                               //If User is Registrar
             {
 
             }else if (userNameTextBox.Text == "sc")                                                     //If User is Supervising Custodian
