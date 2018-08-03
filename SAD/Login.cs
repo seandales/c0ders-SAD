@@ -23,13 +23,15 @@ namespace WindowsFormsApp4
         //-------->Login Button<--------
         //``````
         private void loginBut_Click(object sender, EventArgs e)
-        {
+        { 
         
-            using(var con = new MySqlConnection(con.connectionString))
-            MySqlDataAdapter sda = new MySqlDataAdapter("Select role From user Where user_name='"+ userNameTextBox.Text + "' And password='" + passwordTextBox.Text + "'", con);
+            //using(var con = new MySqlConnection(con.connectionString))
+            MySqlDataAdapter sda = new MySqlDataAdapter("Select role From users Where user_name='"+ userNameTextBox.Text + "' And password='" + passwordTextBox.Text + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            if (dt.Rows.Count >= 1)
+            String role = dt.Rows[0][0].ToString();
+            /*
+            if (role`)
             {
                 this.Hide();
                 Modules modFrm = new Modules(dt.Rows[0][0].ToString());
@@ -40,26 +42,27 @@ namespace WindowsFormsApp4
             {
                 MessageBox.Show("login credentials are incorrect");
             }
+            */
         
             
-            if (userNameTextBox.Text == "admin")                                                        //If User is Admin
+            if (role == "Admin")                                                        //If User is Admin
             {
                 Modules modFrm = new Modules();
                 modFrm.reference = this;
                 modFrm.Show();
                 this.Hide();
             }
-            else if (userNameTextBox.Text == "principal")                                              //If User is Principal
+            else if (userNameTextBox.Text == "Principal")                                              //If User is Principal
             {
 
-            }else if (userNameTextBox.Text == "hrm")                                                    //If User is Human Resource Manager
+            }else if (userNameTextBox.Text == "HRM")                                                    //If User is Human Resource Manager
             {
                 HRMForm hrmFrm = new HRMForm();
                 hrmFrm.reference = this;
                 hrmFrm.Show();
                 this.Hide();
             }
-            else if (userNameTextBox.Text == "registrar")                                              //If User is Registrar
+            else if (userNameTextBox.Text == "Registrar")                                              //If User is Registrar
             {
 
             }else if (userNameTextBox.Text == "sc")                                                     //If User is Supervising Custodian
@@ -124,11 +127,16 @@ namespace WindowsFormsApp4
         {
             
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
         /*
-   public class conClass
-   {
-      public static readonly string connectionString = "Server=localhost;Port=3306;Database=sad_db;Uid=root:Pwd=root";
-   }
+public class conClass
+{
+public static readonly string connectionString = "Server=localhost;Port=3306;Database=sad_db;Uid=root:Pwd=root";
+}
 */
     }
 }
