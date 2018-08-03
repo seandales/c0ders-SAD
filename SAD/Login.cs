@@ -29,20 +29,20 @@ namespace WindowsFormsApp4
             MySqlDataAdapter sda = new MySqlDataAdapter("Select role From users Where user_name='"+ userNameTextBox.Text + "' And password='" + passwordTextBox.Text + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            String role = dt.Rows[0][0].ToString();
-            /*
-            if (role`)
-            {
+            //tring role = dt.Rows[1`][1].ToString();
+            
+            if (dt>1)
+            {`
                 this.Hide();
                 Modules modFrm = new Modules(dt.Rows[0][0].ToString());
                 modFrm.reference = this;
-                modFrm.Show();
+                modFrm.Show();`
             }
             else
             {
                 MessageBox.Show("login credentials are incorrect");
             }
-            */
+            
         
             
             if (role == "Admin")                                                        //If User is Admin
