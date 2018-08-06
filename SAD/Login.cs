@@ -12,11 +12,12 @@ namespace WindowsFormsApp4
 {
     public partial class Login : Form
     {
-        //private MySqlConnection con;
-      
+        private DbConnect con = new DbConnect();
+        private string loginName;
+
         public Login()
         {
-            //con = new MySqlConnection("server=localhost; user id =root; database=sad_db; password=root;");
+            con.connectFunc();
             InitializeComponent();
         }
         //
@@ -24,54 +25,79 @@ namespace WindowsFormsApp4
         //
         private void loginBut_Click(object sender, EventArgs e)
         {
-        /*
-            using(var con = new MySqlConnection(conClass.connectionString))
-            MySqlDataAdapter sda = new MySqlDataAdapter("Select role From user Where user_name='"+ userNameTextBox.Text + "' And password='" + passwordTextBox.Text + "'", con);
+        
+            MySqlDataAdapter sda = new MySqlDataAdapter("SELECT role, firstname " +
+                                                        "FROM users_table " +
+                                                        "LEFT JOIN staff_table " +
+                                                        "ON users_table.idStaff = staff_table.idStaff " +
+                                                        "WHERE username ='" + userNameTextBox.Text.ToLower() +
+                                                        "' AND password ='" + passwordTextBox.Text +
+                                                        "'", con.connectFunc());
             DataTable dt = new DataTable();
             sda.Fill(dt);
+            
             if (dt.Rows.Count >= 1)
             {
-                this.Hide();
-                Modules modFrm = new Modules(dt.Rows[0][0].ToString());
-                modFrm.reference = this;
-                modFrm.Show();
+                String role = dt.Rows[0][0].ToString();
+                loginName = dt.Rows[0][1].ToString();
+
+                //Identifies User's Role
+                if (role == "admin")                                                        //If User is Admin
+                {
+                    Modules modFrm = new Modules(role);
+                    modFrm.reference = this;
+                    this.Hide();
+                    modFrm.Show();
+                }
+                else if (role == "principal")                                               //If User is Principal
+                {
+                    HRMForm hrmFrm = new HRMForm(role);
+                    hrmFrm.reference = this;
+                    this.Hide();
+                    hrmFrm.Show();
+                }
+                else if (role == "hrm")                                                     //If User is Human Resource Manager
+                {
+                    HRMForm hrmFrm = new HRMForm(role);
+                    hrmFrm.reference = this;
+                    this.Hide();
+                    hrmFrm.Show();
+                }
+                else if (role == "registrar")                                               //If User is Registrar
+                {
+                    /*
+                    RegForm regFrm = new RegForm(role);
+                    regFrm.reference = this;
+                    this.Hide();
+                    regFrm.Show();
+                    */
+                }
+                else if (role == "sc")                                                      //If User is Supervising Custodian
+                {
+                    /*
+                    SCForm scFrm = new SCForm(role);
+                    scFrm.reference = this;
+                    this.Hide();
+                    scFrm.Show();
+                    */
+                }
+                else if (role == "supervisor" || role == "monitor")                         //If User is Faculty
+                {
+                    FacultyForm facultyFrm = new FacultyForm(role);
+                    facultyFrm.reference = this;
+                    this.Hide();
+                    if (role == "monitor")
+                    {
+                        //Show-Hide PACE Prescriptions Button
+                        facultyFrm.showPrescriptions(false);
+                    }else facultyFrm.showPrescriptions(true);
+                    facultyFrm.Show();
+                }
             }
             else
             {
-                MessageBox.Show("login credentials are incorrect");
-            }
-        */
-            
-            if (userNameTextBox.Text == "admin")                                                        //If User is Admin
-            {
-                Modules modFrm = new Modules();
-                modFrm.reference = this;
-                modFrm.Show();
-                this.Hide();
-            }
-            else if (userNameTextBox.Text == "principal")                                               //If User is Principal
-            {
-
-            }else if (userNameTextBox.Text == "hrm")                                                    //If User is Human Resource Manager
-            {
-                HRMForm hrmFrm = new HRMForm();
-                hrmFrm.reference = this;
-                hrmFrm.Show();
-                this.Hide();
-            }
-            else if (userNameTextBox.Text == "registrar")                                               //If User is Registrar
-            {
-
-            }else if (userNameTextBox.Text == "sc")                                                     //If User is Supervising Custodian
-            {
-
-            }else if (userNameTextBox.Text == "supervisor" || userNameTextBox.Text == "monitor")        //If User is Faculty
-            {
-                if (userNameTextBox.Text == "monitor")
-                {
-                    //Hide PACE Prescriptions Button
-                }
-            }
+                MessageBox.Show("Username and Password do not match.");
+            }            
         }
         //
         //-------->Exit Button<--------
@@ -110,7 +136,6 @@ namespace WindowsFormsApp4
                 userNameTextBox.ForeColor = Color.Black;
             }
         }
-
         private void userNameTextBox_Leave(object sender, EventArgs e)
         {
             if (userNameTextBox.Text == "")
@@ -119,11 +144,5 @@ namespace WindowsFormsApp4
                 userNameTextBox.ForeColor = Color.Silver;
             }
         }
-    /*
-        public class conClass
-        {
-           public static readonly string connectionString = "Server=localhost;Port=3306;Database=sad_db;Uid=root:Pwd=root";
-        }
-    */
     }
 }

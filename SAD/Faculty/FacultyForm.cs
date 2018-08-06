@@ -10,23 +10,27 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp4
 {
-    public partial class Modules : Form
+    public partial class FacultyForm : Form
     {
         public Login reference { get; set; }
         private string loginName;
         //
         //-------->Form Initialization<--------
         //
-        public Modules()
+        public FacultyForm()
         {
             InitializeComponent();
         }
-        public Modules(String role)
+        public FacultyForm(String role)
         {
             InitializeComponent();
             loginName = role;
         }
-        private void Modules_Load(object sender, EventArgs e)
+        public void showPrescriptions(Boolean b)
+        {
+            prescriptionsButton.Visible = b;
+        }
+        private void HRMForm_Load(object sender, EventArgs e)
         {
             label1.Text = "Welcome back, " + loginName;
 
@@ -35,10 +39,8 @@ namespace WindowsFormsApp4
 
             //Sets All Panels to Fill
             homePanel.Dock = DockStyle.Fill;
-            accountsPanel.Dock = DockStyle.Fill;
 
             //Hides All Other Panels
-            accountsPanel.Visible = false;
         }
         //
         //-------->Navigation Buttons<--------
@@ -47,46 +49,44 @@ namespace WindowsFormsApp4
         {
             //Switches Button BackColors
             homeButton.BackColor = Color.FromArgb(57, 213, 255);
-            staffsButton.BackColor = Color.Transparent;
-            accountsButton.BackColor = Color.Transparent;
+            studentsButton.BackColor = Color.Transparent;
+            prescriptionsButton.BackColor = Color.Transparent;
 
             //Switches Panel Visibility
             homePanel.Visible = true;
-            staffsPanel.Visible = false;
-            accountsPanel.Visible = false;
 
             //Changes Label
             navigationLabel.Text = "Home";
         }
-        private void staffsButton_Click(object sender, EventArgs e)
+        private void studentsButton_Click(object sender, EventArgs e)
         {
             //Switches Button BackColors
             homeButton.BackColor = Color.Transparent;
-            staffsButton.BackColor = Color.FromArgb(57, 213, 255);
-            accountsButton.BackColor = Color.Transparent;
+            studentsButton.BackColor = Color.FromArgb(57, 213, 255);
+            prescriptionsButton.BackColor = Color.Transparent;
 
             //Switches Panel Visibility
             homePanel.Visible = false;
-            staffsPanel.Visible = true;
-            accountsPanel.Visible = false;
+        //    studentsPanel.Visible = true;
+        //    prescriptionsPanel.Visible = false;
 
             //Changes Label
-            navigationLabel.Text = "Staffs";
+            navigationLabel.Text = "Students";
         }
-        private void accountsButton_Click(object sender, EventArgs e)
+        private void prescriptionsButton_Click(object sender, EventArgs e)
         {
             //Switches Button BackColors
             homeButton.BackColor = Color.Transparent;
-            staffsButton.BackColor = Color.Transparent;
-            accountsButton.BackColor = Color.FromArgb(57, 213, 255);
+            studentsButton.BackColor = Color.Transparent;
+            prescriptionsButton.BackColor = Color.FromArgb(57, 213, 255);
 
             //Switches Panel Visibility
             homePanel.Visible = false;
-            staffsPanel.Visible = false;
-            accountsPanel.Visible = true;
+        //    studentsPanel.Visible = false;
+        //    prescriptionsPanel.Visible = true;
 
             //Changes Label
-            navigationLabel.Text = "Accounts";
+            navigationLabel.Text = "Prescriptions";
         }
         //
         //-------->Exit Buttons<--------
@@ -95,7 +95,7 @@ namespace WindowsFormsApp4
         {
             this.Close();
         }
-        private void Modules_FormClosing(object sender, FormClosingEventArgs e)
+        private void FacultyForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             reference.Show();
         }

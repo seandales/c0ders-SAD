@@ -11,7 +11,7 @@ namespace WindowsFormsApp4
     {
         public MySqlConnection connectFunc()
         {
-            String connection = "server=localhost; user id =root; database=sad_db; password=root;";
+            String connection = "server = localhost; user id = root; database = sad_db; password=root;";
             MySqlConnection con = new MySqlConnection(connection);
             return con;
         }

@@ -34,40 +34,39 @@
             this.Icons = new System.Windows.Forms.ImageList(this.components);
             this.accountsPanel = new System.Windows.Forms.Panel();
             this.addUserLabel = new System.Windows.Forms.Label();
-            this.addPanel = new System.Windows.Forms.Panel();
-            this.roleComboBox = new System.Windows.Forms.ComboBox();
-            this.roleLabel = new System.Windows.Forms.Label();
-            this.emailLabel = new System.Windows.Forms.Label();
-            this.addButton = new System.Windows.Forms.Button();
             this.smallerIcons = new System.Windows.Forms.ImageList(this.components);
-            this.clearButton = new System.Windows.Forms.Button();
-            this.pwVerifyTextbox = new System.Windows.Forms.TextBox();
-            this.pwTextbox = new System.Windows.Forms.TextBox();
-            this.unTextbox = new System.Windows.Forms.TextBox();
-            this.lnLabel = new System.Windows.Forms.Label();
-            this.mnLabel = new System.Windows.Forms.Label();
-            this.fnLabel = new System.Windows.Forms.Label();
             this.editButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.searchLabel = new System.Windows.Forms.Label();
             this.displayPanel = new System.Windows.Forms.Panel();
             this.accountListGridView = new System.Windows.Forms.DataGridView();
             this.homePanel = new System.Windows.Forms.Panel();
+            this.staffsPanel = new System.Windows.Forms.Panel();
+            this.addPanel = new System.Windows.Forms.Panel();
+            this.roleComboBox = new System.Windows.Forms.ComboBox();
+            this.roleLabel = new System.Windows.Forms.Label();
+            this.addButton = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.pwVerifyTextbox = new System.Windows.Forms.TextBox();
+            this.pwTextbox = new System.Windows.Forms.TextBox();
+            this.txt = new System.Windows.Forms.TextBox();
+            this.lnLabel = new System.Windows.Forms.Label();
+            this.mnLabel = new System.Windows.Forms.Label();
+            this.fnLabel = new System.Windows.Forms.Label();
             this.topPanel = new System.Windows.Forms.Panel();
             this.ExitButton = new System.Windows.Forms.Button();
             this.navigationLabel = new System.Windows.Forms.Label();
             this.sidePanel = new System.Windows.Forms.Panel();
+            this.staffsButton = new System.Windows.Forms.Button();
             this.accountsButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
             this.signOutButton = new System.Windows.Forms.Button();
-            this.emailTextbox = new System.Windows.Forms.TextBox();
-            this.email2Textbox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.accountsPanel.SuspendLayout();
-            this.addPanel.SuspendLayout();
             this.displayPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accountListGridView)).BeginInit();
             this.homePanel.SuspendLayout();
+            this.addPanel.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.sidePanel.SuspendLayout();
             this.SuspendLayout();
@@ -101,10 +100,9 @@
             this.accountsPanel.Controls.Add(this.textBox1);
             this.accountsPanel.Controls.Add(this.searchLabel);
             this.accountsPanel.Controls.Add(this.displayPanel);
-            this.accountsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.accountsPanel.Location = new System.Drawing.Point(125, 60);
+            this.accountsPanel.Location = new System.Drawing.Point(419, 118);
             this.accountsPanel.Name = "accountsPanel";
-            this.accountsPanel.Size = new System.Drawing.Size(1075, 615);
+            this.accountsPanel.Size = new System.Drawing.Size(952, 545);
             this.accountsPanel.TabIndex = 7;
             // 
             // addUserLabel
@@ -118,87 +116,6 @@
             this.addUserLabel.TabIndex = 16;
             this.addUserLabel.Text = "Add User";
             // 
-            // addPanel
-            // 
-            this.addPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addPanel.BackgroundImage")));
-            this.addPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.addPanel.Controls.Add(this.label2);
-            this.addPanel.Controls.Add(this.email2Textbox);
-            this.addPanel.Controls.Add(this.emailTextbox);
-            this.addPanel.Controls.Add(this.roleComboBox);
-            this.addPanel.Controls.Add(this.roleLabel);
-            this.addPanel.Controls.Add(this.emailLabel);
-            this.addPanel.Controls.Add(this.addButton);
-            this.addPanel.Controls.Add(this.clearButton);
-            this.addPanel.Controls.Add(this.pwVerifyTextbox);
-            this.addPanel.Controls.Add(this.pwTextbox);
-            this.addPanel.Controls.Add(this.unTextbox);
-            this.addPanel.Controls.Add(this.lnLabel);
-            this.addPanel.Controls.Add(this.mnLabel);
-            this.addPanel.Controls.Add(this.fnLabel);
-            this.addPanel.Location = new System.Drawing.Point(771, 51);
-            this.addPanel.Name = "addPanel";
-            this.addPanel.Size = new System.Drawing.Size(292, 550);
-            this.addPanel.TabIndex = 15;
-            // 
-            // roleComboBox
-            // 
-            this.roleComboBox.FormattingEnabled = true;
-            this.roleComboBox.Items.AddRange(new object[] {
-            "",
-            "Admin",
-            "Principal",
-            "Human Resource Manager",
-            "Registrar",
-            "Supervising Custodian",
-            "Supervisor",
-            "Monitor"});
-            this.roleComboBox.Location = new System.Drawing.Point(121, 430);
-            this.roleComboBox.Name = "roleComboBox";
-            this.roleComboBox.Size = new System.Drawing.Size(116, 24);
-            this.roleComboBox.TabIndex = 28;
-            // 
-            // roleLabel
-            // 
-            this.roleLabel.AutoSize = true;
-            this.roleLabel.BackColor = System.Drawing.Color.Transparent;
-            this.roleLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roleLabel.Location = new System.Drawing.Point(52, 433);
-            this.roleLabel.Name = "roleLabel";
-            this.roleLabel.Size = new System.Drawing.Size(63, 16);
-            this.roleLabel.TabIndex = 27;
-            this.roleLabel.Text = "Role:";
-            // 
-            // emailLabel
-            // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.BackColor = System.Drawing.Color.Transparent;
-            this.emailLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLabel.Location = new System.Drawing.Point(64, 195);
-            this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(173, 16);
-            this.emailLabel.TabIndex = 25;
-            this.emailLabel.Text = "E-Mail Address:";
-            this.emailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // addButton
-            // 
-            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(220)))), ((int)(((byte)(129)))));
-            this.addButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(1)))));
-            this.addButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
-            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.ImageKey = "(none)";
-            this.addButton.ImageList = this.smallerIcons;
-            this.addButton.Location = new System.Drawing.Point(157, 491);
-            this.addButton.Name = "addButton";
-            this.addButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.addButton.Size = new System.Drawing.Size(100, 34);
-            this.addButton.TabIndex = 18;
-            this.addButton.Text = "Add";
-            this.addButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.addButton.UseVisualStyleBackColor = false;
-            // 
             // smallerIcons
             // 
             this.smallerIcons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("smallerIcons.ImageStream")));
@@ -207,81 +124,6 @@
             this.smallerIcons.Images.SetKeyName(1, "Edit.png");
             this.smallerIcons.Images.SetKeyName(2, "Archive.png");
             this.smallerIcons.Images.SetKeyName(3, "Delete.png");
-            // 
-            // clearButton
-            // 
-            this.clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(92)))), ((int)(((byte)(76)))));
-            this.clearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(28)))), ((int)(((byte)(12)))));
-            this.clearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(60)))), ((int)(((byte)(44)))));
-            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearButton.ImageKey = "(none)";
-            this.clearButton.ImageList = this.smallerIcons;
-            this.clearButton.Location = new System.Drawing.Point(33, 491);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.clearButton.Size = new System.Drawing.Size(100, 34);
-            this.clearButton.TabIndex = 17;
-            this.clearButton.Text = "Cancel";
-            this.clearButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.clearButton.UseVisualStyleBackColor = false;
-            // 
-            // pwVerifyTextbox
-            // 
-            this.pwVerifyTextbox.Location = new System.Drawing.Point(33, 160);
-            this.pwVerifyTextbox.Name = "pwVerifyTextbox";
-            this.pwVerifyTextbox.Size = new System.Drawing.Size(222, 23);
-            this.pwVerifyTextbox.TabIndex = 5;
-            this.pwVerifyTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pwTextbox
-            // 
-            this.pwTextbox.Location = new System.Drawing.Point(33, 100);
-            this.pwTextbox.Name = "pwTextbox";
-            this.pwTextbox.Size = new System.Drawing.Size(222, 23);
-            this.pwTextbox.TabIndex = 4;
-            this.pwTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // unTextbox
-            // 
-            this.unTextbox.Location = new System.Drawing.Point(33, 40);
-            this.unTextbox.Name = "unTextbox";
-            this.unTextbox.Size = new System.Drawing.Size(222, 23);
-            this.unTextbox.TabIndex = 3;
-            this.unTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lnLabel
-            // 
-            this.lnLabel.AutoSize = true;
-            this.lnLabel.BackColor = System.Drawing.Color.Transparent;
-            this.lnLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnLabel.Location = new System.Drawing.Point(57, 135);
-            this.lnLabel.Name = "lnLabel";
-            this.lnLabel.Size = new System.Drawing.Size(184, 16);
-            this.lnLabel.TabIndex = 2;
-            this.lnLabel.Text = "Repeat Password:";
-            // 
-            // mnLabel
-            // 
-            this.mnLabel.AutoSize = true;
-            this.mnLabel.BackColor = System.Drawing.Color.Transparent;
-            this.mnLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnLabel.Location = new System.Drawing.Point(96, 75);
-            this.mnLabel.Name = "mnLabel";
-            this.mnLabel.Size = new System.Drawing.Size(107, 16);
-            this.mnLabel.TabIndex = 1;
-            this.mnLabel.Text = "Password:";
-            // 
-            // fnLabel
-            // 
-            this.fnLabel.AutoSize = true;
-            this.fnLabel.BackColor = System.Drawing.Color.Transparent;
-            this.fnLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fnLabel.Location = new System.Drawing.Point(94, 15);
-            this.fnLabel.Name = "fnLabel";
-            this.fnLabel.Size = new System.Drawing.Size(107, 16);
-            this.fnLabel.TabIndex = 0;
-            this.fnLabel.Text = "Username:";
             // 
             // editButton
             // 
@@ -347,6 +189,161 @@
             this.homePanel.Size = new System.Drawing.Size(200, 100);
             this.homePanel.TabIndex = 6;
             // 
+            // staffsPanel
+            // 
+            this.staffsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.staffsPanel.Location = new System.Drawing.Point(157, 170);
+            this.staffsPanel.Name = "staffsPanel";
+            this.staffsPanel.Size = new System.Drawing.Size(200, 100);
+            this.staffsPanel.TabIndex = 7;
+            // 
+            // addPanel
+            // 
+            this.addPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addPanel.BackgroundImage")));
+            this.addPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.addPanel.Controls.Add(this.panel1);
+            this.addPanel.Controls.Add(this.roleComboBox);
+            this.addPanel.Controls.Add(this.roleLabel);
+            this.addPanel.Controls.Add(this.addButton);
+            this.addPanel.Controls.Add(this.clearButton);
+            this.addPanel.Controls.Add(this.pwVerifyTextbox);
+            this.addPanel.Controls.Add(this.pwTextbox);
+            this.addPanel.Controls.Add(this.txt);
+            this.addPanel.Controls.Add(this.lnLabel);
+            this.addPanel.Controls.Add(this.mnLabel);
+            this.addPanel.Controls.Add(this.fnLabel);
+            this.addPanel.Location = new System.Drawing.Point(771, 51);
+            this.addPanel.Name = "addPanel";
+            this.addPanel.Size = new System.Drawing.Size(292, 550);
+            this.addPanel.TabIndex = 15;
+            // 
+            // roleComboBox
+            // 
+            this.roleComboBox.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roleComboBox.FormattingEnabled = true;
+            this.roleComboBox.Items.AddRange(new object[] {
+            "",
+            "Admin",
+            "Principal",
+            "Human Resource Manager",
+            "Registrar",
+            "Supervising Custodian",
+            "Supervisor",
+            "Monitor"});
+            this.roleComboBox.Location = new System.Drawing.Point(33, 232);
+            this.roleComboBox.Name = "roleComboBox";
+            this.roleComboBox.Size = new System.Drawing.Size(116, 25);
+            this.roleComboBox.TabIndex = 28;
+            // 
+            // roleLabel
+            // 
+            this.roleLabel.AutoSize = true;
+            this.roleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.roleLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roleLabel.Location = new System.Drawing.Point(30, 212);
+            this.roleLabel.Name = "roleLabel";
+            this.roleLabel.Size = new System.Drawing.Size(53, 17);
+            this.roleLabel.TabIndex = 27;
+            this.roleLabel.Text = "Role:";
+            // 
+            // addButton
+            // 
+            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(220)))), ((int)(((byte)(129)))));
+            this.addButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(1)))));
+            this.addButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
+            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addButton.ImageKey = "(none)";
+            this.addButton.ImageList = this.smallerIcons;
+            this.addButton.Location = new System.Drawing.Point(157, 491);
+            this.addButton.Name = "addButton";
+            this.addButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.addButton.Size = new System.Drawing.Size(100, 34);
+            this.addButton.TabIndex = 18;
+            this.addButton.Text = "Add";
+            this.addButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.addButton.UseVisualStyleBackColor = false;
+            // 
+            // clearButton
+            // 
+            this.clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(92)))), ((int)(((byte)(76)))));
+            this.clearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(28)))), ((int)(((byte)(12)))));
+            this.clearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(60)))), ((int)(((byte)(44)))));
+            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.ImageKey = "(none)";
+            this.clearButton.ImageList = this.smallerIcons;
+            this.clearButton.Location = new System.Drawing.Point(33, 491);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.clearButton.Size = new System.Drawing.Size(100, 34);
+            this.clearButton.TabIndex = 17;
+            this.clearButton.Text = "Cancel";
+            this.clearButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.clearButton.UseVisualStyleBackColor = false;
+            // 
+            // pwVerifyTextbox
+            // 
+            this.pwVerifyTextbox.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pwVerifyTextbox.Location = new System.Drawing.Point(33, 156);
+            this.pwVerifyTextbox.Name = "pwVerifyTextbox";
+            this.pwVerifyTextbox.PasswordChar = '*';
+            this.pwVerifyTextbox.Size = new System.Drawing.Size(222, 25);
+            this.pwVerifyTextbox.TabIndex = 5;
+            this.pwVerifyTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pwTextbox
+            // 
+            this.pwTextbox.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pwTextbox.Location = new System.Drawing.Point(33, 108);
+            this.pwTextbox.Name = "pwTextbox";
+            this.pwTextbox.PasswordChar = '*';
+            this.pwTextbox.Size = new System.Drawing.Size(222, 25);
+            this.pwTextbox.TabIndex = 4;
+            this.pwTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt
+            // 
+            this.txt.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt.Location = new System.Drawing.Point(33, 60);
+            this.txt.Name = "txt";
+            this.txt.Size = new System.Drawing.Size(222, 25);
+            this.txt.TabIndex = 3;
+            this.txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lnLabel
+            // 
+            this.lnLabel.AutoSize = true;
+            this.lnLabel.BackColor = System.Drawing.Color.Transparent;
+            this.lnLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnLabel.Location = new System.Drawing.Point(30, 136);
+            this.lnLabel.Name = "lnLabel";
+            this.lnLabel.Size = new System.Drawing.Size(152, 17);
+            this.lnLabel.TabIndex = 2;
+            this.lnLabel.Text = "Repeat Password:";
+            // 
+            // mnLabel
+            // 
+            this.mnLabel.AutoSize = true;
+            this.mnLabel.BackColor = System.Drawing.Color.Transparent;
+            this.mnLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnLabel.Location = new System.Drawing.Point(30, 88);
+            this.mnLabel.Name = "mnLabel";
+            this.mnLabel.Size = new System.Drawing.Size(89, 17);
+            this.mnLabel.TabIndex = 1;
+            this.mnLabel.Text = "Password:";
+            // 
+            // fnLabel
+            // 
+            this.fnLabel.AutoSize = true;
+            this.fnLabel.BackColor = System.Drawing.Color.Transparent;
+            this.fnLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fnLabel.Location = new System.Drawing.Point(30, 40);
+            this.fnLabel.Name = "fnLabel";
+            this.fnLabel.Size = new System.Drawing.Size(89, 17);
+            this.fnLabel.TabIndex = 0;
+            this.fnLabel.Text = "Username:";
+            // 
             // topPanel
             // 
             this.topPanel.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.TopPanel;
@@ -391,6 +388,7 @@
             // sidePanel
             // 
             this.sidePanel.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.SidePanel1;
+            this.sidePanel.Controls.Add(this.staffsButton);
             this.sidePanel.Controls.Add(this.accountsButton);
             this.sidePanel.Controls.Add(this.homeButton);
             this.sidePanel.Controls.Add(this.signOutButton);
@@ -400,6 +398,29 @@
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(125, 675);
             this.sidePanel.TabIndex = 4;
+            // 
+            // staffsButton
+            // 
+            this.staffsButton.BackColor = System.Drawing.Color.Transparent;
+            this.staffsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.staffsButton.FlatAppearance.BorderSize = 0;
+            this.staffsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.staffsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.staffsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.staffsButton.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staffsButton.ForeColor = System.Drawing.Color.Black;
+            this.staffsButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.staffsButton.ImageKey = "Accounts.png";
+            this.staffsButton.ImageList = this.Icons;
+            this.staffsButton.Location = new System.Drawing.Point(0, 125);
+            this.staffsButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.staffsButton.Name = "staffsButton";
+            this.staffsButton.Size = new System.Drawing.Size(125, 125);
+            this.staffsButton.TabIndex = 7;
+            this.staffsButton.Text = "\r\nStaffs";
+            this.staffsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.staffsButton.UseVisualStyleBackColor = false;
+            this.staffsButton.Click += new System.EventHandler(this.staffsButton_Click);
             // 
             // accountsButton
             // 
@@ -414,7 +435,7 @@
             this.accountsButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.accountsButton.ImageKey = "Accounts.png";
             this.accountsButton.ImageList = this.Icons;
-            this.accountsButton.Location = new System.Drawing.Point(0, 125);
+            this.accountsButton.Location = new System.Drawing.Point(0, 250);
             this.accountsButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.accountsButton.Name = "accountsButton";
             this.accountsButton.Size = new System.Drawing.Size(125, 125);
@@ -470,39 +491,23 @@
             this.signOutButton.UseVisualStyleBackColor = false;
             this.signOutButton.Click += new System.EventHandler(this.signOutButton_Click);
             // 
-            // emailTextbox
+            // panel1
             // 
-            this.emailTextbox.Location = new System.Drawing.Point(33, 220);
-            this.emailTextbox.Name = "emailTextbox";
-            this.emailTextbox.Size = new System.Drawing.Size(120, 23);
-            this.emailTextbox.TabIndex = 29;
-            this.emailTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // email2Textbox
-            // 
-            this.email2Textbox.Location = new System.Drawing.Point(173, 220);
-            this.email2Textbox.Name = "email2Textbox";
-            this.email2Textbox.Size = new System.Drawing.Size(82, 23);
-            this.email2Textbox.TabIndex = 30;
-            this.email2Textbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(153, 223);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 19);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "@";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel1.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.TopPanel;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(288, 16);
+            this.panel1.TabIndex = 36;
             // 
             // Modules
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1200, 675);
+            this.Controls.Add(this.staffsPanel);
             this.Controls.Add(this.accountsPanel);
             this.Controls.Add(this.homePanel);
             this.Controls.Add(this.topPanel);
@@ -514,18 +519,17 @@
             this.MinimizeBox = false;
             this.Name = "Modules";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "---------------------------------------------------------------------------------" +
-    "---------------------";
+            this.Text = "Admin";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Modules_FormClosing);
             this.Load += new System.EventHandler(this.Modules_Load);
             this.accountsPanel.ResumeLayout(false);
             this.accountsPanel.PerformLayout();
-            this.addPanel.ResumeLayout(false);
-            this.addPanel.PerformLayout();
             this.displayPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.accountListGridView)).EndInit();
             this.homePanel.ResumeLayout(false);
             this.homePanel.PerformLayout();
+            this.addPanel.ResumeLayout(false);
+            this.addPanel.PerformLayout();
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             this.sidePanel.ResumeLayout(false);
@@ -556,16 +560,15 @@
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.TextBox pwVerifyTextbox;
         private System.Windows.Forms.TextBox pwTextbox;
-        private System.Windows.Forms.TextBox unTextbox;
+        private System.Windows.Forms.TextBox txt;
         private System.Windows.Forms.Label lnLabel;
         private System.Windows.Forms.Label mnLabel;
         private System.Windows.Forms.Label fnLabel;
-        private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.ComboBox roleComboBox;
         private System.Windows.Forms.Label roleLabel;
         private System.Windows.Forms.DataGridView accountListGridView;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox email2Textbox;
-        private System.Windows.Forms.TextBox emailTextbox;
+        private System.Windows.Forms.Button staffsButton;
+        private System.Windows.Forms.Panel staffsPanel;
+        private System.Windows.Forms.Panel panel1;
     }
 }

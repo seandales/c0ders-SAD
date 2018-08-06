@@ -13,21 +13,19 @@ namespace WindowsFormsApp4
     public partial class HRMForm : Form
     {
         public Login reference { get; set; }
-
         private string loginName;
-
+        //
+        //-------->Form Initialization<--------
+        //
+        public HRMForm()
+        {
+            InitializeComponent();
+        }
         public HRMForm(String role)
         {
             InitializeComponent();
             loginName = role;
         }
-        public HRMForm()
-        {
-            InitializeComponent();
-        }
-        //
-        //-------->Form Initialization<--------
-        //
         private void HRMForm_Load(object sender, EventArgs e)
         {
             label1.Text = "Welcome back, " + loginName;
@@ -72,6 +70,10 @@ namespace WindowsFormsApp4
             navigationLabel.Text = "Staffs";
         }
         //
+        //-------->Staffs Panel Buttons<--------
+        //
+
+        //
         //-------->Exit Buttons<--------
         //
         private void signOutButton_Click(object sender, EventArgs e)
@@ -81,6 +83,11 @@ namespace WindowsFormsApp4
         private void HRMForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             reference.Show();
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

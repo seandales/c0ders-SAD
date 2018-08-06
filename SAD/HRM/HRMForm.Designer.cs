@@ -31,34 +31,30 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HRMForm));
             this.smallerIcons = new System.Windows.Forms.ImageList(this.components);
-            this.topPanel = new System.Windows.Forms.Panel();
-            this.ExitButton = new System.Windows.Forms.Button();
             this.Icons = new System.Windows.Forms.ImageList(this.components);
-            this.navigationLabel = new System.Windows.Forms.Label();
-            this.sidePanel = new System.Windows.Forms.Panel();
-            this.staffsButton = new System.Windows.Forms.Button();
-            this.homeButton = new System.Windows.Forms.Button();
-            this.signOutButton = new System.Windows.Forms.Button();
             this.homePanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.staffsPanel = new System.Windows.Forms.Panel();
-            this.addUserLabel = new System.Windows.Forms.Label();
             this.addPanel = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.addUserLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtEmail2 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtRole = new System.Windows.Forms.ComboBox();
             this.roleLabel = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.emailLabel = new System.Windows.Forms.Label();
-            this.civilStatusComboBox = new System.Windows.Forms.ComboBox();
+            this.comboCivilStatus = new System.Windows.Forms.ComboBox();
             this.civilStatusLabel = new System.Windows.Forms.Label();
-            this.genderComboBox = new System.Windows.Forms.ComboBox();
+            this.comboGender = new System.Windows.Forms.ComboBox();
             this.genderLabel = new System.Windows.Forms.Label();
-            this.bdayDate = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeBirthdate = new System.Windows.Forms.DateTimePicker();
             this.bdayLabel = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
-            this.lnTextbox = new System.Windows.Forms.TextBox();
-            this.mnTextbox = new System.Windows.Forms.TextBox();
-            this.fnTextbox = new System.Windows.Forms.TextBox();
+            this.txtLn = new System.Windows.Forms.TextBox();
+            this.txtMn = new System.Windows.Forms.TextBox();
+            this.txtFn = new System.Windows.Forms.TextBox();
             this.lnLabel = new System.Windows.Forms.Label();
             this.mnLabel = new System.Windows.Forms.Label();
             this.fnLabel = new System.Windows.Forms.Label();
@@ -67,13 +63,21 @@
             this.searchLabel = new System.Windows.Forms.Label();
             this.displayPanel = new System.Windows.Forms.Panel();
             this.staffListGridView = new System.Windows.Forms.DataGridView();
-            this.topPanel.SuspendLayout();
-            this.sidePanel.SuspendLayout();
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.ExitButton = new System.Windows.Forms.Button();
+            this.navigationLabel = new System.Windows.Forms.Label();
+            this.sidePanel = new System.Windows.Forms.Panel();
+            this.staffsButton = new System.Windows.Forms.Button();
+            this.homeButton = new System.Windows.Forms.Button();
+            this.signOutButton = new System.Windows.Forms.Button();
             this.homePanel.SuspendLayout();
             this.staffsPanel.SuspendLayout();
             this.addPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.displayPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.staffListGridView)).BeginInit();
+            this.topPanel.SuspendLayout();
+            this.sidePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // smallerIcons
@@ -84,6 +88,396 @@
             this.smallerIcons.Images.SetKeyName(1, "Edit.png");
             this.smallerIcons.Images.SetKeyName(2, "Archive.png");
             this.smallerIcons.Images.SetKeyName(3, "Delete.png");
+            // 
+            // Icons
+            // 
+            this.Icons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("Icons.ImageStream")));
+            this.Icons.TransparentColor = System.Drawing.Color.Transparent;
+            this.Icons.Images.SetKeyName(0, "X Icon.jpg");
+            this.Icons.Images.SetKeyName(1, "Home.png");
+            this.Icons.Images.SetKeyName(2, "SignOut.png");
+            this.Icons.Images.SetKeyName(3, "Accounts.png");
+            // 
+            // homePanel
+            // 
+            this.homePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.homePanel.Controls.Add(this.label1);
+            this.homePanel.Location = new System.Drawing.Point(151, 83);
+            this.homePanel.Name = "homePanel";
+            this.homePanel.Size = new System.Drawing.Size(200, 100);
+            this.homePanel.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(34, 51);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Status";
+            // 
+            // staffsPanel
+            // 
+            this.staffsPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("staffsPanel.BackgroundImage")));
+            this.staffsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.staffsPanel.Controls.Add(this.addPanel);
+            this.staffsPanel.Controls.Add(this.editButton);
+            this.staffsPanel.Controls.Add(this.textBox1);
+            this.staffsPanel.Controls.Add(this.searchLabel);
+            this.staffsPanel.Controls.Add(this.displayPanel);
+            this.staffsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.staffsPanel.Location = new System.Drawing.Point(125, 60);
+            this.staffsPanel.Name = "staffsPanel";
+            this.staffsPanel.Size = new System.Drawing.Size(1075, 615);
+            this.staffsPanel.TabIndex = 11;
+            // 
+            // addPanel
+            // 
+            this.addPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addPanel.BackgroundImage")));
+            this.addPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.addPanel.Controls.Add(this.panel1);
+            this.addPanel.Controls.Add(this.label2);
+            this.addPanel.Controls.Add(this.txtEmail2);
+            this.addPanel.Controls.Add(this.txtEmail);
+            this.addPanel.Controls.Add(this.txtRole);
+            this.addPanel.Controls.Add(this.roleLabel);
+            this.addPanel.Controls.Add(this.emailLabel);
+            this.addPanel.Controls.Add(this.comboCivilStatus);
+            this.addPanel.Controls.Add(this.civilStatusLabel);
+            this.addPanel.Controls.Add(this.comboGender);
+            this.addPanel.Controls.Add(this.genderLabel);
+            this.addPanel.Controls.Add(this.dateTimeBirthdate);
+            this.addPanel.Controls.Add(this.bdayLabel);
+            this.addPanel.Controls.Add(this.addButton);
+            this.addPanel.Controls.Add(this.clearButton);
+            this.addPanel.Controls.Add(this.txtLn);
+            this.addPanel.Controls.Add(this.txtMn);
+            this.addPanel.Controls.Add(this.txtFn);
+            this.addPanel.Controls.Add(this.lnLabel);
+            this.addPanel.Controls.Add(this.mnLabel);
+            this.addPanel.Controls.Add(this.fnLabel);
+            this.addPanel.Location = new System.Drawing.Point(771, 51);
+            this.addPanel.Name = "addPanel";
+            this.addPanel.Size = new System.Drawing.Size(292, 550);
+            this.addPanel.TabIndex = 15;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.TopPanel;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.addUserLabel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(288, 42);
+            this.panel1.TabIndex = 35;
+            // 
+            // addUserLabel
+            // 
+            this.addUserLabel.AutoSize = true;
+            this.addUserLabel.BackColor = System.Drawing.Color.Transparent;
+            this.addUserLabel.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addUserLabel.ForeColor = System.Drawing.Color.Black;
+            this.addUserLabel.Location = new System.Drawing.Point(66, 8);
+            this.addUserLabel.Name = "addUserLabel";
+            this.addUserLabel.Size = new System.Drawing.Size(165, 27);
+            this.addUserLabel.TabIndex = 16;
+            this.addUserLabel.Text = "Add Staff";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(152, 373);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 20);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "@";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtEmail2
+            // 
+            this.txtEmail2.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail2.Location = new System.Drawing.Point(173, 371);
+            this.txtEmail2.Name = "txtEmail2";
+            this.txtEmail2.Size = new System.Drawing.Size(82, 25);
+            this.txtEmail2.TabIndex = 33;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(33, 371);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(119, 25);
+            this.txtEmail.TabIndex = 32;
+            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtRole
+            // 
+            this.txtRole.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRole.FormattingEnabled = true;
+            this.txtRole.Items.AddRange(new object[] {
+            "",
+            "Registrar",
+            "Supervising Custodian",
+            "Supervisor",
+            "Monitor"});
+            this.txtRole.Location = new System.Drawing.Point(33, 421);
+            this.txtRole.Name = "txtRole";
+            this.txtRole.Size = new System.Drawing.Size(116, 25);
+            this.txtRole.TabIndex = 28;
+            // 
+            // roleLabel
+            // 
+            this.roleLabel.AutoSize = true;
+            this.roleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.roleLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roleLabel.Location = new System.Drawing.Point(30, 401);
+            this.roleLabel.Name = "roleLabel";
+            this.roleLabel.Size = new System.Drawing.Size(53, 17);
+            this.roleLabel.TabIndex = 27;
+            this.roleLabel.Text = "Role:";
+            // 
+            // emailLabel
+            // 
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.BackColor = System.Drawing.Color.Transparent;
+            this.emailLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailLabel.Location = new System.Drawing.Point(30, 351);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(143, 17);
+            this.emailLabel.TabIndex = 25;
+            this.emailLabel.Text = "E-Mail Address:";
+            // 
+            // comboCivilStatus
+            // 
+            this.comboCivilStatus.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboCivilStatus.FormattingEnabled = true;
+            this.comboCivilStatus.Items.AddRange(new object[] {
+            "",
+            "Single",
+            "Married"});
+            this.comboCivilStatus.Location = new System.Drawing.Point(33, 321);
+            this.comboCivilStatus.Name = "comboCivilStatus";
+            this.comboCivilStatus.Size = new System.Drawing.Size(116, 25);
+            this.comboCivilStatus.TabIndex = 24;
+            // 
+            // civilStatusLabel
+            // 
+            this.civilStatusLabel.AutoSize = true;
+            this.civilStatusLabel.BackColor = System.Drawing.Color.Transparent;
+            this.civilStatusLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.civilStatusLabel.Location = new System.Drawing.Point(30, 301);
+            this.civilStatusLabel.Name = "civilStatusLabel";
+            this.civilStatusLabel.Size = new System.Drawing.Size(125, 17);
+            this.civilStatusLabel.TabIndex = 23;
+            this.civilStatusLabel.Text = "Civil Status:";
+            // 
+            // comboGender
+            // 
+            this.comboGender.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboGender.FormattingEnabled = true;
+            this.comboGender.Items.AddRange(new object[] {
+            "",
+            "Male",
+            "Female"});
+            this.comboGender.Location = new System.Drawing.Point(33, 271);
+            this.comboGender.Name = "comboGender";
+            this.comboGender.Size = new System.Drawing.Size(113, 25);
+            this.comboGender.TabIndex = 22;
+            // 
+            // genderLabel
+            // 
+            this.genderLabel.AutoSize = true;
+            this.genderLabel.BackColor = System.Drawing.Color.Transparent;
+            this.genderLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderLabel.Location = new System.Drawing.Point(30, 251);
+            this.genderLabel.Name = "genderLabel";
+            this.genderLabel.Size = new System.Drawing.Size(80, 17);
+            this.genderLabel.TabIndex = 21;
+            this.genderLabel.Text = "Gender: ";
+            // 
+            // dateTimeBirthdate
+            // 
+            this.dateTimeBirthdate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeBirthdate.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeBirthdate.Location = new System.Drawing.Point(33, 221);
+            this.dateTimeBirthdate.MaxDate = new System.DateTime(2018, 8, 2, 0, 0, 0, 0);
+            this.dateTimeBirthdate.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
+            this.dateTimeBirthdate.Name = "dateTimeBirthdate";
+            this.dateTimeBirthdate.Size = new System.Drawing.Size(222, 26);
+            this.dateTimeBirthdate.TabIndex = 20;
+            this.dateTimeBirthdate.Value = new System.DateTime(2018, 8, 2, 0, 0, 0, 0);
+            // 
+            // bdayLabel
+            // 
+            this.bdayLabel.AutoSize = true;
+            this.bdayLabel.BackColor = System.Drawing.Color.Transparent;
+            this.bdayLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bdayLabel.Location = new System.Drawing.Point(30, 201);
+            this.bdayLabel.Name = "bdayLabel";
+            this.bdayLabel.Size = new System.Drawing.Size(98, 17);
+            this.bdayLabel.TabIndex = 19;
+            this.bdayLabel.Text = "Birthdate:";
+            // 
+            // addButton
+            // 
+            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(220)))), ((int)(((byte)(129)))));
+            this.addButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(1)))));
+            this.addButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
+            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addButton.ImageKey = "(none)";
+            this.addButton.ImageList = this.smallerIcons;
+            this.addButton.Location = new System.Drawing.Point(157, 491);
+            this.addButton.Name = "addButton";
+            this.addButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.addButton.Size = new System.Drawing.Size(100, 34);
+            this.addButton.TabIndex = 18;
+            this.addButton.Text = "Add";
+            this.addButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.addButton.UseVisualStyleBackColor = false;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // clearButton
+            // 
+            this.clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(92)))), ((int)(((byte)(76)))));
+            this.clearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(28)))), ((int)(((byte)(12)))));
+            this.clearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(60)))), ((int)(((byte)(44)))));
+            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.ImageKey = "(none)";
+            this.clearButton.ImageList = this.smallerIcons;
+            this.clearButton.Location = new System.Drawing.Point(33, 491);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.clearButton.Size = new System.Drawing.Size(100, 34);
+            this.clearButton.TabIndex = 17;
+            this.clearButton.Text = "Cancel";
+            this.clearButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.clearButton.UseVisualStyleBackColor = false;
+            // 
+            // txtLn
+            // 
+            this.txtLn.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLn.Location = new System.Drawing.Point(33, 171);
+            this.txtLn.Name = "txtLn";
+            this.txtLn.Size = new System.Drawing.Size(222, 25);
+            this.txtLn.TabIndex = 5;
+            this.txtLn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtMn
+            // 
+            this.txtMn.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMn.Location = new System.Drawing.Point(33, 121);
+            this.txtMn.Name = "txtMn";
+            this.txtMn.Size = new System.Drawing.Size(222, 25);
+            this.txtMn.TabIndex = 4;
+            this.txtMn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtFn
+            // 
+            this.txtFn.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFn.Location = new System.Drawing.Point(33, 71);
+            this.txtFn.Name = "txtFn";
+            this.txtFn.Size = new System.Drawing.Size(222, 25);
+            this.txtFn.TabIndex = 3;
+            this.txtFn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lnLabel
+            // 
+            this.lnLabel.AutoSize = true;
+            this.lnLabel.BackColor = System.Drawing.Color.Transparent;
+            this.lnLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnLabel.Location = new System.Drawing.Point(30, 151);
+            this.lnLabel.Name = "lnLabel";
+            this.lnLabel.Size = new System.Drawing.Size(98, 17);
+            this.lnLabel.TabIndex = 2;
+            this.lnLabel.Text = "Last Name:";
+            // 
+            // mnLabel
+            // 
+            this.mnLabel.AutoSize = true;
+            this.mnLabel.BackColor = System.Drawing.Color.Transparent;
+            this.mnLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnLabel.Location = new System.Drawing.Point(30, 101);
+            this.mnLabel.Name = "mnLabel";
+            this.mnLabel.Size = new System.Drawing.Size(116, 17);
+            this.mnLabel.TabIndex = 1;
+            this.mnLabel.Text = "Middle Name:";
+            // 
+            // fnLabel
+            // 
+            this.fnLabel.AutoSize = true;
+            this.fnLabel.BackColor = System.Drawing.Color.Transparent;
+            this.fnLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fnLabel.Location = new System.Drawing.Point(30, 51);
+            this.fnLabel.Name = "fnLabel";
+            this.fnLabel.Size = new System.Drawing.Size(107, 17);
+            this.fnLabel.TabIndex = 0;
+            this.fnLabel.Text = "First Name:";
+            // 
+            // editButton
+            // 
+            this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(75)))));
+            this.editButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(100)))), ((int)(((byte)(0)))));
+            this.editButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editButton.ImageKey = "(none)";
+            this.editButton.ImageList = this.smallerIcons;
+            this.editButton.Location = new System.Drawing.Point(427, 9);
+            this.editButton.Name = "editButton";
+            this.editButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.editButton.Size = new System.Drawing.Size(89, 34);
+            this.editButton.TabIndex = 12;
+            this.editButton.Text = "Edit";
+            this.editButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.editButton.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(138, 9);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(272, 34);
+            this.textBox1.TabIndex = 11;
+            // 
+            // searchLabel
+            // 
+            this.searchLabel.AutoSize = true;
+            this.searchLabel.BackColor = System.Drawing.Color.Transparent;
+            this.searchLabel.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchLabel.ForeColor = System.Drawing.Color.Black;
+            this.searchLabel.Location = new System.Drawing.Point(6, 12);
+            this.searchLabel.Name = "searchLabel";
+            this.searchLabel.Size = new System.Drawing.Size(148, 27);
+            this.searchLabel.TabIndex = 14;
+            this.searchLabel.Text = "Search: ";
+            // 
+            // displayPanel
+            // 
+            this.displayPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.displayPanel.Controls.Add(this.staffListGridView);
+            this.displayPanel.Location = new System.Drawing.Point(11, 51);
+            this.displayPanel.Name = "displayPanel";
+            this.displayPanel.Size = new System.Drawing.Size(750, 550);
+            this.displayPanel.TabIndex = 13;
+            // 
+            // staffListGridView
+            // 
+            this.staffListGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.staffListGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.staffListGridView.Location = new System.Drawing.Point(0, 0);
+            this.staffListGridView.Name = "staffListGridView";
+            this.staffListGridView.Size = new System.Drawing.Size(748, 548);
+            this.staffListGridView.TabIndex = 0;
             // 
             // topPanel
             // 
@@ -114,15 +508,6 @@
             this.ExitButton.TabIndex = 5;
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.signOutButton_Click);
-            // 
-            // Icons
-            // 
-            this.Icons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("Icons.ImageStream")));
-            this.Icons.TransparentColor = System.Drawing.Color.Transparent;
-            this.Icons.Images.SetKeyName(0, "X Icon.jpg");
-            this.Icons.Images.SetKeyName(1, "Home.png");
-            this.Icons.Images.SetKeyName(2, "SignOut.png");
-            this.Icons.Images.SetKeyName(3, "Accounts.png");
             // 
             // navigationLabel
             // 
@@ -217,340 +602,6 @@
             this.signOutButton.UseVisualStyleBackColor = false;
             this.signOutButton.Click += new System.EventHandler(this.signOutButton_Click);
             // 
-            // homePanel
-            // 
-            this.homePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.homePanel.Controls.Add(this.label1);
-            this.homePanel.Location = new System.Drawing.Point(151, 83);
-            this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(200, 100);
-            this.homePanel.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 51);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Status";
-            // 
-            // staffsPanel
-            // 
-            this.staffsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.staffsPanel.Controls.Add(this.addUserLabel);
-            this.staffsPanel.Controls.Add(this.addPanel);
-            this.staffsPanel.Controls.Add(this.editButton);
-            this.staffsPanel.Controls.Add(this.textBox1);
-            this.staffsPanel.Controls.Add(this.searchLabel);
-            this.staffsPanel.Controls.Add(this.displayPanel);
-            this.staffsPanel.Location = new System.Drawing.Point(206, 189);
-            this.staffsPanel.Name = "staffsPanel";
-            this.staffsPanel.Size = new System.Drawing.Size(495, 404);
-            this.staffsPanel.TabIndex = 11;
-            // 
-            // addUserLabel
-            // 
-            this.addUserLabel.AutoSize = true;
-            this.addUserLabel.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addUserLabel.ForeColor = System.Drawing.Color.Black;
-            this.addUserLabel.Location = new System.Drawing.Point(843, 16);
-            this.addUserLabel.Name = "addUserLabel";
-            this.addUserLabel.Size = new System.Drawing.Size(148, 27);
-            this.addUserLabel.TabIndex = 16;
-            this.addUserLabel.Text = "Add User";
-            // 
-            // addPanel
-            // 
-            this.addPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addPanel.BackgroundImage")));
-            this.addPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.addPanel.Controls.Add(this.comboBox1);
-            this.addPanel.Controls.Add(this.roleLabel);
-            this.addPanel.Controls.Add(this.textBox2);
-            this.addPanel.Controls.Add(this.emailLabel);
-            this.addPanel.Controls.Add(this.civilStatusComboBox);
-            this.addPanel.Controls.Add(this.civilStatusLabel);
-            this.addPanel.Controls.Add(this.genderComboBox);
-            this.addPanel.Controls.Add(this.genderLabel);
-            this.addPanel.Controls.Add(this.bdayDate);
-            this.addPanel.Controls.Add(this.bdayLabel);
-            this.addPanel.Controls.Add(this.addButton);
-            this.addPanel.Controls.Add(this.clearButton);
-            this.addPanel.Controls.Add(this.lnTextbox);
-            this.addPanel.Controls.Add(this.mnTextbox);
-            this.addPanel.Controls.Add(this.fnTextbox);
-            this.addPanel.Controls.Add(this.lnLabel);
-            this.addPanel.Controls.Add(this.mnLabel);
-            this.addPanel.Controls.Add(this.fnLabel);
-            this.addPanel.Location = new System.Drawing.Point(771, 51);
-            this.addPanel.Name = "addPanel";
-            this.addPanel.Size = new System.Drawing.Size(292, 550);
-            this.addPanel.TabIndex = 15;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "",
-            "Admin",
-            "Principal",
-            "Human Resource Manager",
-            "Registrar",
-            "Supervising Custodian",
-            "Supervisor",
-            "Monitor"});
-            this.comboBox1.Location = new System.Drawing.Point(121, 430);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(116, 24);
-            this.comboBox1.TabIndex = 28;
-            // 
-            // roleLabel
-            // 
-            this.roleLabel.AutoSize = true;
-            this.roleLabel.BackColor = System.Drawing.Color.Transparent;
-            this.roleLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roleLabel.Location = new System.Drawing.Point(52, 433);
-            this.roleLabel.Name = "roleLabel";
-            this.roleLabel.Size = new System.Drawing.Size(63, 16);
-            this.roleLabel.TabIndex = 27;
-            this.roleLabel.Text = "Role:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(33, 385);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(222, 23);
-            this.textBox2.TabIndex = 26;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // emailLabel
-            // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.BackColor = System.Drawing.Color.Transparent;
-            this.emailLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLabel.Location = new System.Drawing.Point(62, 360);
-            this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(173, 16);
-            this.emailLabel.TabIndex = 25;
-            this.emailLabel.Text = "E-Mail Address:";
-            // 
-            // civilStatusComboBox
-            // 
-            this.civilStatusComboBox.FormattingEnabled = true;
-            this.civilStatusComboBox.Items.AddRange(new object[] {
-            "",
-            "Single",
-            "Married"});
-            this.civilStatusComboBox.Location = new System.Drawing.Point(90, 325);
-            this.civilStatusComboBox.Name = "civilStatusComboBox";
-            this.civilStatusComboBox.Size = new System.Drawing.Size(116, 24);
-            this.civilStatusComboBox.TabIndex = 24;
-            // 
-            // civilStatusLabel
-            // 
-            this.civilStatusLabel.AutoSize = true;
-            this.civilStatusLabel.BackColor = System.Drawing.Color.Transparent;
-            this.civilStatusLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.civilStatusLabel.Location = new System.Drawing.Point(74, 300);
-            this.civilStatusLabel.Name = "civilStatusLabel";
-            this.civilStatusLabel.Size = new System.Drawing.Size(151, 16);
-            this.civilStatusLabel.TabIndex = 23;
-            this.civilStatusLabel.Text = "Civil Status:";
-            // 
-            // genderComboBox
-            // 
-            this.genderComboBox.FormattingEnabled = true;
-            this.genderComboBox.Items.AddRange(new object[] {
-            "",
-            "Male",
-            "Female"});
-            this.genderComboBox.Location = new System.Drawing.Point(139, 262);
-            this.genderComboBox.Name = "genderComboBox";
-            this.genderComboBox.Size = new System.Drawing.Size(116, 24);
-            this.genderComboBox.TabIndex = 22;
-            // 
-            // genderLabel
-            // 
-            this.genderLabel.AutoSize = true;
-            this.genderLabel.BackColor = System.Drawing.Color.Transparent;
-            this.genderLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genderLabel.Location = new System.Drawing.Point(37, 265);
-            this.genderLabel.Name = "genderLabel";
-            this.genderLabel.Size = new System.Drawing.Size(96, 16);
-            this.genderLabel.TabIndex = 21;
-            this.genderLabel.Text = "Gender: ";
-            // 
-            // bdayDate
-            // 
-            this.bdayDate.Location = new System.Drawing.Point(33, 220);
-            this.bdayDate.MaxDate = new System.DateTime(2018, 8, 2, 0, 0, 0, 0);
-            this.bdayDate.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
-            this.bdayDate.Name = "bdayDate";
-            this.bdayDate.Size = new System.Drawing.Size(222, 23);
-            this.bdayDate.TabIndex = 20;
-            this.bdayDate.Value = new System.DateTime(2018, 8, 2, 0, 0, 0, 0);
-            // 
-            // bdayLabel
-            // 
-            this.bdayLabel.AutoSize = true;
-            this.bdayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.bdayLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bdayLabel.Location = new System.Drawing.Point(98, 195);
-            this.bdayLabel.Name = "bdayLabel";
-            this.bdayLabel.Size = new System.Drawing.Size(118, 16);
-            this.bdayLabel.TabIndex = 19;
-            this.bdayLabel.Text = "Birthdate:";
-            // 
-            // addButton
-            // 
-            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(220)))), ((int)(((byte)(129)))));
-            this.addButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(1)))));
-            this.addButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
-            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.ImageKey = "(none)";
-            this.addButton.ImageList = this.smallerIcons;
-            this.addButton.Location = new System.Drawing.Point(157, 491);
-            this.addButton.Name = "addButton";
-            this.addButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.addButton.Size = new System.Drawing.Size(100, 34);
-            this.addButton.TabIndex = 18;
-            this.addButton.Text = "Add";
-            this.addButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.addButton.UseVisualStyleBackColor = false;
-            // 
-            // clearButton
-            // 
-            this.clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(92)))), ((int)(((byte)(76)))));
-            this.clearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(28)))), ((int)(((byte)(12)))));
-            this.clearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(60)))), ((int)(((byte)(44)))));
-            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearButton.ImageKey = "(none)";
-            this.clearButton.ImageList = this.smallerIcons;
-            this.clearButton.Location = new System.Drawing.Point(33, 491);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.clearButton.Size = new System.Drawing.Size(100, 34);
-            this.clearButton.TabIndex = 17;
-            this.clearButton.Text = "Cancel";
-            this.clearButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.clearButton.UseVisualStyleBackColor = false;
-            // 
-            // lnTextbox
-            // 
-            this.lnTextbox.Location = new System.Drawing.Point(33, 160);
-            this.lnTextbox.Name = "lnTextbox";
-            this.lnTextbox.Size = new System.Drawing.Size(222, 23);
-            this.lnTextbox.TabIndex = 5;
-            this.lnTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // mnTextbox
-            // 
-            this.mnTextbox.Location = new System.Drawing.Point(33, 100);
-            this.mnTextbox.Name = "mnTextbox";
-            this.mnTextbox.Size = new System.Drawing.Size(222, 23);
-            this.mnTextbox.TabIndex = 4;
-            this.mnTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // fnTextbox
-            // 
-            this.fnTextbox.Location = new System.Drawing.Point(33, 40);
-            this.fnTextbox.Name = "fnTextbox";
-            this.fnTextbox.Size = new System.Drawing.Size(222, 23);
-            this.fnTextbox.TabIndex = 3;
-            this.fnTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lnLabel
-            // 
-            this.lnLabel.AutoSize = true;
-            this.lnLabel.BackColor = System.Drawing.Color.Transparent;
-            this.lnLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnLabel.Location = new System.Drawing.Point(98, 135);
-            this.lnLabel.Name = "lnLabel";
-            this.lnLabel.Size = new System.Drawing.Size(118, 16);
-            this.lnLabel.TabIndex = 2;
-            this.lnLabel.Text = "Last Name:";
-            // 
-            // mnLabel
-            // 
-            this.mnLabel.AutoSize = true;
-            this.mnLabel.BackColor = System.Drawing.Color.Transparent;
-            this.mnLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnLabel.Location = new System.Drawing.Point(87, 75);
-            this.mnLabel.Name = "mnLabel";
-            this.mnLabel.Size = new System.Drawing.Size(140, 16);
-            this.mnLabel.TabIndex = 1;
-            this.mnLabel.Text = "Middle Name:";
-            // 
-            // fnLabel
-            // 
-            this.fnLabel.AutoSize = true;
-            this.fnLabel.BackColor = System.Drawing.Color.Transparent;
-            this.fnLabel.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fnLabel.Location = new System.Drawing.Point(90, 15);
-            this.fnLabel.Name = "fnLabel";
-            this.fnLabel.Size = new System.Drawing.Size(129, 16);
-            this.fnLabel.TabIndex = 0;
-            this.fnLabel.Text = "First Name:";
-            // 
-            // editButton
-            // 
-            this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(75)))));
-            this.editButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(100)))), ((int)(((byte)(0)))));
-            this.editButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton.ImageKey = "(none)";
-            this.editButton.ImageList = this.smallerIcons;
-            this.editButton.Location = new System.Drawing.Point(427, 9);
-            this.editButton.Name = "editButton";
-            this.editButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.editButton.Size = new System.Drawing.Size(89, 34);
-            this.editButton.TabIndex = 12;
-            this.editButton.Text = "Edit";
-            this.editButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.editButton.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(138, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(272, 34);
-            this.textBox1.TabIndex = 11;
-            // 
-            // searchLabel
-            // 
-            this.searchLabel.AutoSize = true;
-            this.searchLabel.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchLabel.ForeColor = System.Drawing.Color.Black;
-            this.searchLabel.Location = new System.Drawing.Point(6, 12);
-            this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(148, 27);
-            this.searchLabel.TabIndex = 14;
-            this.searchLabel.Text = "Search: ";
-            // 
-            // displayPanel
-            // 
-            this.displayPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.displayPanel.Controls.Add(this.staffListGridView);
-            this.displayPanel.Location = new System.Drawing.Point(11, 51);
-            this.displayPanel.Name = "displayPanel";
-            this.displayPanel.Size = new System.Drawing.Size(750, 550);
-            this.displayPanel.TabIndex = 13;
-            // 
-            // staffListGridView
-            // 
-            this.staffListGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.staffListGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.staffListGridView.Location = new System.Drawing.Point(0, 0);
-            this.staffListGridView.Name = "staffListGridView";
-            this.staffListGridView.Size = new System.Drawing.Size(748, 548);
-            this.staffListGridView.TabIndex = 0;
-            // 
             // HRMForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -569,17 +620,19 @@
             this.Text = "HRMForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HRMForm_FormClosing);
             this.Load += new System.EventHandler(this.HRMForm_Load);
-            this.topPanel.ResumeLayout(false);
-            this.topPanel.PerformLayout();
-            this.sidePanel.ResumeLayout(false);
             this.homePanel.ResumeLayout(false);
             this.homePanel.PerformLayout();
             this.staffsPanel.ResumeLayout(false);
             this.staffsPanel.PerformLayout();
             this.addPanel.ResumeLayout(false);
             this.addPanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.displayPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.staffListGridView)).EndInit();
+            this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
+            this.sidePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -600,21 +653,20 @@
         private System.Windows.Forms.Panel staffsPanel;
         private System.Windows.Forms.Label addUserLabel;
         private System.Windows.Forms.Panel addPanel;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox txtRole;
         private System.Windows.Forms.Label roleLabel;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label emailLabel;
-        private System.Windows.Forms.ComboBox civilStatusComboBox;
+        private System.Windows.Forms.ComboBox comboCivilStatus;
         private System.Windows.Forms.Label civilStatusLabel;
-        private System.Windows.Forms.ComboBox genderComboBox;
+        private System.Windows.Forms.ComboBox comboGender;
         private System.Windows.Forms.Label genderLabel;
-        private System.Windows.Forms.DateTimePicker bdayDate;
+        private System.Windows.Forms.DateTimePicker dateTimeBirthdate;
         private System.Windows.Forms.Label bdayLabel;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button clearButton;
-        private System.Windows.Forms.TextBox lnTextbox;
-        private System.Windows.Forms.TextBox mnTextbox;
-        private System.Windows.Forms.TextBox fnTextbox;
+        private System.Windows.Forms.TextBox txtLn;
+        private System.Windows.Forms.TextBox txtMn;
+        private System.Windows.Forms.TextBox txtFn;
         private System.Windows.Forms.Label lnLabel;
         private System.Windows.Forms.Label mnLabel;
         private System.Windows.Forms.Label fnLabel;
@@ -623,5 +675,9 @@
         private System.Windows.Forms.Label searchLabel;
         private System.Windows.Forms.Panel displayPanel;
         private System.Windows.Forms.DataGridView staffListGridView;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtEmail2;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Panel panel1;
     }
 }
