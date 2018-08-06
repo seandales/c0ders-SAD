@@ -16,7 +16,7 @@ namespace WindowsFormsApp4
      
         public Login()
         {
-            con = new MySqlConnection("server=localhost; user id =root; database=sad_db; password=root;");
+            con = new MySqlConnection("server=localhost; userid =root; database=sad_db; password=root;");
             InitializeComponent();
         }
         //

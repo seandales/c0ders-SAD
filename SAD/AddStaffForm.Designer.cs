@@ -87,6 +87,7 @@
             this.label3.Size = new System.Drawing.Size(182, 32);
             this.label3.TabIndex = 0;
             this.label3.Text = "Middle Name";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 

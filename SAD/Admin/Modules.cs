@@ -13,6 +13,9 @@ namespace WindowsFormsApp4
 {
     public partial class Modules : Form
     {
+        //public Staff_Manag_Form reference { get; set; }
+        DbConnect conRef = new DbConnect();
+        //Staff_Manag_Form frmObject = new Staff_Manag_Form();
         public Login reference { get; set; }
 
         private string loginName;
@@ -87,7 +90,19 @@ namespace WindowsFormsApp4
 
         private void addButton_Click(object sender, EventArgs e)
         {
-
+            string strQuery = "INSERT INTO users(user_name, password, role) " +
+                "VALUES (@user_name, @password, @role)";
+            MySqlConnection con = conRef.connectFunc();
+            MySqlCommand cmd = new MySqlCommand(strQuery, con);
+            cmd.Parameters.AddWithValue("@user_name", txtfn1.Text);
+            cmd.Parameters.AddWithValue("@password", txtpass1.Text);
+            cmd.Parameters.AddWithValue("@role", combRole.Text);
+            
+            con.Open();
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("successfully inserted");
+            readData();
+            //showPrevForm();
         }
         DbConnect connect = new DbConnect();
         MySqlDataAdapter da;
@@ -95,11 +110,13 @@ namespace WindowsFormsApp4
         public void readData()
         {
             MySqlConnection con = connect.connectFunc();
-            String query = "SELECT * FROM staff";
+            String query = "SELECT * FROM users";
             dt = new DataTable();
             da = new MySqlDataAdapter(query, con);
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+            //dt.Rows[0].Vi
+            
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -109,19 +126,20 @@ namespace WindowsFormsApp4
 
         private void Textbox_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(txtFn.Text))
+            /*
+            if (String.IsNullOrWhiteSpace(txtfn1.Text)||String.IsNullOrWhiteSpace(txtpass1.Text))
             {
-                butAdd.Enabled = false;
-
+                btnAdd1.Enabled = false;
+       
             }
 
 
 
             else
             {
-                butAdd.Enabled = true;
+                btnAdd1.Enabled = true;
             }
-
+            */
         }
 
         private void topPanel_Paint(object sender, PaintEventArgs e)
@@ -132,6 +150,16 @@ namespace WindowsFormsApp4
         private void txtpass_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void clear()
+        {
+            txtpass1.Text = ("");
+            txtfn1.Text = ("");
         }
     }
 }

@@ -35,7 +35,7 @@
             this.accountsPanel = new System.Windows.Forms.Panel();
             this.addUserLabel = new System.Windows.Forms.Label();
             this.addPanel = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.combRole = new System.Windows.Forms.ComboBox();
             this.roleLabel = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.emailLabel = new System.Windows.Forms.Label();
@@ -45,12 +45,12 @@
             this.genderLabel = new System.Windows.Forms.Label();
             this.bdayDate = new System.Windows.Forms.DateTimePicker();
             this.bdayLabel = new System.Windows.Forms.Label();
-            this.addButton = new System.Windows.Forms.Button();
+            this.btnAdd1 = new System.Windows.Forms.Button();
             this.smallerIcons = new System.Windows.Forms.ImageList(this.components);
             this.clearButton = new System.Windows.Forms.Button();
             this.lnTextbox = new System.Windows.Forms.TextBox();
-            this.txtpass = new System.Windows.Forms.TextBox();
-            this.txtfn = new System.Windows.Forms.TextBox();
+            this.txtpass1 = new System.Windows.Forms.TextBox();
+            this.txtfn1 = new System.Windows.Forms.TextBox();
             this.lnLabel = new System.Windows.Forms.Label();
             this.mnLabel = new System.Windows.Forms.Label();
             this.fnLabel = new System.Windows.Forms.Label();
@@ -125,7 +125,7 @@
             // 
             this.addPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addPanel.BackgroundImage")));
             this.addPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.addPanel.Controls.Add(this.comboBox1);
+            this.addPanel.Controls.Add(this.combRole);
             this.addPanel.Controls.Add(this.roleLabel);
             this.addPanel.Controls.Add(this.textBox2);
             this.addPanel.Controls.Add(this.emailLabel);
@@ -135,11 +135,11 @@
             this.addPanel.Controls.Add(this.genderLabel);
             this.addPanel.Controls.Add(this.bdayDate);
             this.addPanel.Controls.Add(this.bdayLabel);
-            this.addPanel.Controls.Add(this.addButton);
+            this.addPanel.Controls.Add(this.btnAdd1);
             this.addPanel.Controls.Add(this.clearButton);
             this.addPanel.Controls.Add(this.lnTextbox);
-            this.addPanel.Controls.Add(this.txtpass);
-            this.addPanel.Controls.Add(this.txtfn);
+            this.addPanel.Controls.Add(this.txtpass1);
+            this.addPanel.Controls.Add(this.txtfn1);
             this.addPanel.Controls.Add(this.lnLabel);
             this.addPanel.Controls.Add(this.mnLabel);
             this.addPanel.Controls.Add(this.fnLabel);
@@ -148,10 +148,10 @@
             this.addPanel.Size = new System.Drawing.Size(292, 550);
             this.addPanel.TabIndex = 15;
             // 
-            // comboBox1
+            // combRole
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.combRole.FormattingEnabled = true;
+            this.combRole.Items.AddRange(new object[] {
             "",
             "Admin",
             "Principal",
@@ -160,10 +160,10 @@
             "Supervising Custodian",
             "Supervisor",
             "Monitor"});
-            this.comboBox1.Location = new System.Drawing.Point(121, 430);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(116, 48);
-            this.comboBox1.TabIndex = 28;
+            this.combRole.Location = new System.Drawing.Point(121, 430);
+            this.combRole.Name = "combRole";
+            this.combRole.Size = new System.Drawing.Size(116, 48);
+            this.combRole.TabIndex = 28;
             // 
             // roleLabel
             // 
@@ -262,24 +262,24 @@
             this.bdayLabel.TabIndex = 19;
             this.bdayLabel.Text = "Birthdate:";
             // 
-            // addButton
+            // btnAdd1
             // 
-            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(220)))), ((int)(((byte)(129)))));
-            this.addButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(1)))));
-            this.addButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
-            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.ImageKey = "(none)";
-            this.addButton.ImageList = this.smallerIcons;
-            this.addButton.Location = new System.Drawing.Point(157, 491);
-            this.addButton.Name = "addButton";
-            this.addButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.addButton.Size = new System.Drawing.Size(100, 34);
-            this.addButton.TabIndex = 18;
-            this.addButton.Text = "Add";
-            this.addButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.addButton.UseVisualStyleBackColor = false;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            this.btnAdd1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(220)))), ((int)(((byte)(129)))));
+            this.btnAdd1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(1)))));
+            this.btnAdd1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
+            this.btnAdd1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd1.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd1.ImageKey = "(none)";
+            this.btnAdd1.ImageList = this.smallerIcons;
+            this.btnAdd1.Location = new System.Drawing.Point(157, 491);
+            this.btnAdd1.Name = "btnAdd1";
+            this.btnAdd1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnAdd1.Size = new System.Drawing.Size(100, 34);
+            this.btnAdd1.TabIndex = 18;
+            this.btnAdd1.Text = "Add";
+            this.btnAdd1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAdd1.UseVisualStyleBackColor = false;
+            this.btnAdd1.Click += new System.EventHandler(this.addButton_Click);
             // 
             // smallerIcons
             // 
@@ -307,6 +307,7 @@
             this.clearButton.Text = "Cancel";
             this.clearButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // lnTextbox
             // 
@@ -316,23 +317,23 @@
             this.lnTextbox.TabIndex = 5;
             this.lnTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtpass
+            // txtpass1
             // 
-            this.txtpass.Location = new System.Drawing.Point(33, 100);
-            this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(222, 47);
-            this.txtpass.TabIndex = 4;
-            this.txtpass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
+            this.txtpass1.Location = new System.Drawing.Point(33, 100);
+            this.txtpass1.Name = "txtpass1";
+            this.txtpass1.Size = new System.Drawing.Size(222, 47);
+            this.txtpass1.TabIndex = 4;
+            this.txtpass1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtpass1.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
             // 
-            // txtfn
+            // txtfn1
             // 
-            this.txtfn.Location = new System.Drawing.Point(33, 40);
-            this.txtfn.Name = "txtfn";
-            this.txtfn.Size = new System.Drawing.Size(222, 47);
-            this.txtfn.TabIndex = 3;
-            this.txtfn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtfn.TextChanged += new System.EventHandler(this.Textbox_TextChanged);
+            this.txtfn1.Location = new System.Drawing.Point(33, 40);
+            this.txtfn1.Name = "txtfn1";
+            this.txtfn1.Size = new System.Drawing.Size(222, 47);
+            this.txtfn1.TabIndex = 3;
+            this.txtfn1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtfn1.TextChanged += new System.EventHandler(this.Textbox_TextChanged);
             // 
             // lnLabel
             // 
@@ -441,7 +442,7 @@
             this.topPanel.Location = new System.Drawing.Point(125, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1378, 60);
+            this.topPanel.Size = new System.Drawing.Size(1383, 60);
             this.topPanel.TabIndex = 5;
             this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
             // 
@@ -484,7 +485,7 @@
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(125, 888);
+            this.sidePanel.Size = new System.Drawing.Size(125, 896);
             this.sidePanel.TabIndex = 4;
             // 
             // accountsButton
@@ -560,7 +561,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1503, 888);
+            this.ClientSize = new System.Drawing.Size(1508, 896);
             this.Controls.Add(this.accountsPanel);
             this.Controls.Add(this.homePanel);
             this.Controls.Add(this.topPanel);
@@ -610,10 +611,10 @@
         private System.Windows.Forms.ImageList smallerIcons;
         private System.Windows.Forms.Label addUserLabel;
         private System.Windows.Forms.Panel addPanel;
-        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button btnAdd1;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.TextBox lnTextbox;
-        private System.Windows.Forms.TextBox txtpass;
+        private System.Windows.Forms.TextBox txtpass1;
         private System.Windows.Forms.Label lnLabel;
         private System.Windows.Forms.Label mnLabel;
         private System.Windows.Forms.Label bdayLabel;
@@ -624,10 +625,10 @@
         private System.Windows.Forms.ComboBox civilStatusComboBox;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label emailLabel;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox combRole;
         private System.Windows.Forms.Label roleLabel;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtfn;
+        private System.Windows.Forms.TextBox txtfn1;
         private System.Windows.Forms.Label fnLabel;
     }
 }
