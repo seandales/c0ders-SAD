@@ -100,6 +100,7 @@
             // 
             // homePanel
             // 
+            this.homePanel.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.PanelBG;
             this.homePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.homePanel.Controls.Add(this.label1);
             this.homePanel.Location = new System.Drawing.Point(151, 83);
@@ -110,6 +111,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(34, 51);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -127,10 +129,9 @@
             this.staffsPanel.Controls.Add(this.textBox1);
             this.staffsPanel.Controls.Add(this.searchLabel);
             this.staffsPanel.Controls.Add(this.displayPanel);
-            this.staffsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.staffsPanel.Location = new System.Drawing.Point(125, 60);
+            this.staffsPanel.Location = new System.Drawing.Point(695, 374);
             this.staffsPanel.Name = "staffsPanel";
-            this.staffsPanel.Size = new System.Drawing.Size(1075, 615);
+            this.staffsPanel.Size = new System.Drawing.Size(505, 301);
             this.staffsPanel.TabIndex = 11;
             // 
             // addPanel
@@ -551,7 +552,7 @@
             this.staffsButton.Name = "staffsButton";
             this.staffsButton.Size = new System.Drawing.Size(125, 125);
             this.staffsButton.TabIndex = 6;
-            this.staffsButton.Text = "\r\nStaff";
+            this.staffsButton.Text = "\r\nStaffs";
             this.staffsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.staffsButton.UseVisualStyleBackColor = false;
             this.staffsButton.Click += new System.EventHandler(this.staffsButton_Click);
@@ -606,6 +607,8 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.PanelBG;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1200, 675);
             this.Controls.Add(this.staffsPanel);
             this.Controls.Add(this.homePanel);

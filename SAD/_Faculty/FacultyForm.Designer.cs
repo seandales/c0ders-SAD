@@ -38,10 +38,12 @@
             this.homeButton = new System.Windows.Forms.Button();
             this.studentsButton = new System.Windows.Forms.Button();
             this.sidePanel = new System.Windows.Forms.Panel();
+            this.prescriptionsButton = new System.Windows.Forms.Button();
             this.navigationLabel = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.prescriptionsButton = new System.Windows.Forms.Button();
+            this.studentsPanel = new System.Windows.Forms.Panel();
+            this.prescriptionsPanel = new System.Windows.Forms.Panel();
             this.homePanel.SuspendLayout();
             this.sidePanel.SuspendLayout();
             this.topPanel.SuspendLayout();
@@ -56,10 +58,13 @@
             this.Icons.Images.SetKeyName(2, "SignOut.png");
             this.Icons.Images.SetKeyName(3, "Accounts.png");
             this.Icons.Images.SetKeyName(4, "Clipboard.png");
+            this.Icons.Images.SetKeyName(5, "account.png");
+            this.Icons.Images.SetKeyName(6, "Classroom.png");
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(34, 51);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -70,6 +75,7 @@
             // 
             // homePanel
             // 
+            this.homePanel.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.PanelBG;
             this.homePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.homePanel.Controls.Add(this.label1);
             this.homePanel.Location = new System.Drawing.Point(189, 125);
@@ -143,7 +149,7 @@
             this.studentsButton.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentsButton.ForeColor = System.Drawing.Color.Black;
             this.studentsButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.studentsButton.ImageKey = "Accounts.png";
+            this.studentsButton.ImageKey = "Classroom.png";
             this.studentsButton.ImageList = this.Icons;
             this.studentsButton.Location = new System.Drawing.Point(0, 125);
             this.studentsButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -168,6 +174,29 @@
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(125, 675);
             this.sidePanel.TabIndex = 8;
+            // 
+            // prescriptionsButton
+            // 
+            this.prescriptionsButton.BackColor = System.Drawing.Color.Transparent;
+            this.prescriptionsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.prescriptionsButton.FlatAppearance.BorderSize = 0;
+            this.prescriptionsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
+            this.prescriptionsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.prescriptionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.prescriptionsButton.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prescriptionsButton.ForeColor = System.Drawing.Color.Black;
+            this.prescriptionsButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.prescriptionsButton.ImageKey = "Clipboard.png";
+            this.prescriptionsButton.ImageList = this.Icons;
+            this.prescriptionsButton.Location = new System.Drawing.Point(0, 250);
+            this.prescriptionsButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.prescriptionsButton.Name = "prescriptionsButton";
+            this.prescriptionsButton.Size = new System.Drawing.Size(125, 125);
+            this.prescriptionsButton.TabIndex = 7;
+            this.prescriptionsButton.Text = "\r\nPre-\r\nscriptions";
+            this.prescriptionsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.prescriptionsButton.UseVisualStyleBackColor = false;
+            this.prescriptionsButton.Click += new System.EventHandler(this.prescriptionsButton_Click);
             // 
             // navigationLabel
             // 
@@ -210,35 +239,34 @@
             this.topPanel.Size = new System.Drawing.Size(1075, 60);
             this.topPanel.TabIndex = 9;
             // 
-            // prescriptionsButton
+            // studentsPanel
             // 
-            this.prescriptionsButton.BackColor = System.Drawing.Color.Transparent;
-            this.prescriptionsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.prescriptionsButton.FlatAppearance.BorderSize = 0;
-            this.prescriptionsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(213)))), ((int)(((byte)(255)))));
-            this.prescriptionsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.prescriptionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prescriptionsButton.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prescriptionsButton.ForeColor = System.Drawing.Color.Black;
-            this.prescriptionsButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.prescriptionsButton.ImageKey = "Clipboard.png";
-            this.prescriptionsButton.ImageList = this.Icons;
-            this.prescriptionsButton.Location = new System.Drawing.Point(0, 250);
-            this.prescriptionsButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.prescriptionsButton.Name = "prescriptionsButton";
-            this.prescriptionsButton.Size = new System.Drawing.Size(125, 125);
-            this.prescriptionsButton.TabIndex = 7;
-            this.prescriptionsButton.Text = "\r\nPre-\r\nscriptions";
-            this.prescriptionsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.prescriptionsButton.UseVisualStyleBackColor = false;
-            this.prescriptionsButton.Click += new System.EventHandler(this.prescriptionsButton_Click);
+            this.studentsPanel.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.PanelBG;
+            this.studentsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.studentsPanel.Location = new System.Drawing.Point(217, 336);
+            this.studentsPanel.Name = "studentsPanel";
+            this.studentsPanel.Size = new System.Drawing.Size(200, 100);
+            this.studentsPanel.TabIndex = 11;
+            // 
+            // prescriptionsPanel
+            // 
+            this.prescriptionsPanel.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.PanelBG;
+            this.prescriptionsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.prescriptionsPanel.Location = new System.Drawing.Point(640, 165);
+            this.prescriptionsPanel.Name = "prescriptionsPanel";
+            this.prescriptionsPanel.Size = new System.Drawing.Size(200, 100);
+            this.prescriptionsPanel.TabIndex = 11;
             // 
             // FacultyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.PanelBG;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1200, 675);
+            this.Controls.Add(this.studentsPanel);
+            this.Controls.Add(this.prescriptionsPanel);
             this.Controls.Add(this.homePanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.sidePanel);
@@ -251,6 +279,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Faculty";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FacultyForm_FormClosing);
+            this.Load += new System.EventHandler(this.FacultyForm_Load);
             this.homePanel.ResumeLayout(false);
             this.homePanel.PerformLayout();
             this.sidePanel.ResumeLayout(false);
@@ -274,5 +303,7 @@
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Button prescriptionsButton;
+        private System.Windows.Forms.Panel studentsPanel;
+        private System.Windows.Forms.Panel prescriptionsPanel;
     }
 }

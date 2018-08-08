@@ -10,27 +10,23 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp4
 {
-    public partial class FacultyForm : Form
+    public partial class Modules : Form
     {
         public Login reference { get; set; }
         private string loginName;
         //
         //-------->Form Initialization<--------
         //
-        public FacultyForm()
+        public Modules()
         {
             InitializeComponent();
         }
-        public FacultyForm(String role)
+        public Modules(String role)
         {
             InitializeComponent();
             loginName = role;
         }
-        public void showPrescriptions(Boolean b)
-        {
-            prescriptionsButton.Visible = b;
-        }
-        private void HRMForm_Load(object sender, EventArgs e)
+        private void Modules_Load(object sender, EventArgs e)
         {
             label1.Text = "Welcome back, " + loginName;
 
@@ -39,8 +35,12 @@ namespace WindowsFormsApp4
 
             //Sets All Panels to Fill
             homePanel.Dock = DockStyle.Fill;
+            staffsPanel.Dock = DockStyle.Fill;
+            accountsPanel.Dock = DockStyle.Fill;
 
             //Hides All Other Panels
+            staffsPanel.Visible = false;
+            accountsPanel.Visible = false;
         }
         //
         //-------->Navigation Buttons<--------
@@ -49,44 +49,46 @@ namespace WindowsFormsApp4
         {
             //Switches Button BackColors
             homeButton.BackColor = Color.FromArgb(57, 213, 255);
-            studentsButton.BackColor = Color.Transparent;
-            prescriptionsButton.BackColor = Color.Transparent;
+            staffsButton.BackColor = Color.Transparent;
+            accountsButton.BackColor = Color.Transparent;
 
             //Switches Panel Visibility
             homePanel.Visible = true;
+            staffsPanel.Visible = false;
+            accountsPanel.Visible = false;
 
             //Changes Label
             navigationLabel.Text = "Home";
         }
-        private void studentsButton_Click(object sender, EventArgs e)
+        private void staffsButton_Click(object sender, EventArgs e)
         {
             //Switches Button BackColors
             homeButton.BackColor = Color.Transparent;
-            studentsButton.BackColor = Color.FromArgb(57, 213, 255);
-            prescriptionsButton.BackColor = Color.Transparent;
+            staffsButton.BackColor = Color.FromArgb(57, 213, 255);
+            accountsButton.BackColor = Color.Transparent;
 
             //Switches Panel Visibility
+            staffsPanel.Visible = true;
             homePanel.Visible = false;
-        //    studentsPanel.Visible = true;
-        //    prescriptionsPanel.Visible = false;
+            accountsPanel.Visible = false;
 
             //Changes Label
-            navigationLabel.Text = "Students";
+            navigationLabel.Text = "Staffs";
         }
-        private void prescriptionsButton_Click(object sender, EventArgs e)
+        private void accountsButton_Click(object sender, EventArgs e)
         {
             //Switches Button BackColors
             homeButton.BackColor = Color.Transparent;
-            studentsButton.BackColor = Color.Transparent;
-            prescriptionsButton.BackColor = Color.FromArgb(57, 213, 255);
+            staffsButton.BackColor = Color.Transparent;
+            accountsButton.BackColor = Color.FromArgb(57, 213, 255);
 
             //Switches Panel Visibility
+            accountsPanel.Visible = true;
             homePanel.Visible = false;
-        //    studentsPanel.Visible = false;
-        //    prescriptionsPanel.Visible = true;
+            staffsPanel.Visible = false;
 
             //Changes Label
-            navigationLabel.Text = "Prescriptions";
+            navigationLabel.Text = "Accounts";
         }
         //
         //-------->Exit Buttons<--------
@@ -95,7 +97,7 @@ namespace WindowsFormsApp4
         {
             this.Close();
         }
-        private void FacultyForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void Modules_FormClosing(object sender, FormClosingEventArgs e)
         {
             reference.Show();
         }
