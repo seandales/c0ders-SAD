@@ -94,7 +94,7 @@
             this.topPanel.Location = new System.Drawing.Point(125, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1075, 60);
+            this.topPanel.Size = new System.Drawing.Size(1504, 60);
             this.topPanel.TabIndex = 9;
             // 
             // ExitButton
@@ -145,7 +145,7 @@
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(125, 675);
+            this.sidePanel.Size = new System.Drawing.Size(125, 956);
             this.sidePanel.TabIndex = 8;
             // 
             // staffsButton
@@ -556,7 +556,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 675);
+            this.ClientSize = new System.Drawing.Size(1629, 956);
             this.Controls.Add(this.staffsPanel);
             this.Controls.Add(this.homePanel);
             this.Controls.Add(this.topPanel);

@@ -279,7 +279,7 @@
             this.btnAdd1.Text = "Add";
             this.btnAdd1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAdd1.UseVisualStyleBackColor = false;
-            this.btnAdd1.Click += new System.EventHandler(this.addButton_Click);
+            this.btnAdd1.Click += new System.EventHandler(this.btnAdd1_Click);
             // 
             // smallerIcons
             // 
@@ -385,6 +385,7 @@
             this.editButton.Text = "Edit";
             this.editButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.editButton.UseVisualStyleBackColor = false;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // textBox1
             // 

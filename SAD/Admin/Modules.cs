@@ -88,8 +88,9 @@ namespace WindowsFormsApp4
             reference.Show();
         }
 
-        private void addButton_Click(object sender, EventArgs e)
+        private void btnAdd1_Click(object sender, EventArgs e)
         {
+            /*
             string strQuery = "INSERT INTO users(user_name, password, role) " +
                 "VALUES (@user_name, @password, @role)";
             MySqlConnection con = conRef.connectFunc();
@@ -103,6 +104,8 @@ namespace WindowsFormsApp4
             MessageBox.Show("successfully inserted");
             readData();
             //showPrevForm();
+            */
+            
         }
         DbConnect connect = new DbConnect();
         MySqlDataAdapter da;
@@ -126,20 +129,20 @@ namespace WindowsFormsApp4
 
         private void Textbox_TextChanged(object sender, EventArgs e)
         {
-            /*
-            if (String.IsNullOrWhiteSpace(txtfn1.Text)||String.IsNullOrWhiteSpace(txtpass1.Text))
+            if (String.IsNullOrWhiteSpace(txtfn1.Text) || String.IsNullOrWhiteSpace(txtpass1.Text) || String.IsNullOrWhiteSpace(txtpass1.Text) || String.IsNullOrWhiteSpace(combRole.Text))
             {
                 btnAdd1.Enabled = false;
-       
+
             }
-
-
+            if (txtpass1.Text != txtRepeatPass.Text)
+            {
+                btnAdd1.Enabled = false;
+            }
 
             else
             {
                 btnAdd1.Enabled = true;
             }
-            */
         }
 
         private void topPanel_Paint(object sender, PaintEventArgs e)
@@ -154,12 +157,34 @@ namespace WindowsFormsApp4
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-
+            clear();
         }
         public void clear()
         {
             txtpass1.Text = ("");
-            txtfn1.Text = ("");
+            txtRepeat.Text = ("");
+            txtUserName.Text = ("");
+            combRole.Text = ("");
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            //editStaffForm f = new editStaffForm();
+            for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
+            {
+                f.txtPass.Text = dataGridView1.SelectedRows[i].Cells[1].Value.ToString();
+                f.combRole.Text = dataGridView1.SelectedRows[i].Cells[2].Value.ToString();
+                f.txtUsername.Text = dataGridView1.SelectedRows[i].Cells[3].Value.ToString();
+                
+
+
+            }
+            this.Hide();
+            //editStaffForm edit = new editStaffForm();
+            edit.reference = this;
+            edit.butAdd.Enabled = false;
+            edit.butAdd.Enabled = true;
+            edit.Show();
         }
     }
 }
