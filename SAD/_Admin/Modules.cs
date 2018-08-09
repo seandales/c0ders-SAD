@@ -17,21 +17,19 @@ namespace WindowsFormsApp4
         DbConnect conRef = new DbConnect();
         //Staff_Manag_Form frmObject = new Staff_Manag_Form();
         public Login reference { get; set; }
-
         private string loginName;
-
+        //
+        //-------->Form Initialization<--------
+        //
+        public Modules()
+        {
+            InitializeComponent();
+        }
         public Modules(String role)
         {
             InitializeComponent();
             loginName = role;
         }
-        public Modules()
-        {
-            InitializeComponent();
-        }
-        //
-        //-------->Form Initialization<--------
-        //
         private void Modules_Load(object sender, EventArgs e)
         {
             label1.Text = "Welcome back, " + loginName;
@@ -41,9 +39,11 @@ namespace WindowsFormsApp4
 
             //Sets All Panels to Fill
             homePanel.Dock = DockStyle.Fill;
+            staffsPanel.Dock = DockStyle.Fill;
             accountsPanel.Dock = DockStyle.Fill;
 
             //Hides All Other Panels
+            staffsPanel.Visible = false;
             accountsPanel.Visible = false;
             readData();
         }
@@ -54,24 +54,43 @@ namespace WindowsFormsApp4
         {
             //Switches Button BackColors
             homeButton.BackColor = Color.FromArgb(57, 213, 255);
+            staffsButton.BackColor = Color.Transparent;
             accountsButton.BackColor = Color.Transparent;
 
             //Switches Panel Visibility
             homePanel.Visible = true;
+            staffsPanel.Visible = false;
             accountsPanel.Visible = false;
 
             //Changes Label
             navigationLabel.Text = "Home";
         }
+        private void staffsButton_Click(object sender, EventArgs e)
+        {
+            //Switches Button BackColors
+            homeButton.BackColor = Color.Transparent;
+            staffsButton.BackColor = Color.FromArgb(57, 213, 255);
+            accountsButton.BackColor = Color.Transparent;
+
+            //Switches Panel Visibility
+            staffsPanel.Visible = true;
+            homePanel.Visible = false;
+            accountsPanel.Visible = false;
+
+            //Changes Label
+            navigationLabel.Text = "Staffs";
+        }
         private void accountsButton_Click(object sender, EventArgs e)
         {
             //Switches Button BackColors
             homeButton.BackColor = Color.Transparent;
+            staffsButton.BackColor = Color.Transparent;
             accountsButton.BackColor = Color.FromArgb(57, 213, 255);
 
             //Switches Panel Visibility
-            homePanel.Visible = false;
             accountsPanel.Visible = true;
+            homePanel.Visible = false;
+            staffsPanel.Visible = false;
 
             //Changes Label
             navigationLabel.Text = "Accounts";

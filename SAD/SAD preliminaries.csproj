@@ -53,10 +53,16 @@
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DbConnect.cs" />
-    <Compile Include="HRM\HRMForm.cs">
+    <Compile Include="_Faculty\FacultyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HRM\HRMForm.Designer.cs">
+    <Compile Include="_Faculty\FacultyForm.Designer.cs">
+      <DependentUpon>FacultyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_HRM\HRMForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_HRM\HRMForm.Designer.cs">
       <DependentUpon>HRMForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PACE Progression Form.cs">
@@ -77,6 +83,12 @@
     <Compile Include="PACEPrescriptionForm.Designer.cs">
       <DependentUpon>PACEPrescriptionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="_Principal\PrincipalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Principal\PrincipalForm.Designer.cs">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,8 +100,20 @@
     <Compile Include="RecordDeliveryForm.Designer.cs">
       <DependentUpon>RecordDeliveryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="_Registrar\RegForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Registrar\RegForm.Designer.cs">
+      <DependentUpon>RegForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RoundedButtons.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_SC\SCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_SC\SCForm.Designer.cs">
+      <DependentUpon>SCForm.cs</DependentUpon>
     </Compile>
     <Compile Include="StaffLineupForm.cs">
       <SubType>Form</SubType>
@@ -103,10 +127,10 @@
     <Compile Include="StaffManagForm.Designer.cs">
       <DependentUpon>StaffManagForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Modules.cs">
+    <Compile Include="_Admin\Modules.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\Modules.Designer.cs">
+    <Compile Include="_Admin\Modules.Designer.cs">
       <DependentUpon>Modules.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
@@ -144,7 +168,10 @@
     <EmbeddedResource Include="AddStaffForm.resx">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HRM\HRMForm.resx">
+    <EmbeddedResource Include="_Faculty\FacultyForm.resx">
+      <DependentUpon>FacultyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_HRM\HRMForm.resx">
       <DependentUpon>HRMForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PACE Progression Form.resx">
@@ -156,8 +183,17 @@
     <EmbeddedResource Include="PACEPrescriptionForm.resx">
       <DependentUpon>PACEPrescriptionForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="_Principal\PrincipalForm.resx">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RecordDeliveryForm.resx">
       <DependentUpon>RecordDeliveryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Registrar\RegForm.resx">
+      <DependentUpon>RegForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_SC\SCForm.resx">
+      <DependentUpon>SCForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffLineupForm.resx">
       <DependentUpon>StaffLineupForm.cs</DependentUpon>
@@ -165,7 +201,7 @@
     <EmbeddedResource Include="StaffManagForm.resx">
       <DependentUpon>StaffManagForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Modules.resx">
+    <EmbeddedResource Include="_Admin\Modules.resx">
       <DependentUpon>Modules.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
@@ -217,10 +253,7 @@
     <None Include="Resources\TopPanel.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Faculty\" />
-    <Folder Include="Principal\" />
-    <Folder Include="Registrar\" />
-    <Folder Include="SC\" />
+    <None Include="Resources\PanelBG1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PanelBG.jpg" />
@@ -239,6 +272,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AnotherPanel1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anything.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PanelBG3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
