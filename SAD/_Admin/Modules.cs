@@ -29,6 +29,8 @@ namespace WindowsFormsApp4
         {
             InitializeComponent();
             loginName = role;
+            btnAdd.Enabled = false;
+            editButton.Enabled = true;
         }
         private void Modules_Load(object sender, EventArgs e)
         {
@@ -132,11 +134,12 @@ namespace WindowsFormsApp4
         public void readData()
         {
             MySqlConnection con = connect.connectFunc();
-            String query = "SELECT * FROM users";
+            String query = "SELECT * FROM users_table";
             dt = new DataTable();
             da = new MySqlDataAdapter(query, con);
             da.Fill(dt);
-            dataGridView1.DataSource = dt;
+            accountListGridView.DataSource = dt;
+            accountListGridView.Columns[0].Visible = false;
             //dt.Rows[0].Vi
             
         }
@@ -148,19 +151,20 @@ namespace WindowsFormsApp4
 
         private void Textbox_TextChanged(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(txtfn1.Text) || String.IsNullOrWhiteSpace(txtpass1.Text) || String.IsNullOrWhiteSpace(txtpass1.Text) || String.IsNullOrWhiteSpace(combRole.Text))
-            {
-                btnAdd1.Enabled = false;
+            if (String.IsNullOrWhiteSpace(txtPass.Text) || String.IsNullOrWhiteSpace(txtPass2.Text) || String.IsNullOrWhiteSpace(txtUser.Text)) { 
+                btnAdd.Enabled = false;
 
             }
-            if (txtpass1.Text != txtRepeatPass.Text)
+            
+            if (txtPass.Text != txtPass2.Text)
             {
-                btnAdd1.Enabled = false;
+                btnAdd.Enabled = false;
             }
+            
 
             else
             {
-                btnAdd1.Enabled = true;
+                btnAdd.Enabled = true;
             }
         }
 
@@ -180,30 +184,155 @@ namespace WindowsFormsApp4
         }
         public void clear()
         {
-            txtpass1.Text = ("");
-            txtRepeat.Text = ("");
-            txtUserName.Text = ("");
-            combRole.Text = ("");
+            txtPass.Text = ("");
+            txtPass2.Text = ("");
+            txtUser.Text = ("");
+            comboRoleAccounts.SelectedIndex = comboRoleAccounts.Items.IndexOf(0);
         }
 
-        private void editButton_Click(object sender, EventArgs e)
+   
+
+        private void accountsPanel_Paint(object sender, PaintEventArgs e)
         {
-            //editStaffForm f = new editStaffForm();
-            for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Boolean flag = false;
+            if (comboRoleAccounts.SelectedItem == null  || comboRoleAccounts.SelectedIndex == 0)
             {
-                f.txtPass.Text = dataGridView1.SelectedRows[i].Cells[1].Value.ToString();
-                f.combRole.Text = dataGridView1.SelectedRows[i].Cells[2].Value.ToString();
-                f.txtUsername.Text = dataGridView1.SelectedRows[i].Cells[3].Value.ToString();
+                MessageBox.Show("please specify the role of the user");
+                flag = true;
+
+            }
+            if(txtPass.Text != txtPass2.Text)
+            {
+                MessageBox.Show("Passwords do not match please try again");
+            }
+           
+
+
+            else if (flag == false)
+            {
+                int number = 1;
+                String query1 = "INSERT INTO users_table (username,password,roleuser, statususer) VALUES (@username, @password, @roleuser, statususer)";
+                MySqlConnection con = conRef.connectFunc();
+                 using (MySqlCommand cmd = new MySqlCommand(query1, con))
+                 {
+                    cmd.Parameters.AddWithValue("@username", txtUser.Text);
+                    cmd.Parameters.AddWithValue("@password", txtPass.Text);
+                    cmd.Parameters.AddWithValue(@"roleuser", comboRoleAccounts.Text);
+                    cmd.Parameters.AddWithValue("@statususer", number);
+                    
+                    con.Open();
+                    int result = cmd.ExecuteNonQuery();
+                    //checking for errors
+                    if (result < 0)
+                    {
+                        Console.WriteLine("Error inserting data into users_table!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("succesfully inserted");
+
+                    }
+                    con.Close();
+                    readData();
+                }
+
+                //Form();
+            }
+            else
+            {
+                MessageBox.Show(" error");
+            }
+
+
+
+
+
+        }
+
+        private void clearButton_Click_1(object sender, EventArgs e)
+        {
+            clear();
+        }
+
+        private void topPanel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void accountListGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        int id;
+        public String username1, password1, role1;
+
+        private void comboRoleAccounts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editButton_Click_2(object sender, EventArgs e)
+        {
+
+            EditAccountForm f = new EditAccountForm();
+            for (int i = 0; i < accountListGridView.SelectedRows.Count; i++)
+            {
+                f.userId = Convert.ToInt32(accountListGridView.SelectedRows[i].Cells[0].Value.ToString());
+                f.textBox1.Text = (accountListGridView.SelectedRows[i].Cells[0].Value.ToString());
+                f.txtEditUserName.Text = accountListGridView.SelectedRows[i].Cells[1].Value.ToString();
+                f.txtEditPass1.Text = accountListGridView.SelectedRows[i].Cells[2].Value.ToString();
+                f.comboEditRole.Text = accountListGridView.SelectedRows[i].Cells[3].Value.ToString();
+                //f.dateTimePicker1.Text = accountListGridView.SelectedRows[i].Cells[4].Value.ToString();
+                f.comboStatus.Text = accountListGridView.SelectedRows[i].Cells[5].Value.ToString();
                 
 
 
             }
             this.Hide();
-            //editStaffForm edit = new editStaffForm();
-            edit.reference = this;
-            edit.butAdd.Enabled = false;
-            edit.butAdd.Enabled = true;
-            edit.Show();
+            //ddStaffForm addForm = new AddStaffForm();
+            f.reference = this;
+            //addForm.butAdd.Enabled = false;
+           // addForm.butAdd.Enabled = true;
+            f.Show();
         }
+
+        private void accountListGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //editButton.Enabled = true;
+            
+            id = Convert.ToInt32(accountListGridView.Rows[e.RowIndex].Cells["idUser"].Value.ToString());
+            MySqlConnection con = connect.connectFunc();
+            MySqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM users_table WHERE idUser=" + id + "";
+            con.Open();
+            cmd.ExecuteNonQuery();
+            dt = new DataTable();
+            da = new MySqlDataAdapter(cmd);
+            da.Fill(dt);
+            //String username, password, role;
+            foreach (DataRow dr in dt.Rows)
+            {
+                username1 = dr["firstname"].ToString();
+                password1 = dr["password"].ToString();
+                role1 = dr["role"].ToString();
+        
+            }
+            
+            
+        }
+
+
     }
 }
+

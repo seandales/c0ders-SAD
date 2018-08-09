@@ -26,7 +26,7 @@ namespace WindowsFormsApp4
         private void loginBut_Click(object sender, EventArgs e)
         {
         
-            MySqlDataAdapter sda = new MySqlDataAdapter("SELECT role, firstname " +
+            MySqlDataAdapter sda = new MySqlDataAdapter("SELECT roleuser, firstname " +
                                                         "FROM users_table " +
                                                         "LEFT JOIN staff_table " +
                                                         "ON users_table.idStaff = staff_table.idStaff " +
