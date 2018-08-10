@@ -33,13 +33,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Icons = new System.Windows.Forms.ImageList(this.components);
             this.accountsPanel = new System.Windows.Forms.Panel();
+            this.editButton = new System.Windows.Forms.Button();
+            this.smallerIcons = new System.Windows.Forms.ImageList(this.components);
             this.addPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.addUserLabel = new System.Windows.Forms.Label();
             this.comboRoleAccounts = new System.Windows.Forms.ComboBox();
             this.roleLabel = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.smallerIcons = new System.Windows.Forms.ImageList(this.components);
             this.clearButton = new System.Windows.Forms.Button();
             this.txtPass2 = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
@@ -76,20 +77,19 @@
             this.genderLabel = new System.Windows.Forms.Label();
             this.dateTimeBirthdate = new System.Windows.Forms.DateTimePicker();
             this.bdayLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnStaffAdd = new System.Windows.Forms.Button();
+            this.btnStaffCancel = new System.Windows.Forms.Button();
             this.txtLn = new System.Windows.Forms.TextBox();
             this.txtMn = new System.Windows.Forms.TextBox();
             this.txtFn = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnStaffEdit = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.staffListGridView = new System.Windows.Forms.DataGridView();
-            this.editButton = new System.Windows.Forms.Button();
             this.accountsPanel.SuspendLayout();
             this.addPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -142,6 +142,34 @@
             this.accountsPanel.TabIndex = 7;
             this.accountsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.accountsPanel_Paint);
             // 
+            // editButton
+            // 
+            this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(75)))));
+            this.editButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(100)))), ((int)(((byte)(0)))));
+            this.editButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editButton.ImageKey = "(none)";
+            this.editButton.ImageList = this.smallerIcons;
+            this.editButton.Location = new System.Drawing.Point(420, 25);
+            this.editButton.Name = "editButton";
+            this.editButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.editButton.Size = new System.Drawing.Size(89, 34);
+            this.editButton.TabIndex = 16;
+            this.editButton.Text = "Edit";
+            this.editButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.editButton.UseVisualStyleBackColor = false;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
+            // smallerIcons
+            // 
+            this.smallerIcons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("smallerIcons.ImageStream")));
+            this.smallerIcons.TransparentColor = System.Drawing.Color.Transparent;
+            this.smallerIcons.Images.SetKeyName(0, "Add.png");
+            this.smallerIcons.Images.SetKeyName(1, "Edit.png");
+            this.smallerIcons.Images.SetKeyName(2, "Archive.png");
+            this.smallerIcons.Images.SetKeyName(3, "Delete.png");
+            // 
             // addPanel
             // 
             this.addPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addPanel.BackgroundImage")));
@@ -161,6 +189,9 @@
             this.addPanel.Name = "addPanel";
             this.addPanel.Size = new System.Drawing.Size(292, 550);
             this.addPanel.TabIndex = 15;
+            this.addPanel.Click += new System.EventHandler(this.addPanel_Click);
+            this.addPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.addPanel_Paint);
+            this.addPanel.Enter += new System.EventHandler(this.addPanel_Enter);
             // 
             // panel1
             // 
@@ -234,15 +265,6 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // smallerIcons
-            // 
-            this.smallerIcons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("smallerIcons.ImageStream")));
-            this.smallerIcons.TransparentColor = System.Drawing.Color.Transparent;
-            this.smallerIcons.Images.SetKeyName(0, "Add.png");
-            this.smallerIcons.Images.SetKeyName(1, "Edit.png");
-            this.smallerIcons.Images.SetKeyName(2, "Archive.png");
-            this.smallerIcons.Images.SetKeyName(3, "Delete.png");
-            // 
             // clearButton
             // 
             this.clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(92)))), ((int)(((byte)(76)))));
@@ -276,7 +298,7 @@
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(33, 134);
+            this.txtPass.Location = new System.Drawing.Point(33, 133);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(222, 52);
@@ -366,6 +388,8 @@
             this.accountListGridView.Size = new System.Drawing.Size(748, 548);
             this.accountListGridView.TabIndex = 0;
             this.accountListGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.accountListGridView_CellContentClick);
+            this.accountListGridView.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.accountListGridView_CellMouseDown);
+            this.accountListGridView.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.accountListGridView_CellMouseLeave);
             // 
             // homePanel
             // 
@@ -530,14 +554,15 @@
             this.staffsPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("staffsPanel.BackgroundImage")));
             this.staffsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.staffsPanel.Controls.Add(this.panel2);
-            this.staffsPanel.Controls.Add(this.button3);
+            this.staffsPanel.Controls.Add(this.btnStaffEdit);
             this.staffsPanel.Controls.Add(this.textBox2);
             this.staffsPanel.Controls.Add(this.label8);
             this.staffsPanel.Controls.Add(this.panel4);
-            this.staffsPanel.Location = new System.Drawing.Point(268, 826);
+            this.staffsPanel.Location = new System.Drawing.Point(252, 734);
             this.staffsPanel.Name = "staffsPanel";
-            this.staffsPanel.Size = new System.Drawing.Size(1321, 615);
+            this.staffsPanel.Size = new System.Drawing.Size(1337, 915);
             this.staffsPanel.TabIndex = 12;
+            this.staffsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.staffsPanel_Paint);
             // 
             // panel2
             // 
@@ -557,8 +582,8 @@
             this.panel2.Controls.Add(this.genderLabel);
             this.panel2.Controls.Add(this.dateTimeBirthdate);
             this.panel2.Controls.Add(this.bdayLabel);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnStaffAdd);
+            this.panel2.Controls.Add(this.btnStaffCancel);
             this.panel2.Controls.Add(this.txtLn);
             this.panel2.Controls.Add(this.txtMn);
             this.panel2.Controls.Add(this.txtFn);
@@ -567,8 +592,10 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Location = new System.Drawing.Point(771, 51);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(292, 550);
+            this.panel2.Size = new System.Drawing.Size(374, 631);
             this.panel2.TabIndex = 15;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.Enter += new System.EventHandler(this.panel2_Enter);
             // 
             // panel3
             // 
@@ -578,7 +605,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(288, 42);
+            this.panel3.Size = new System.Drawing.Size(370, 42);
             this.panel3.TabIndex = 35;
             // 
             // label2
@@ -636,6 +663,7 @@
             this.comboRoleStaffs.Name = "comboRoleStaffs";
             this.comboRoleStaffs.Size = new System.Drawing.Size(116, 50);
             this.comboRoleStaffs.TabIndex = 28;
+            this.comboRoleStaffs.SelectedIndexChanged += new System.EventHandler(this.comboRoleStaffs_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -661,6 +689,11 @@
             // 
             // comboCivilStatus
             // 
+            this.comboCivilStatus.AutoCompleteCustomSource.AddRange(new string[] {
+            "",
+            "Married",
+            "Single",
+            "Widowed"});
             this.comboCivilStatus.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboCivilStatus.FormattingEnabled = true;
             this.comboCivilStatus.Items.AddRange(new object[] {
@@ -682,6 +715,7 @@
             this.civilStatusLabel.Size = new System.Drawing.Size(318, 43);
             this.civilStatusLabel.TabIndex = 23;
             this.civilStatusLabel.Text = "Civil Status:";
+            this.civilStatusLabel.Click += new System.EventHandler(this.civilStatusLabel_Click);
             // 
             // comboGender
             // 
@@ -695,6 +729,7 @@
             this.comboGender.Name = "comboGender";
             this.comboGender.Size = new System.Drawing.Size(113, 50);
             this.comboGender.TabIndex = 22;
+            this.comboGender.SelectedIndexChanged += new System.EventHandler(this.comboGender_SelectedIndexChanged);
             // 
             // genderLabel
             // 
@@ -718,6 +753,7 @@
             this.dateTimeBirthdate.Size = new System.Drawing.Size(222, 54);
             this.dateTimeBirthdate.TabIndex = 20;
             this.dateTimeBirthdate.Value = new System.DateTime(2018, 8, 2, 0, 0, 0, 0);
+            this.dateTimeBirthdate.ValueChanged += new System.EventHandler(this.dateTimeBirthdate_ValueChanged);
             // 
             // bdayLabel
             // 
@@ -730,41 +766,42 @@
             this.bdayLabel.TabIndex = 19;
             this.bdayLabel.Text = "Birthdate:";
             // 
-            // button1
+            // btnStaffAdd
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(220)))), ((int)(((byte)(129)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(1)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ImageKey = "(none)";
-            this.button1.ImageList = this.smallerIcons;
-            this.button1.Location = new System.Drawing.Point(157, 491);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(100, 34);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Add";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnStaffAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(220)))), ((int)(((byte)(129)))));
+            this.btnStaffAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(1)))));
+            this.btnStaffAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
+            this.btnStaffAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStaffAdd.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStaffAdd.ImageKey = "(none)";
+            this.btnStaffAdd.ImageList = this.smallerIcons;
+            this.btnStaffAdd.Location = new System.Drawing.Point(157, 491);
+            this.btnStaffAdd.Name = "btnStaffAdd";
+            this.btnStaffAdd.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnStaffAdd.Size = new System.Drawing.Size(100, 34);
+            this.btnStaffAdd.TabIndex = 18;
+            this.btnStaffAdd.Text = "Add";
+            this.btnStaffAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnStaffAdd.UseVisualStyleBackColor = false;
+            this.btnStaffAdd.Click += new System.EventHandler(this.btnStaffAdd_Click_1);
             // 
-            // button2
+            // btnStaffCancel
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(92)))), ((int)(((byte)(76)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(28)))), ((int)(((byte)(12)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(60)))), ((int)(((byte)(44)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ImageKey = "(none)";
-            this.button2.ImageList = this.smallerIcons;
-            this.button2.Location = new System.Drawing.Point(33, 491);
-            this.button2.Name = "button2";
-            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button2.Size = new System.Drawing.Size(100, 34);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Cancel";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnStaffCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(92)))), ((int)(((byte)(76)))));
+            this.btnStaffCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(28)))), ((int)(((byte)(12)))));
+            this.btnStaffCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(60)))), ((int)(((byte)(44)))));
+            this.btnStaffCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStaffCancel.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStaffCancel.ImageKey = "(none)";
+            this.btnStaffCancel.ImageList = this.smallerIcons;
+            this.btnStaffCancel.Location = new System.Drawing.Point(33, 491);
+            this.btnStaffCancel.Name = "btnStaffCancel";
+            this.btnStaffCancel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnStaffCancel.Size = new System.Drawing.Size(100, 34);
+            this.btnStaffCancel.TabIndex = 17;
+            this.btnStaffCancel.Text = "Cancel";
+            this.btnStaffCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnStaffCancel.UseVisualStyleBackColor = false;
             // 
             // txtLn
             // 
@@ -774,6 +811,7 @@
             this.txtLn.Size = new System.Drawing.Size(222, 52);
             this.txtLn.TabIndex = 5;
             this.txtLn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLn.TextChanged += new System.EventHandler(this.TextBox_TextChanged2);
             // 
             // txtMn
             // 
@@ -783,6 +821,7 @@
             this.txtMn.Size = new System.Drawing.Size(222, 52);
             this.txtMn.TabIndex = 4;
             this.txtMn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMn.TextChanged += new System.EventHandler(this.TextBox_TextChanged2);
             // 
             // txtFn
             // 
@@ -792,6 +831,7 @@
             this.txtFn.Size = new System.Drawing.Size(222, 52);
             this.txtFn.TabIndex = 3;
             this.txtFn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtFn.TextChanged += new System.EventHandler(this.TextBox_TextChanged2);
             // 
             // label5
             // 
@@ -826,24 +866,24 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "First Name:";
             // 
-            // button3
+            // btnStaffEdit
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(75)))));
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(100)))), ((int)(((byte)(0)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ImageKey = "(none)";
-            this.button3.ImageList = this.smallerIcons;
-            this.button3.Location = new System.Drawing.Point(427, 9);
-            this.button3.Name = "button3";
-            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button3.Size = new System.Drawing.Size(89, 34);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Edit";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnStaffEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(75)))));
+            this.btnStaffEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(100)))), ((int)(((byte)(0)))));
+            this.btnStaffEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.btnStaffEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStaffEdit.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStaffEdit.ImageKey = "(none)";
+            this.btnStaffEdit.ImageList = this.smallerIcons;
+            this.btnStaffEdit.Location = new System.Drawing.Point(427, 9);
+            this.btnStaffEdit.Name = "btnStaffEdit";
+            this.btnStaffEdit.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnStaffEdit.Size = new System.Drawing.Size(89, 34);
+            this.btnStaffEdit.TabIndex = 12;
+            this.btnStaffEdit.Text = "Edit";
+            this.btnStaffEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnStaffEdit.UseVisualStyleBackColor = false;
+            this.btnStaffEdit.Click += new System.EventHandler(this.btnStaffEdit_Click);
             // 
             // textBox2
             // 
@@ -882,27 +922,12 @@
             this.staffListGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.staffListGridView.Location = new System.Drawing.Point(0, 0);
             this.staffListGridView.Name = "staffListGridView";
+            this.staffListGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.staffListGridView.Size = new System.Drawing.Size(748, 548);
             this.staffListGridView.TabIndex = 0;
-            // 
-            // editButton
-            // 
-            this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(75)))));
-            this.editButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(100)))), ((int)(((byte)(0)))));
-            this.editButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton.ImageKey = "(none)";
-            this.editButton.ImageList = this.smallerIcons;
-            this.editButton.Location = new System.Drawing.Point(420, 25);
-            this.editButton.Name = "editButton";
-            this.editButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.editButton.Size = new System.Drawing.Size(89, 34);
-            this.editButton.TabIndex = 16;
-            this.editButton.Text = "Edit";
-            this.editButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.editButton.UseVisualStyleBackColor = false;
-            this.editButton.Click += new System.EventHandler(this.editButton_Click_2);
+            this.staffListGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffListGridView_CellContentClick);
+            this.staffListGridView.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.staffListGridView_CellMouseDown);
+            this.staffListGridView.Enter += new System.EventHandler(this.staffListGridView_Enter);
             // 
             // Modules
             // 
@@ -999,15 +1024,15 @@
         private System.Windows.Forms.Label genderLabel;
         private System.Windows.Forms.DateTimePicker dateTimeBirthdate;
         private System.Windows.Forms.Label bdayLabel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnStaffAdd;
+        private System.Windows.Forms.Button btnStaffCancel;
         private System.Windows.Forms.TextBox txtLn;
         private System.Windows.Forms.TextBox txtMn;
         private System.Windows.Forms.TextBox txtFn;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnStaffEdit;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;

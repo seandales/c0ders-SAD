@@ -47,6 +47,10 @@ namespace WindowsFormsApp4
             this.Hide();
             reference.Show();
         }
+        private void clearFields()
+        {
+
+        }
 
         private void EditAccountForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -54,6 +58,11 @@ namespace WindowsFormsApp4
         }
 
         private void comboEditRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
         }

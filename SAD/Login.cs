@@ -19,6 +19,8 @@ namespace WindowsFormsApp4
         {
             con.connectFunc();
             InitializeComponent();
+            userNameTextBox.Text = "admin";
+            passwordTextBox.Text = "admin";
         }
         //
         //-------->Login Button<--------
@@ -42,28 +44,28 @@ namespace WindowsFormsApp4
                 loginName = dt.Rows[0][1].ToString();
 
                 //Identifies User's Role
-                if (role == "admin")                                                        //If User is Admin
+                if (role == "Admin")                                                        //If User is Admin
                 {
                     Modules modFrm = new Modules(role);
                     modFrm.reference = this;
                     this.Hide();
                     modFrm.Show();
                 }
-                else if (role == "principal")                                               //If User is Principal
+                else if (role == "Principal")                                               //If User is Principal
                 {
                     HRMForm hrmFrm = new HRMForm(role);
                     hrmFrm.reference = this;
                     this.Hide();
                     hrmFrm.Show();
                 }
-                else if (role == "hrm")                                                     //If User is Human Resource Manager
+                else if (role == "Hrm")                                                     //If User is Human Resource Manager
                 {
                     HRMForm hrmFrm = new HRMForm(role);
                     hrmFrm.reference = this;
                     this.Hide();
                     hrmFrm.Show();
                 }
-                else if (role == "registrar")                                               //If User is Registrar
+                else if (role == "Registrar")                                               //If User is Registrar
                 {
                     /*
                     RegForm regFrm = new RegForm(role);
@@ -72,7 +74,7 @@ namespace WindowsFormsApp4
                     regFrm.Show();
                     */
                 }
-                else if (role == "sc")                                                      //If User is Supervising Custodian
+                else if (role == "Sc")                                                      //If User is Supervising Custodian
                 {
                     /*
                     SCForm scFrm = new SCForm(role);
@@ -81,7 +83,7 @@ namespace WindowsFormsApp4
                     scFrm.Show();
                     */
                 }
-                else if (role == "supervisor" || role == "monitor")                         //If User is Faculty
+                else if (role == "Supervisor" || role == "Monitor")                         //If User is Faculty
                 {
                     FacultyForm facultyFrm = new FacultyForm(role);
                     facultyFrm.reference = this;
@@ -143,6 +145,11 @@ namespace WindowsFormsApp4
                 userNameTextBox.Text = "username";
                 userNameTextBox.ForeColor = Color.Silver;
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
