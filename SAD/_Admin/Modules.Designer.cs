@@ -151,7 +151,7 @@
             this.editButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editButton.ImageKey = "(none)";
             this.editButton.ImageList = this.smallerIcons;
-            this.editButton.Location = new System.Drawing.Point(416, 9);
+            this.editButton.Location = new System.Drawing.Point(427, 9);
             this.editButton.Name = "editButton";
             this.editButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.editButton.Size = new System.Drawing.Size(89, 34);
