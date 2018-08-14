@@ -152,11 +152,17 @@ namespace WindowsFormsApp4
             String query2 = "SELECT * FROM staff_table"; 
             dt = new DataTable();
             dt2 = new DataTable();
+
             da = new MySqlDataAdapter(query, con);
             da2 = new MySqlDataAdapter(query2, con);
             da.Fill(dt);
+            
+            BindingSource bSource = new BindingSource();
+            bSource.DataSource = dt;
+            
+
             da2.Fill(dt2);
-            accountListGridView.DataSource = dt;
+            accountListGridView.DataSource = bSource;
             staffListGridView.DataSource = dt2;
             staffListGridView.Columns[0].Visible = false;
             accountListGridView.Columns[0].Visible = false;
@@ -315,10 +321,12 @@ namespace WindowsFormsApp4
 
             }
             
+            /*
             if (txtPass.Text != txtPass2.Text)
             {
                 btnStaffAdd.Enabled = false;
             }
+            */
             
 
             else
@@ -691,6 +699,49 @@ namespace WindowsFormsApp4
         {
 
         }
+        DataTable dtSearch = new DataTable();
+
+        MySqlDataAdapter ad;
+        private void searchAccounts_TextChanged(object sender, EventArgs e)
+        {
+            using (MySqlConnection conn = conRef.connectFunc())
+            {
+                conn.Open();
+                string query = ("SELECT * FROM users_table WHERE username LIKE '" +txtSearchAccounts.Text + "%'");
+                ad = new MySqlDataAdapter(query, conn);
+                dt = new DataTable();
+                ad.Fill(dt);
+                accountListGridView.DataSource = dt;
+            }
+            //DataView DV = new DataView(dt);
+            //DV.RowFilter = string.Format("username LIKE '%[0]%'", txtSearchAccounts.Text);
+            //DV.RowFilter = string.Format("username LIKE '%[0]%'", txtSearchAccounts.Text);
+            //accountListGridView.DataSource = DV;
+
+        }
+
+        MySqlDataAdapter ad2;
+        DataTable newdt2;
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            using (MySqlConnection conn = conRef.connectFunc())
+            {
+                conn.Open();
+                string query = ("SELECT * FROM staff_table WHERE firstname LIKE '" + txtStaffSearch
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    .Text + "%'");
+                ad2 = new MySqlDataAdapter(query, conn);
+                newdt2 = new DataTable();
+                ad2.Fill(newdt2);
+                staffListGridView.DataSource = newdt2;
+            }
+        }
 
         private void btnStaffEdit_Click(object sender, EventArgs e)
         {
@@ -768,6 +819,10 @@ namespace WindowsFormsApp4
 
         }
         //user defined methods
+        void AutoCompleteText()
+        {
+            //txtStaffSearch.AutoCompleteCustomSource = AutoCompleteMode.SuggestAppend();
+        }
 
 
     }

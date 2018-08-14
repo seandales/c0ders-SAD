@@ -48,7 +48,7 @@
             this.lnLabel = new System.Windows.Forms.Label();
             this.mnLabel = new System.Windows.Forms.Label();
             this.fnLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearchAccounts = new System.Windows.Forms.TextBox();
             this.searchLabel = new System.Windows.Forms.Label();
             this.displayPanel = new System.Windows.Forms.Panel();
             this.accountListGridView = new System.Windows.Forms.DataGridView();
@@ -86,7 +86,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnStaffEdit = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtStaffSearch = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.staffListGridView = new System.Windows.Forms.DataGridView();
@@ -133,7 +133,7 @@
             this.accountsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.accountsPanel.Controls.Add(this.editButton);
             this.accountsPanel.Controls.Add(this.addPanel);
-            this.accountsPanel.Controls.Add(this.textBox1);
+            this.accountsPanel.Controls.Add(this.txtSearchAccounts);
             this.accountsPanel.Controls.Add(this.searchLabel);
             this.accountsPanel.Controls.Add(this.displayPanel);
             this.accountsPanel.Location = new System.Drawing.Point(130, 70);
@@ -349,13 +349,15 @@
             this.fnLabel.TabIndex = 0;
             this.fnLabel.Text = "Username:";
             // 
-            // textBox1
+            // txtSearchAccounts
             // 
-            this.textBox1.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(138, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(272, 75);
-            this.textBox1.TabIndex = 11;
+            this.txtSearchAccounts.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchAccounts.Location = new System.Drawing.Point(138, 9);
+            this.txtSearchAccounts.Name = "txtSearchAccounts";
+            this.txtSearchAccounts.Size = new System.Drawing.Size(272, 75);
+            this.txtSearchAccounts.TabIndex = 11;
+            this.txtSearchAccounts.Text = "r";
+            this.txtSearchAccounts.TextChanged += new System.EventHandler(this.searchAccounts_TextChanged);
             // 
             // searchLabel
             // 
@@ -555,7 +557,7 @@
             this.staffsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.staffsPanel.Controls.Add(this.panel2);
             this.staffsPanel.Controls.Add(this.btnStaffEdit);
-            this.staffsPanel.Controls.Add(this.textBox2);
+            this.staffsPanel.Controls.Add(this.txtStaffSearch);
             this.staffsPanel.Controls.Add(this.label8);
             this.staffsPanel.Controls.Add(this.panel4);
             this.staffsPanel.Location = new System.Drawing.Point(252, 734);
@@ -592,7 +594,7 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Location = new System.Drawing.Point(771, 51);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(374, 631);
+            this.panel2.Size = new System.Drawing.Size(335, 549);
             this.panel2.TabIndex = 15;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.Enter += new System.EventHandler(this.panel2_Enter);
@@ -605,7 +607,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(370, 42);
+            this.panel3.Size = new System.Drawing.Size(331, 42);
             this.panel3.TabIndex = 35;
             // 
             // label2
@@ -885,15 +887,16 @@
             this.btnStaffEdit.UseVisualStyleBackColor = false;
             this.btnStaffEdit.Click += new System.EventHandler(this.btnStaffEdit_Click);
             // 
-            // textBox2
+            // txtStaffSearch
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(138, 9);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(272, 75);
-            this.textBox2.TabIndex = 11;
+            this.txtStaffSearch.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtStaffSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtStaffSearch.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStaffSearch.Location = new System.Drawing.Point(138, 9);
+            this.txtStaffSearch.Name = "txtStaffSearch";
+            this.txtStaffSearch.Size = new System.Drawing.Size(272, 75);
+            this.txtStaffSearch.TabIndex = 11;
+            this.txtStaffSearch.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label8
             // 
@@ -989,7 +992,7 @@
         private System.Windows.Forms.Button accountsButton;
         private System.Windows.Forms.Panel homePanel;
         private System.Windows.Forms.Panel accountsPanel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearchAccounts;
         private System.Windows.Forms.Label searchLabel;
         private System.Windows.Forms.Panel displayPanel;
         private System.Windows.Forms.ImageList smallerIcons;
@@ -1033,10 +1036,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnStaffEdit;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtStaffSearch;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView staffListGridView;
         private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.DataGridView staffListGridView;
     }
 }
