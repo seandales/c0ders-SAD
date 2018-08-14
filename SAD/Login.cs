@@ -47,6 +47,7 @@ namespace WindowsFormsApp4
                 if (role == "Admin")                                                        //If User is Admin
                 {
                     Modules modFrm = new Modules(role);
+                    modFrm.Size = new Size(1200, 675);
                     modFrm.reference = this;
                     this.Hide();
                     modFrm.Show();
@@ -54,6 +55,7 @@ namespace WindowsFormsApp4
                 else if (role == "Principal")                                               //If User is Principal
                 {
                     HRMForm hrmFrm = new HRMForm(role);
+                    hrmFrm.Size = new Size(1200, 675);
                     hrmFrm.reference = this;
                     this.Hide();
                     hrmFrm.Show();
@@ -61,6 +63,7 @@ namespace WindowsFormsApp4
                 else if (role == "Hrm")                                                     //If User is Human Resource Manager
                 {
                     HRMForm hrmFrm = new HRMForm(role);
+                    hrmFrm.Size = new Size(1200, 675);
                     hrmFrm.reference = this;
                     this.Hide();
                     hrmFrm.Show();
@@ -69,6 +72,7 @@ namespace WindowsFormsApp4
                 {
                     /*
                     RegForm regFrm = new RegForm(role);
+                    regFrm.Size = new Size(1200, 675);
                     regFrm.reference = this;
                     this.Hide();
                     regFrm.Show();
@@ -78,6 +82,7 @@ namespace WindowsFormsApp4
                 {
                     /*
                     SCForm scFrm = new SCForm(role);
+                    scFrm.Size = new Size(1200, 675);
                     scFrm.reference = this;
                     this.Hide();
                     scFrm.Show();
@@ -86,6 +91,7 @@ namespace WindowsFormsApp4
                 else if (role == "Supervisor" || role == "Monitor")                         //If User is Faculty
                 {
                     FacultyForm facultyFrm = new FacultyForm(role);
+                    facultyFrm.Size = new Size(1200, 675);
                     facultyFrm.reference = this;
                     this.Hide();
                     if (role == "monitor")

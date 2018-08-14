@@ -41,9 +41,6 @@ namespace WindowsFormsApp4
         {
             label1.Text = "Welcome back, " + loginName;
 
-            //Sets Proper Form Size
-            this.Size = new Size(1200, 675);
-
             //Sets All Panels to Fill
             homePanel.Dock = DockStyle.Fill;
             staffsPanel.Dock = DockStyle.Fill;
