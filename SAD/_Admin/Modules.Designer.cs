@@ -356,7 +356,6 @@
             this.txtSearchAccounts.Name = "txtSearchAccounts";
             this.txtSearchAccounts.Size = new System.Drawing.Size(272, 34);
             this.txtSearchAccounts.TabIndex = 11;
-            this.txtSearchAccounts.Text = "r";
             this.txtSearchAccounts.TextChanged += new System.EventHandler(this.searchAccounts_TextChanged);
             // 
             // searchLabel
@@ -412,7 +411,7 @@
             this.topPanel.Location = new System.Drawing.Point(125, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1815, 60);
+            this.topPanel.Size = new System.Drawing.Size(1799, 60);
             this.topPanel.TabIndex = 5;
             this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint_1);
             // 
@@ -456,7 +455,7 @@
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(125, 1100);
+            this.sidePanel.Size = new System.Drawing.Size(125, 1061);
             this.sidePanel.TabIndex = 4;
             // 
             // staffsButton
@@ -939,7 +938,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.PanelBG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1940, 1100);
+            this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.Controls.Add(this.staffsPanel);
             this.Controls.Add(this.accountsPanel);
             this.Controls.Add(this.homePanel);
