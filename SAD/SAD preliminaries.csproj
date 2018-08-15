@@ -52,6 +52,7 @@
     <Compile Include="AddStaffForm.Designer.cs">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddStudentQueries.cs" />
     <Compile Include="DbConnect.cs" />
     <Compile Include="_Admin\EditStaffForm.cs">
       <SubType>Form</SubType>

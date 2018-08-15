@@ -25,6 +25,8 @@ namespace WindowsFormsApp4
         public Modules()
         {
             InitializeComponent();
+            accountListGridView.ClearSelection();
+            staffListGridView.ClearSelection();
         }
         public Modules(String role)
         {
@@ -34,8 +36,10 @@ namespace WindowsFormsApp4
             editButton.Enabled = false;
             btnStaffAdd.Enabled = false;
             btnStaffEdit.Enabled = false;
+            /*
             accountListGridView.ClearSelection();
             staffListGridView.ClearSelection();
+            */
         }
         private void Modules_Load(object sender, EventArgs e)
         {
@@ -83,8 +87,9 @@ namespace WindowsFormsApp4
 
             //Changes Label
             navigationLabel.Text = "Staffs";
-            accountListGridView.ClearSelection();
-            staffListGridView.ClearSelection();
+            editButton.Enabled = false;
+            btnAdd.Enabled = false;
+
             readData();
         }
         private void accountsButton_Click(object sender, EventArgs e)
@@ -103,8 +108,7 @@ namespace WindowsFormsApp4
             navigationLabel.Text = "Accounts";
             editButton.Enabled = false;
             btnAdd.Enabled = false;
-            accountListGridView.ClearSelection();
-            staffListGridView.ClearSelection();
+            
             readData();
         }
         //
@@ -163,8 +167,10 @@ namespace WindowsFormsApp4
             staffListGridView.DataSource = dt2;
             staffListGridView.Columns[0].Visible = false;
             accountListGridView.Columns[0].Visible = false;
+            accountListGridView.ClearSelection();
+            staffListGridView.ClearSelection();
             //dt.Rows[0].Vi
-            
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

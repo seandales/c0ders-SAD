@@ -113,7 +113,7 @@
             this.label1.Location = new System.Drawing.Point(34, 51);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 16);
+            this.label1.Size = new System.Drawing.Size(161, 40);
             this.label1.TabIndex = 1;
             this.label1.Text = "Status";
             // 
@@ -212,7 +212,7 @@
             this.addUserLabel.ForeColor = System.Drawing.Color.Black;
             this.addUserLabel.Location = new System.Drawing.Point(68, 9);
             this.addUserLabel.Name = "addUserLabel";
-            this.addUserLabel.Size = new System.Drawing.Size(148, 27);
+            this.addUserLabel.Size = new System.Drawing.Size(365, 68);
             this.addUserLabel.TabIndex = 16;
             this.addUserLabel.Text = "Add User";
             // 
@@ -231,7 +231,7 @@
             "Monitor"});
             this.comboRoleAccounts.Location = new System.Drawing.Point(33, 230);
             this.comboRoleAccounts.Name = "comboRoleAccounts";
-            this.comboRoleAccounts.Size = new System.Drawing.Size(116, 25);
+            this.comboRoleAccounts.Size = new System.Drawing.Size(116, 50);
             this.comboRoleAccounts.TabIndex = 28;
             this.comboRoleAccounts.SelectedIndexChanged += new System.EventHandler(this.comboRoleAccounts_SelectedIndexChanged);
             // 
@@ -242,7 +242,7 @@
             this.roleLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roleLabel.Location = new System.Drawing.Point(30, 210);
             this.roleLabel.Name = "roleLabel";
-            this.roleLabel.Size = new System.Drawing.Size(53, 17);
+            this.roleLabel.Size = new System.Drawing.Size(134, 43);
             this.roleLabel.TabIndex = 27;
             this.roleLabel.Text = "Role:";
             // 
@@ -290,7 +290,7 @@
             this.txtPass2.Location = new System.Drawing.Point(33, 182);
             this.txtPass2.Name = "txtPass2";
             this.txtPass2.PasswordChar = '*';
-            this.txtPass2.Size = new System.Drawing.Size(222, 25);
+            this.txtPass2.Size = new System.Drawing.Size(222, 52);
             this.txtPass2.TabIndex = 5;
             this.txtPass2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPass2.TextChanged += new System.EventHandler(this.Textbox_TextChanged);
@@ -301,7 +301,7 @@
             this.txtPass.Location = new System.Drawing.Point(33, 133);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(222, 25);
+            this.txtPass.Size = new System.Drawing.Size(222, 52);
             this.txtPass.TabIndex = 4;
             this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPass.TextChanged += new System.EventHandler(this.Textbox_TextChanged);
@@ -311,7 +311,7 @@
             this.txtUser.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(33, 86);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(222, 25);
+            this.txtUser.Size = new System.Drawing.Size(222, 52);
             this.txtUser.TabIndex = 3;
             this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtUser.TextChanged += new System.EventHandler(this.Textbox_TextChanged);
@@ -323,7 +323,7 @@
             this.lnLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnLabel.Location = new System.Drawing.Point(30, 162);
             this.lnLabel.Name = "lnLabel";
-            this.lnLabel.Size = new System.Drawing.Size(152, 17);
+            this.lnLabel.Size = new System.Drawing.Size(387, 43);
             this.lnLabel.TabIndex = 2;
             this.lnLabel.Text = "Repeat Password:";
             // 
@@ -334,7 +334,7 @@
             this.mnLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnLabel.Location = new System.Drawing.Point(30, 114);
             this.mnLabel.Name = "mnLabel";
-            this.mnLabel.Size = new System.Drawing.Size(89, 17);
+            this.mnLabel.Size = new System.Drawing.Size(226, 43);
             this.mnLabel.TabIndex = 1;
             this.mnLabel.Text = "Password:";
             // 
@@ -345,7 +345,7 @@
             this.fnLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fnLabel.Location = new System.Drawing.Point(30, 66);
             this.fnLabel.Name = "fnLabel";
-            this.fnLabel.Size = new System.Drawing.Size(89, 17);
+            this.fnLabel.Size = new System.Drawing.Size(226, 43);
             this.fnLabel.TabIndex = 0;
             this.fnLabel.Text = "Username:";
             // 
@@ -354,7 +354,7 @@
             this.txtSearchAccounts.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchAccounts.Location = new System.Drawing.Point(138, 9);
             this.txtSearchAccounts.Name = "txtSearchAccounts";
-            this.txtSearchAccounts.Size = new System.Drawing.Size(272, 34);
+            this.txtSearchAccounts.Size = new System.Drawing.Size(272, 75);
             this.txtSearchAccounts.TabIndex = 11;
             this.txtSearchAccounts.TextChanged += new System.EventHandler(this.searchAccounts_TextChanged);
             // 
@@ -366,7 +366,7 @@
             this.searchLabel.ForeColor = System.Drawing.Color.Black;
             this.searchLabel.Location = new System.Drawing.Point(6, 12);
             this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(148, 27);
+            this.searchLabel.Size = new System.Drawing.Size(365, 68);
             this.searchLabel.TabIndex = 14;
             this.searchLabel.Text = "Search: ";
             // 
@@ -411,7 +411,7 @@
             this.topPanel.Location = new System.Drawing.Point(125, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1799, 60);
+            this.topPanel.Size = new System.Drawing.Size(1804, 60);
             this.topPanel.TabIndex = 5;
             this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint_1);
             // 
@@ -440,7 +440,7 @@
             this.navigationLabel.Font = new System.Drawing.Font("Lucida Console", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navigationLabel.Location = new System.Drawing.Point(5, 9);
             this.navigationLabel.Name = "navigationLabel";
-            this.navigationLabel.Size = new System.Drawing.Size(140, 48);
+            this.navigationLabel.Size = new System.Drawing.Size(342, 120);
             this.navigationLabel.TabIndex = 0;
             this.navigationLabel.Text = "Home";
             // 
@@ -455,7 +455,7 @@
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(125, 1061);
+            this.sidePanel.Size = new System.Drawing.Size(125, 1335);
             this.sidePanel.TabIndex = 4;
             // 
             // staffsButton
@@ -617,7 +617,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(66, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 27);
+            this.label2.Size = new System.Drawing.Size(407, 68);
             this.label2.TabIndex = 16;
             this.label2.Text = "Add Staff";
             // 
@@ -628,7 +628,7 @@
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(152, 373);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 20);
+            this.label3.Size = new System.Drawing.Size(52, 44);
             this.label3.TabIndex = 34;
             this.label3.Text = "@";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -638,7 +638,7 @@
             this.txtEmail2.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail2.Location = new System.Drawing.Point(173, 371);
             this.txtEmail2.Name = "txtEmail2";
-            this.txtEmail2.Size = new System.Drawing.Size(82, 25);
+            this.txtEmail2.Size = new System.Drawing.Size(82, 52);
             this.txtEmail2.TabIndex = 33;
             // 
             // txtEmail
@@ -646,7 +646,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(33, 371);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(119, 25);
+            this.txtEmail.Size = new System.Drawing.Size(119, 52);
             this.txtEmail.TabIndex = 32;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -662,7 +662,7 @@
             "Monitor"});
             this.comboRoleStaffs.Location = new System.Drawing.Point(33, 421);
             this.comboRoleStaffs.Name = "comboRoleStaffs";
-            this.comboRoleStaffs.Size = new System.Drawing.Size(116, 25);
+            this.comboRoleStaffs.Size = new System.Drawing.Size(116, 50);
             this.comboRoleStaffs.TabIndex = 28;
             this.comboRoleStaffs.SelectedIndexChanged += new System.EventHandler(this.comboRoleStaffs_SelectedIndexChanged);
             // 
@@ -673,7 +673,7 @@
             this.label4.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(30, 401);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 17);
+            this.label4.Size = new System.Drawing.Size(134, 43);
             this.label4.TabIndex = 27;
             this.label4.Text = "Role:";
             // 
@@ -684,7 +684,7 @@
             this.emailLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailLabel.Location = new System.Drawing.Point(30, 351);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(143, 17);
+            this.emailLabel.Size = new System.Drawing.Size(364, 43);
             this.emailLabel.TabIndex = 25;
             this.emailLabel.Text = "E-Mail Address:";
             // 
@@ -703,7 +703,7 @@
             "Married"});
             this.comboCivilStatus.Location = new System.Drawing.Point(33, 321);
             this.comboCivilStatus.Name = "comboCivilStatus";
-            this.comboCivilStatus.Size = new System.Drawing.Size(116, 25);
+            this.comboCivilStatus.Size = new System.Drawing.Size(116, 50);
             this.comboCivilStatus.TabIndex = 24;
             // 
             // civilStatusLabel
@@ -713,7 +713,7 @@
             this.civilStatusLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.civilStatusLabel.Location = new System.Drawing.Point(30, 301);
             this.civilStatusLabel.Name = "civilStatusLabel";
-            this.civilStatusLabel.Size = new System.Drawing.Size(125, 17);
+            this.civilStatusLabel.Size = new System.Drawing.Size(318, 43);
             this.civilStatusLabel.TabIndex = 23;
             this.civilStatusLabel.Text = "Civil Status:";
             this.civilStatusLabel.Click += new System.EventHandler(this.civilStatusLabel_Click);
@@ -728,7 +728,7 @@
             "Female"});
             this.comboGender.Location = new System.Drawing.Point(33, 271);
             this.comboGender.Name = "comboGender";
-            this.comboGender.Size = new System.Drawing.Size(113, 25);
+            this.comboGender.Size = new System.Drawing.Size(113, 50);
             this.comboGender.TabIndex = 22;
             this.comboGender.SelectedIndexChanged += new System.EventHandler(this.comboGender_SelectedIndexChanged);
             // 
@@ -739,7 +739,7 @@
             this.genderLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genderLabel.Location = new System.Drawing.Point(30, 251);
             this.genderLabel.Name = "genderLabel";
-            this.genderLabel.Size = new System.Drawing.Size(80, 17);
+            this.genderLabel.Size = new System.Drawing.Size(203, 43);
             this.genderLabel.TabIndex = 21;
             this.genderLabel.Text = "Gender: ";
             // 
@@ -751,7 +751,7 @@
             this.dateTimeBirthdate.MaxDate = new System.DateTime(2018, 8, 2, 0, 0, 0, 0);
             this.dateTimeBirthdate.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.dateTimeBirthdate.Name = "dateTimeBirthdate";
-            this.dateTimeBirthdate.Size = new System.Drawing.Size(222, 26);
+            this.dateTimeBirthdate.Size = new System.Drawing.Size(222, 54);
             this.dateTimeBirthdate.TabIndex = 20;
             this.dateTimeBirthdate.Value = new System.DateTime(2018, 8, 2, 0, 0, 0, 0);
             this.dateTimeBirthdate.ValueChanged += new System.EventHandler(this.dateTimeBirthdate_ValueChanged);
@@ -763,7 +763,7 @@
             this.bdayLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bdayLabel.Location = new System.Drawing.Point(30, 201);
             this.bdayLabel.Name = "bdayLabel";
-            this.bdayLabel.Size = new System.Drawing.Size(98, 17);
+            this.bdayLabel.Size = new System.Drawing.Size(249, 43);
             this.bdayLabel.TabIndex = 19;
             this.bdayLabel.Text = "Birthdate:";
             // 
@@ -809,7 +809,7 @@
             this.txtLn.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLn.Location = new System.Drawing.Point(33, 171);
             this.txtLn.Name = "txtLn";
-            this.txtLn.Size = new System.Drawing.Size(222, 25);
+            this.txtLn.Size = new System.Drawing.Size(222, 52);
             this.txtLn.TabIndex = 5;
             this.txtLn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtLn.TextChanged += new System.EventHandler(this.TextBox_TextChanged2);
@@ -819,7 +819,7 @@
             this.txtMn.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMn.Location = new System.Drawing.Point(33, 121);
             this.txtMn.Name = "txtMn";
-            this.txtMn.Size = new System.Drawing.Size(222, 25);
+            this.txtMn.Size = new System.Drawing.Size(222, 52);
             this.txtMn.TabIndex = 4;
             this.txtMn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMn.TextChanged += new System.EventHandler(this.TextBox_TextChanged2);
@@ -829,7 +829,7 @@
             this.txtFn.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFn.Location = new System.Drawing.Point(33, 71);
             this.txtFn.Name = "txtFn";
-            this.txtFn.Size = new System.Drawing.Size(222, 25);
+            this.txtFn.Size = new System.Drawing.Size(222, 52);
             this.txtFn.TabIndex = 3;
             this.txtFn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtFn.TextChanged += new System.EventHandler(this.TextBox_TextChanged2);
@@ -841,7 +841,7 @@
             this.label5.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(30, 151);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 17);
+            this.label5.Size = new System.Drawing.Size(249, 43);
             this.label5.TabIndex = 2;
             this.label5.Text = "Last Name:";
             // 
@@ -852,7 +852,7 @@
             this.label6.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(30, 101);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 17);
+            this.label6.Size = new System.Drawing.Size(295, 43);
             this.label6.TabIndex = 1;
             this.label6.Text = "Middle Name:";
             // 
@@ -863,7 +863,7 @@
             this.label7.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(30, 51);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 17);
+            this.label7.Size = new System.Drawing.Size(272, 43);
             this.label7.TabIndex = 0;
             this.label7.Text = "First Name:";
             // 
@@ -893,7 +893,7 @@
             this.txtStaffSearch.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStaffSearch.Location = new System.Drawing.Point(138, 9);
             this.txtStaffSearch.Name = "txtStaffSearch";
-            this.txtStaffSearch.Size = new System.Drawing.Size(272, 34);
+            this.txtStaffSearch.Size = new System.Drawing.Size(272, 75);
             this.txtStaffSearch.TabIndex = 11;
             this.txtStaffSearch.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -905,7 +905,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(6, 12);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(148, 27);
+            this.label8.Size = new System.Drawing.Size(365, 68);
             this.label8.TabIndex = 14;
             this.label8.Text = "Search: ";
             // 
@@ -933,12 +933,12 @@
             // 
             // Modules
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(24F, 40F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.PanelBG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.ClientSize = new System.Drawing.Size(1929, 1335);
             this.Controls.Add(this.staffsPanel);
             this.Controls.Add(this.accountsPanel);
             this.Controls.Add(this.homePanel);
