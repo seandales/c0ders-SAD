@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Icons = new System.Windows.Forms.ImageList(this.components);
             this.accountsPanel = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.editButton = new System.Windows.Forms.Button();
             this.smallerIcons = new System.Windows.Forms.ImageList(this.components);
             this.addPanel = new System.Windows.Forms.Panel();
@@ -51,6 +52,7 @@
             this.txtSearchAccounts = new System.Windows.Forms.TextBox();
             this.searchLabel = new System.Windows.Forms.Label();
             this.displayPanel = new System.Windows.Forms.Panel();
+            this.archive1 = new System.Windows.Forms.DataGridView();
             this.accountListGridView = new System.Windows.Forms.DataGridView();
             this.homePanel = new System.Windows.Forms.Panel();
             this.topPanel = new System.Windows.Forms.Panel();
@@ -62,6 +64,8 @@
             this.homeButton = new System.Windows.Forms.Button();
             this.signOutButton = new System.Windows.Forms.Button();
             this.staffsPanel = new System.Windows.Forms.Panel();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -87,13 +91,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnStaffEdit = new System.Windows.Forms.Button();
             this.txtStaffSearch = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.archive2 = new System.Windows.Forms.DataGridView();
             this.staffListGridView = new System.Windows.Forms.DataGridView();
             this.accountsPanel.SuspendLayout();
             this.addPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.displayPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.archive1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountListGridView)).BeginInit();
             this.homePanel.SuspendLayout();
             this.topPanel.SuspendLayout();
@@ -102,6 +107,7 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.archive2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffListGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,7 +119,7 @@
             this.label1.Location = new System.Drawing.Point(34, 51);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 40);
+            this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Status";
             // 
@@ -131,6 +137,7 @@
             // 
             this.accountsPanel.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.PanelBG;
             this.accountsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.accountsPanel.Controls.Add(this.checkBox1);
             this.accountsPanel.Controls.Add(this.editButton);
             this.accountsPanel.Controls.Add(this.addPanel);
             this.accountsPanel.Controls.Add(this.txtSearchAccounts);
@@ -142,6 +149,17 @@
             this.accountsPanel.TabIndex = 7;
             this.accountsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.accountsPanel_Paint);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(592, 21);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(117, 20);
+            this.checkBox1.TabIndex = 17;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // editButton
             // 
             this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(75)))));
@@ -151,7 +169,7 @@
             this.editButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editButton.ImageKey = "(none)";
             this.editButton.ImageList = this.smallerIcons;
-            this.editButton.Location = new System.Drawing.Point(427, 9);
+            this.editButton.Location = new System.Drawing.Point(478, 11);
             this.editButton.Name = "editButton";
             this.editButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.editButton.Size = new System.Drawing.Size(89, 34);
@@ -212,7 +230,7 @@
             this.addUserLabel.ForeColor = System.Drawing.Color.Black;
             this.addUserLabel.Location = new System.Drawing.Point(68, 9);
             this.addUserLabel.Name = "addUserLabel";
-            this.addUserLabel.Size = new System.Drawing.Size(365, 68);
+            this.addUserLabel.Size = new System.Drawing.Size(148, 27);
             this.addUserLabel.TabIndex = 16;
             this.addUserLabel.Text = "Add User";
             // 
@@ -231,7 +249,7 @@
             "Monitor"});
             this.comboRoleAccounts.Location = new System.Drawing.Point(33, 230);
             this.comboRoleAccounts.Name = "comboRoleAccounts";
-            this.comboRoleAccounts.Size = new System.Drawing.Size(116, 50);
+            this.comboRoleAccounts.Size = new System.Drawing.Size(116, 25);
             this.comboRoleAccounts.TabIndex = 28;
             this.comboRoleAccounts.SelectedIndexChanged += new System.EventHandler(this.comboRoleAccounts_SelectedIndexChanged);
             // 
@@ -242,7 +260,7 @@
             this.roleLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roleLabel.Location = new System.Drawing.Point(30, 210);
             this.roleLabel.Name = "roleLabel";
-            this.roleLabel.Size = new System.Drawing.Size(134, 43);
+            this.roleLabel.Size = new System.Drawing.Size(53, 17);
             this.roleLabel.TabIndex = 27;
             this.roleLabel.Text = "Role:";
             // 
@@ -290,7 +308,7 @@
             this.txtPass2.Location = new System.Drawing.Point(33, 182);
             this.txtPass2.Name = "txtPass2";
             this.txtPass2.PasswordChar = '*';
-            this.txtPass2.Size = new System.Drawing.Size(222, 52);
+            this.txtPass2.Size = new System.Drawing.Size(222, 25);
             this.txtPass2.TabIndex = 5;
             this.txtPass2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPass2.TextChanged += new System.EventHandler(this.Textbox_TextChanged);
@@ -301,7 +319,7 @@
             this.txtPass.Location = new System.Drawing.Point(33, 133);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(222, 52);
+            this.txtPass.Size = new System.Drawing.Size(222, 25);
             this.txtPass.TabIndex = 4;
             this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPass.TextChanged += new System.EventHandler(this.Textbox_TextChanged);
@@ -311,7 +329,7 @@
             this.txtUser.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(33, 86);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(222, 52);
+            this.txtUser.Size = new System.Drawing.Size(222, 25);
             this.txtUser.TabIndex = 3;
             this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtUser.TextChanged += new System.EventHandler(this.Textbox_TextChanged);
@@ -323,7 +341,7 @@
             this.lnLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnLabel.Location = new System.Drawing.Point(30, 162);
             this.lnLabel.Name = "lnLabel";
-            this.lnLabel.Size = new System.Drawing.Size(387, 43);
+            this.lnLabel.Size = new System.Drawing.Size(152, 17);
             this.lnLabel.TabIndex = 2;
             this.lnLabel.Text = "Repeat Password:";
             // 
@@ -334,7 +352,7 @@
             this.mnLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnLabel.Location = new System.Drawing.Point(30, 114);
             this.mnLabel.Name = "mnLabel";
-            this.mnLabel.Size = new System.Drawing.Size(226, 43);
+            this.mnLabel.Size = new System.Drawing.Size(89, 17);
             this.mnLabel.TabIndex = 1;
             this.mnLabel.Text = "Password:";
             // 
@@ -345,16 +363,16 @@
             this.fnLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fnLabel.Location = new System.Drawing.Point(30, 66);
             this.fnLabel.Name = "fnLabel";
-            this.fnLabel.Size = new System.Drawing.Size(226, 43);
+            this.fnLabel.Size = new System.Drawing.Size(89, 17);
             this.fnLabel.TabIndex = 0;
             this.fnLabel.Text = "Username:";
             // 
             // txtSearchAccounts
             // 
             this.txtSearchAccounts.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchAccounts.Location = new System.Drawing.Point(138, 9);
+            this.txtSearchAccounts.Location = new System.Drawing.Point(178, 12);
             this.txtSearchAccounts.Name = "txtSearchAccounts";
-            this.txtSearchAccounts.Size = new System.Drawing.Size(272, 75);
+            this.txtSearchAccounts.Size = new System.Drawing.Size(272, 34);
             this.txtSearchAccounts.TabIndex = 11;
             this.txtSearchAccounts.TextChanged += new System.EventHandler(this.searchAccounts_TextChanged);
             // 
@@ -366,25 +384,43 @@
             this.searchLabel.ForeColor = System.Drawing.Color.Black;
             this.searchLabel.Location = new System.Drawing.Point(6, 12);
             this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(365, 68);
+            this.searchLabel.Size = new System.Drawing.Size(148, 27);
             this.searchLabel.TabIndex = 14;
             this.searchLabel.Text = "Search: ";
             // 
             // displayPanel
             // 
             this.displayPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.displayPanel.Controls.Add(this.archive1);
             this.displayPanel.Controls.Add(this.accountListGridView);
             this.displayPanel.Location = new System.Drawing.Point(11, 51);
             this.displayPanel.Name = "displayPanel";
             this.displayPanel.Size = new System.Drawing.Size(750, 550);
             this.displayPanel.TabIndex = 13;
             // 
+            // archive1
+            // 
+            this.archive1.AllowUserToAddRows = false;
+            this.archive1.AllowUserToDeleteRows = false;
+            this.archive1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.archive1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.archive1.Location = new System.Drawing.Point(0, 0);
+            this.archive1.Name = "archive1";
+            this.archive1.ReadOnly = true;
+            this.archive1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.archive1.Size = new System.Drawing.Size(748, 548);
+            this.archive1.TabIndex = 1;
+            this.archive1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.archive1_CellContentClick_1);
+            // 
             // accountListGridView
             // 
+            this.accountListGridView.AllowUserToAddRows = false;
+            this.accountListGridView.AllowUserToDeleteRows = false;
             this.accountListGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.accountListGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.accountListGridView.Location = new System.Drawing.Point(0, 0);
             this.accountListGridView.Name = "accountListGridView";
+            this.accountListGridView.ReadOnly = true;
             this.accountListGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.accountListGridView.Size = new System.Drawing.Size(748, 548);
             this.accountListGridView.TabIndex = 0;
@@ -411,7 +447,7 @@
             this.topPanel.Location = new System.Drawing.Point(125, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1804, 60);
+            this.topPanel.Size = new System.Drawing.Size(1799, 60);
             this.topPanel.TabIndex = 5;
             this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint_1);
             // 
@@ -440,7 +476,7 @@
             this.navigationLabel.Font = new System.Drawing.Font("Lucida Console", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navigationLabel.Location = new System.Drawing.Point(5, 9);
             this.navigationLabel.Name = "navigationLabel";
-            this.navigationLabel.Size = new System.Drawing.Size(342, 120);
+            this.navigationLabel.Size = new System.Drawing.Size(140, 48);
             this.navigationLabel.TabIndex = 0;
             this.navigationLabel.Text = "Home";
             // 
@@ -455,7 +491,7 @@
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(125, 1335);
+            this.sidePanel.Size = new System.Drawing.Size(125, 1061);
             this.sidePanel.TabIndex = 4;
             // 
             // staffsButton
@@ -554,16 +590,40 @@
             // 
             this.staffsPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("staffsPanel.BackgroundImage")));
             this.staffsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.staffsPanel.Controls.Add(this.checkBox2);
+            this.staffsPanel.Controls.Add(this.label8);
             this.staffsPanel.Controls.Add(this.panel2);
             this.staffsPanel.Controls.Add(this.btnStaffEdit);
             this.staffsPanel.Controls.Add(this.txtStaffSearch);
-            this.staffsPanel.Controls.Add(this.label8);
             this.staffsPanel.Controls.Add(this.panel4);
             this.staffsPanel.Location = new System.Drawing.Point(252, 734);
             this.staffsPanel.Name = "staffsPanel";
             this.staffsPanel.Size = new System.Drawing.Size(1337, 915);
             this.staffsPanel.TabIndex = 12;
             this.staffsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.staffsPanel_Paint);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(570, 1);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(117, 20);
+            this.checkBox2.TabIndex = 16;
+            this.checkBox2.Text = "checkBox2";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(6, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(148, 27);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Search: ";
             // 
             // panel2
             // 
@@ -617,7 +677,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(66, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(407, 68);
+            this.label2.Size = new System.Drawing.Size(165, 27);
             this.label2.TabIndex = 16;
             this.label2.Text = "Add Staff";
             // 
@@ -628,7 +688,7 @@
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(152, 373);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 44);
+            this.label3.Size = new System.Drawing.Size(21, 20);
             this.label3.TabIndex = 34;
             this.label3.Text = "@";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -638,7 +698,7 @@
             this.txtEmail2.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail2.Location = new System.Drawing.Point(173, 371);
             this.txtEmail2.Name = "txtEmail2";
-            this.txtEmail2.Size = new System.Drawing.Size(82, 52);
+            this.txtEmail2.Size = new System.Drawing.Size(82, 25);
             this.txtEmail2.TabIndex = 33;
             // 
             // txtEmail
@@ -646,7 +706,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(33, 371);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(119, 52);
+            this.txtEmail.Size = new System.Drawing.Size(119, 25);
             this.txtEmail.TabIndex = 32;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -662,7 +722,7 @@
             "Monitor"});
             this.comboRoleStaffs.Location = new System.Drawing.Point(33, 421);
             this.comboRoleStaffs.Name = "comboRoleStaffs";
-            this.comboRoleStaffs.Size = new System.Drawing.Size(116, 50);
+            this.comboRoleStaffs.Size = new System.Drawing.Size(116, 25);
             this.comboRoleStaffs.TabIndex = 28;
             this.comboRoleStaffs.SelectedIndexChanged += new System.EventHandler(this.comboRoleStaffs_SelectedIndexChanged);
             // 
@@ -673,7 +733,7 @@
             this.label4.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(30, 401);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 43);
+            this.label4.Size = new System.Drawing.Size(53, 17);
             this.label4.TabIndex = 27;
             this.label4.Text = "Role:";
             // 
@@ -684,7 +744,7 @@
             this.emailLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailLabel.Location = new System.Drawing.Point(30, 351);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(364, 43);
+            this.emailLabel.Size = new System.Drawing.Size(143, 17);
             this.emailLabel.TabIndex = 25;
             this.emailLabel.Text = "E-Mail Address:";
             // 
@@ -703,7 +763,7 @@
             "Married"});
             this.comboCivilStatus.Location = new System.Drawing.Point(33, 321);
             this.comboCivilStatus.Name = "comboCivilStatus";
-            this.comboCivilStatus.Size = new System.Drawing.Size(116, 50);
+            this.comboCivilStatus.Size = new System.Drawing.Size(116, 25);
             this.comboCivilStatus.TabIndex = 24;
             // 
             // civilStatusLabel
@@ -713,7 +773,7 @@
             this.civilStatusLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.civilStatusLabel.Location = new System.Drawing.Point(30, 301);
             this.civilStatusLabel.Name = "civilStatusLabel";
-            this.civilStatusLabel.Size = new System.Drawing.Size(318, 43);
+            this.civilStatusLabel.Size = new System.Drawing.Size(125, 17);
             this.civilStatusLabel.TabIndex = 23;
             this.civilStatusLabel.Text = "Civil Status:";
             this.civilStatusLabel.Click += new System.EventHandler(this.civilStatusLabel_Click);
@@ -728,7 +788,7 @@
             "Female"});
             this.comboGender.Location = new System.Drawing.Point(33, 271);
             this.comboGender.Name = "comboGender";
-            this.comboGender.Size = new System.Drawing.Size(113, 50);
+            this.comboGender.Size = new System.Drawing.Size(113, 25);
             this.comboGender.TabIndex = 22;
             this.comboGender.SelectedIndexChanged += new System.EventHandler(this.comboGender_SelectedIndexChanged);
             // 
@@ -739,7 +799,7 @@
             this.genderLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genderLabel.Location = new System.Drawing.Point(30, 251);
             this.genderLabel.Name = "genderLabel";
-            this.genderLabel.Size = new System.Drawing.Size(203, 43);
+            this.genderLabel.Size = new System.Drawing.Size(80, 17);
             this.genderLabel.TabIndex = 21;
             this.genderLabel.Text = "Gender: ";
             // 
@@ -751,7 +811,7 @@
             this.dateTimeBirthdate.MaxDate = new System.DateTime(2018, 8, 2, 0, 0, 0, 0);
             this.dateTimeBirthdate.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.dateTimeBirthdate.Name = "dateTimeBirthdate";
-            this.dateTimeBirthdate.Size = new System.Drawing.Size(222, 54);
+            this.dateTimeBirthdate.Size = new System.Drawing.Size(222, 26);
             this.dateTimeBirthdate.TabIndex = 20;
             this.dateTimeBirthdate.Value = new System.DateTime(2018, 8, 2, 0, 0, 0, 0);
             this.dateTimeBirthdate.ValueChanged += new System.EventHandler(this.dateTimeBirthdate_ValueChanged);
@@ -763,7 +823,7 @@
             this.bdayLabel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bdayLabel.Location = new System.Drawing.Point(30, 201);
             this.bdayLabel.Name = "bdayLabel";
-            this.bdayLabel.Size = new System.Drawing.Size(249, 43);
+            this.bdayLabel.Size = new System.Drawing.Size(98, 17);
             this.bdayLabel.TabIndex = 19;
             this.bdayLabel.Text = "Birthdate:";
             // 
@@ -809,7 +869,7 @@
             this.txtLn.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLn.Location = new System.Drawing.Point(33, 171);
             this.txtLn.Name = "txtLn";
-            this.txtLn.Size = new System.Drawing.Size(222, 52);
+            this.txtLn.Size = new System.Drawing.Size(222, 25);
             this.txtLn.TabIndex = 5;
             this.txtLn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtLn.TextChanged += new System.EventHandler(this.TextBox_TextChanged2);
@@ -819,7 +879,7 @@
             this.txtMn.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMn.Location = new System.Drawing.Point(33, 121);
             this.txtMn.Name = "txtMn";
-            this.txtMn.Size = new System.Drawing.Size(222, 52);
+            this.txtMn.Size = new System.Drawing.Size(222, 25);
             this.txtMn.TabIndex = 4;
             this.txtMn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMn.TextChanged += new System.EventHandler(this.TextBox_TextChanged2);
@@ -829,7 +889,7 @@
             this.txtFn.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFn.Location = new System.Drawing.Point(33, 71);
             this.txtFn.Name = "txtFn";
-            this.txtFn.Size = new System.Drawing.Size(222, 52);
+            this.txtFn.Size = new System.Drawing.Size(222, 25);
             this.txtFn.TabIndex = 3;
             this.txtFn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtFn.TextChanged += new System.EventHandler(this.TextBox_TextChanged2);
@@ -841,7 +901,7 @@
             this.label5.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(30, 151);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(249, 43);
+            this.label5.Size = new System.Drawing.Size(98, 17);
             this.label5.TabIndex = 2;
             this.label5.Text = "Last Name:";
             // 
@@ -852,7 +912,7 @@
             this.label6.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(30, 101);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(295, 43);
+            this.label6.Size = new System.Drawing.Size(116, 17);
             this.label6.TabIndex = 1;
             this.label6.Text = "Middle Name:";
             // 
@@ -863,7 +923,7 @@
             this.label7.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(30, 51);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(272, 43);
+            this.label7.Size = new System.Drawing.Size(107, 17);
             this.label7.TabIndex = 0;
             this.label7.Text = "First Name:";
             // 
@@ -893,37 +953,42 @@
             this.txtStaffSearch.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStaffSearch.Location = new System.Drawing.Point(138, 9);
             this.txtStaffSearch.Name = "txtStaffSearch";
-            this.txtStaffSearch.Size = new System.Drawing.Size(272, 75);
+            this.txtStaffSearch.Size = new System.Drawing.Size(272, 34);
             this.txtStaffSearch.TabIndex = 11;
             this.txtStaffSearch.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(6, 12);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(365, 68);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Search: ";
             // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.archive2);
             this.panel4.Controls.Add(this.staffListGridView);
             this.panel4.Location = new System.Drawing.Point(11, 51);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(750, 550);
             this.panel4.TabIndex = 13;
             // 
+            // archive2
+            // 
+            this.archive2.AllowUserToAddRows = false;
+            this.archive2.AllowUserToDeleteRows = false;
+            this.archive2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.archive2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.archive2.Location = new System.Drawing.Point(0, 0);
+            this.archive2.Name = "archive2";
+            this.archive2.ReadOnly = true;
+            this.archive2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.archive2.Size = new System.Drawing.Size(748, 548);
+            this.archive2.TabIndex = 1;
+            // 
             // staffListGridView
             // 
+            this.staffListGridView.AllowUserToAddRows = false;
+            this.staffListGridView.AllowUserToDeleteRows = false;
             this.staffListGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.staffListGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.staffListGridView.Location = new System.Drawing.Point(0, 0);
             this.staffListGridView.Name = "staffListGridView";
+            this.staffListGridView.ReadOnly = true;
             this.staffListGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.staffListGridView.Size = new System.Drawing.Size(748, 548);
             this.staffListGridView.TabIndex = 0;
@@ -933,12 +998,12 @@
             // 
             // Modules
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(24F, 40F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.PanelBG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1929, 1335);
+            this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.Controls.Add(this.staffsPanel);
             this.Controls.Add(this.accountsPanel);
             this.Controls.Add(this.homePanel);
@@ -961,6 +1026,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.displayPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.archive1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountListGridView)).EndInit();
             this.homePanel.ResumeLayout(false);
             this.homePanel.PerformLayout();
@@ -974,6 +1040,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.archive2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffListGridView)).EndInit();
             this.ResumeLayout(false);
 
@@ -1039,6 +1106,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.DataGridView archive1;
         private System.Windows.Forms.DataGridView staffListGridView;
+        private System.Windows.Forms.DataGridView archive2;
     }
 }

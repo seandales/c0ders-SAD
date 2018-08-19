@@ -63,7 +63,7 @@
             this.topPanel.Location = new System.Drawing.Point(125, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1075, 60);
+            this.topPanel.Size = new System.Drawing.Size(1228, 60);
             this.topPanel.TabIndex = 13;
             // 
             // ExitButton
@@ -99,7 +99,7 @@
             this.navigationLabel.Font = new System.Drawing.Font("Lucida Console", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navigationLabel.Location = new System.Drawing.Point(5, 9);
             this.navigationLabel.Name = "navigationLabel";
-            this.navigationLabel.Size = new System.Drawing.Size(140, 48);
+            this.navigationLabel.Size = new System.Drawing.Size(342, 120);
             this.navigationLabel.TabIndex = 0;
             this.navigationLabel.Text = "Home";
             // 
@@ -112,7 +112,7 @@
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(125, 675);
+            this.sidePanel.Size = new System.Drawing.Size(125, 929);
             this.sidePanel.TabIndex = 12;
             // 
             // homeButton
@@ -167,7 +167,7 @@
             this.label1.Location = new System.Drawing.Point(34, 51);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 16);
+            this.label1.Size = new System.Drawing.Size(161, 40);
             this.label1.TabIndex = 1;
             this.label1.Text = "Status";
             // 
@@ -183,12 +183,12 @@
             // 
             // RegForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(24F, 40F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.PanelBG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1200, 675);
+            this.ClientSize = new System.Drawing.Size(1353, 929);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.homePanel);

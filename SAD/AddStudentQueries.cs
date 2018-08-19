@@ -7,5 +7,7 @@ using System.Threading.Tasks;
 namespace WindowsFormsApp4
 {
     class AddStudentQueries
-    { }
+    {
+    }
+
 }

@@ -89,7 +89,7 @@ namespace WindowsFormsApp4
             navigationLabel.Text = "Staffs";
             editButton.Enabled = false;
             btnAdd.Enabled = false;
-
+            checkBox1.Checked = false;
             readData();
         }
         private void accountsButton_Click(object sender, EventArgs e)
@@ -108,7 +108,8 @@ namespace WindowsFormsApp4
             navigationLabel.Text = "Accounts";
             editButton.Enabled = false;
             btnAdd.Enabled = false;
-            
+            checkBox1.Checked = false;
+
             readData();
         }
         //
@@ -143,35 +144,71 @@ namespace WindowsFormsApp4
             
         }
         DbConnect connect = new DbConnect();
-        MySqlDataAdapter da, da2;
-        DataTable dt, dt2;
+        MySqlDataAdapter da, da2, da3, da4;
+        DataTable dt, dt2, dt3, dt4;
         
         public void readData()
         {
             MySqlConnection con = connect.connectFunc();
-            String query = "SELECT * FROM users_table";
-            String query2 = "SELECT * FROM staff_table"; 
+            String query = "SELECT * FROM users_table WHERE statususer = 1";
+            String query2 = "SELECT * FROM staff_table WHERE staffstatus = 1";
+            String query3 = "SELECT * FROM users_table WHERE statususer = 0";
+            String query4 = "SELECT * FROM staff_table WHERE staffstatus = 0";
             dt = new DataTable();
             dt2 = new DataTable();
+            dt3 = new DataTable();
+            dt4 = new DataTable();
 
             da = new MySqlDataAdapter(query, con);
             da2 = new MySqlDataAdapter(query2, con);
+            da3 = new MySqlDataAdapter(query3, con);
+            da4 = new MySqlDataAdapter(query4, con);
+
             da.Fill(dt);
-            
+            da2.Fill(dt2);
+            da3.Fill(dt3);
+            da4.Fill(dt4);
+                  
+            /*
             BindingSource bSource = new BindingSource();
             bSource.DataSource = dt;
             
+            bSource.DataSource = dt2;
+            bSource.DataSource = dt3;
+            bSource.DataSource = dt4;
+            */
+            
 
-            da2.Fill(dt2);
-            accountListGridView.DataSource = bSource;
+
+           // accountListGridView.DataSource = bSource;
+            accountListGridView.DataSource = dt;
             staffListGridView.DataSource = dt2;
+            archive1.DataSource = dt3;
+            archive2.DataSource = dt4;
             staffListGridView.Columns[0].Visible = false;
             accountListGridView.Columns[0].Visible = false;
+            archive1.Columns[0].Visible = false;
+            archive2.Columns[0].Visible = false;
             accountListGridView.ClearSelection();
             staffListGridView.ClearSelection();
+            archive1.ClearSelection();
+            archive1.ClearSelection();
+            archive1.Visible = false;
+            archive2.Visible = false;
+            archive1.Enabled = false;
+            archive2.Enabled = false;
+            accountListGridView.Visible = true;
+            staffListGridView.Visible = true;
+            accountListGridView.Enabled = true;
+            staffListGridView.Enabled = true;
+            accountListGridView.ClearSelection();
+            staffListGridView.ClearSelection();
+            archive1.ClearSelection();
+            archive2.ClearSelection();
             //dt.Rows[0].Vi
 
         }
+
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -376,7 +413,6 @@ namespace WindowsFormsApp4
                 
                 String query1 = ("INSERT INTO staff_table (firstname,middlename,lastname, birthdate, gender, civilstatus, staffstatus, staffrole) " +
                     "VALUES (@firstname, @middlename, @lastname, @birthdate, @gender, @civilstatus, @staffstatus, @staffrole)");
-                //String query2 = "INSERT INTO users_table (username,password,roleuser, statususer) VALUES (@username, @password, @roleuser, statususer)";
                 long jarrod;
                 MySqlConnection con = conRef.connectFunc();
                 using (MySqlCommand cmd = new MySqlCommand(query1, con))
@@ -389,16 +425,6 @@ namespace WindowsFormsApp4
                     cmd.Parameters.AddWithValue("@civilstatus", comboCivilStatus.Text);
                     cmd.Parameters.AddWithValue("@staffstatus", statusNumber);
                     cmd.Parameters.AddWithValue("@staffrole", comboRoleStaffs.Text);
-                    // object identity = Convert.ToInt32(cmd.ExecuteScalar());
-                    // object identity = Convert.ToInt32(cmd.ExecuteScalar());
-
-                    //MessageBox.Show(identity.ToString());
-                    /*
-                    cmd.Parameters.AddWithValue("@birthdate", number);
-                    cmd.Parameters.AddWithValue("@birthdate", number);
-                    cmd.Parameters.AddWithValue("@birthdate", number);
-                    */
-
 
 
 
@@ -673,7 +699,7 @@ namespace WindowsFormsApp4
         private void editButton_Click(object sender, EventArgs e)
         {
             EditAccountForm f = new EditAccountForm();
-            for (int i = 0; i < staffListGridView.SelectedRows.Count; i++)
+            for (int i = 0; i < accountListGridView.SelectedRows.Count; i++)
             {
                 f.userId = Convert.ToInt32(accountListGridView.SelectedRows[i].Cells[0].Value.ToString());
                 f.textBox1.Text = (accountListGridView.SelectedRows[i].Cells[0].Value.ToString());
@@ -775,6 +801,59 @@ namespace WindowsFormsApp4
             //addForm.butAdd.Enabled = false;
             // addForm.butAdd.Enabled = true;
             f.Show();
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+                readArchive();
+            }
+            if (checkBox2.Checked == false)
+            {
+                readData();
+            }
+        }
+
+        private void archive1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        public void readArchive()
+        {
+            staffListGridView.Visible = false;
+            accountListGridView.Visible = false;
+            accountListGridView.Enabled = false;
+            staffListGridView.Enabled = false;
+            archive1.Visible = true;
+            archive2.Visible = true;
+            archive1.Enabled  = true;
+            archive2.Enabled = true;
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked == true)
+            {
+                readArchive();
+            }
+            if(checkBox1.Checked == false)
+            {
+                readData();
+            }
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void archive1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void staffListGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -45,7 +45,9 @@ namespace WindowsFormsApp4
         private void showPref()
         {
             this.Hide();
+            reference.readData();
             reference.Show();
+            
         }
         private void clearFields()
         {
