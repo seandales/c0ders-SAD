@@ -66,6 +66,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.archiveStud = new System.Windows.Forms.DataGridView();
             this.datagridStud = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.combostatus = new System.Windows.Forms.ComboBox();
             this.topPanel.SuspendLayout();
             this.sidePanel.SuspendLayout();
             this.homePanel.SuspendLayout();
@@ -283,6 +285,8 @@
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.combostatus);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.comboGradeLevel);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.comboGender);
@@ -338,6 +342,7 @@
             this.comboGradeLevel.Name = "comboGradeLevel";
             this.comboGradeLevel.Size = new System.Drawing.Size(116, 25);
             this.comboGradeLevel.TabIndex = 28;
+            this.comboGradeLevel.SelectedIndexChanged += new System.EventHandler(this.comboGradeLevel_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -512,6 +517,7 @@
             this.btnEditStud.Text = "Edit";
             this.btnEditStud.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnEditStud.UseVisualStyleBackColor = false;
+            this.btnEditStud.Click += new System.EventHandler(this.btnEditStud_Click);
             // 
             // txtSearchStud
             // 
@@ -559,6 +565,31 @@
             this.datagridStud.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridStud.Size = new System.Drawing.Size(748, 548);
             this.datagridStud.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(30, 347);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 17);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Status";
+            // 
+            // combostatus
+            // 
+            this.combostatus.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combostatus.FormattingEnabled = true;
+            this.combostatus.Items.AddRange(new object[] {
+            "",
+            "0",
+            "1"});
+            this.combostatus.Location = new System.Drawing.Point(33, 367);
+            this.combostatus.Name = "combostatus";
+            this.combostatus.Size = new System.Drawing.Size(116, 25);
+            this.combostatus.TabIndex = 28;
+            this.combostatus.SelectedIndexChanged += new System.EventHandler(this.comboGradeLevel_SelectedIndexChanged);
             // 
             // RegForm
             // 
@@ -637,5 +668,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView archiveStud;
         private System.Windows.Forms.DataGridView datagridStud;
+        private System.Windows.Forms.ComboBox combostatus;
+        private System.Windows.Forms.Label label3;
     }
 }

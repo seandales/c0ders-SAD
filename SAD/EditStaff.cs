@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp4
 {
-    public partial class EditStudentcs : Form
+    public partial class EditStaff : Form
     {
-        public EditStudentcs()
+        public EditStaff()
         {
             InitializeComponent();
         }

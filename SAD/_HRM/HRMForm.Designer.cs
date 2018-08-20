@@ -470,6 +470,7 @@
             this.btnStaffAdd.Text = "Add";
             this.btnStaffAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnStaffAdd.UseVisualStyleBackColor = false;
+            this.btnStaffAdd.Click += new System.EventHandler(this.btnStaffAdd_Click);
             // 
             // btnStaffCancel
             // 
