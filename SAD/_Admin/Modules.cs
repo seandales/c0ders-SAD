@@ -25,8 +25,6 @@ namespace WindowsFormsApp4
         public Modules()
         {
             InitializeComponent();
-            accountListGridView.ClearSelection();
-            staffListGridView.ClearSelection();
         }
         public Modules(String role)
         {
@@ -209,12 +207,6 @@ namespace WindowsFormsApp4
 
         }
 
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void Textbox_TextChanged(object sender, EventArgs e)
         {
             editButton.Enabled = false;
@@ -222,34 +214,21 @@ namespace WindowsFormsApp4
                 btnAdd.Enabled = false;
 
             }
-
             else if (txtPass.Text != txtPass2.Text)
             {
                 btnAdd.Enabled = false;
             }
-
-
-
             else
             {
                 btnAdd.Enabled = true;
             }
         }
 
-        private void topPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtpass_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void clearButton_Click(object sender, EventArgs e)
         {
             clearAccountFields();
         }
+
         public void clearAccountFields()
         {
             txtPass.Text = ("");
@@ -257,13 +236,6 @@ namespace WindowsFormsApp4
             txtUser.Text = ("");
             comboRoleAccounts.SelectedIndex = comboRoleAccounts.Items.IndexOf(0);
             txtStaffSearch.Clear();
-        }
-
-
-
-        private void accountsPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -329,30 +301,12 @@ namespace WindowsFormsApp4
             clearAccountFields();
         }
 
-        private void topPanel_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void accountListGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             editButton.Enabled = true;
         }
         int id;
         public String username1, password1, role1;
-
-        private void comboRoleAccounts_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void staffsPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
 
         private void TextBox_TextChanged2(object sender, EventArgs e)
         {
@@ -374,11 +328,6 @@ namespace WindowsFormsApp4
             {
                 btnStaffAdd.Enabled = true;
             }
-        }
-
-        private void btnStaffAdd_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnStaffAdd_Click_1(object sender, EventArgs e)
@@ -557,8 +506,7 @@ namespace WindowsFormsApp4
                     cmd.Parameters.AddWithValue("@birthdate", number);
                     */
 
-
-
+                    
 
                     con.Open();
                     int result = cmd.ExecuteNonQuery();
@@ -576,13 +524,7 @@ namespace WindowsFormsApp4
                     clearStaffFields();
                     readData();
                     MessageBox.Show(" into staff table" + flag2);
-
-
                 }
-
-
-
-
                 //Form();
             }
             else
@@ -621,16 +563,6 @@ namespace WindowsFormsApp4
             f.Show();
         }
 
-        private void comboGender_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void addPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void accountListGridView_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
             editButton.Enabled = true;
@@ -663,16 +595,6 @@ namespace WindowsFormsApp4
 
         }
 
-        private void comboRoleStaffs_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void civilStatusLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void staffListGridView_Enter(object sender, EventArgs e)
         {
             // btnStaffEdit.Enabled = true;
@@ -683,11 +605,6 @@ namespace WindowsFormsApp4
             btnStaffEdit.Enabled = false;
             accountListGridView.ClearSelection();
             staffListGridView.ClearSelection();
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
@@ -747,10 +664,6 @@ namespace WindowsFormsApp4
             f.Show();
         }
 
-        private void dateTimeBirthdate_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
         DataTable dtSearch = new DataTable();
 
         MySqlDataAdapter ad;
@@ -863,11 +776,6 @@ namespace WindowsFormsApp4
             }
         }
 
-        private void archive1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         public void readArchive()
         {
 
@@ -897,21 +805,6 @@ namespace WindowsFormsApp4
             {
                 readData();
             }
-            
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void archive1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void staffListGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
             
         }
 

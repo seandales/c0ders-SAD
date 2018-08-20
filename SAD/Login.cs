@@ -70,14 +70,12 @@ namespace WindowsFormsApp4
                 }
                 else if (role == "Registrar")                                               //If User is Registrar
                 {
-                    
                     //RegForm regFrm = new RegForm(role);
                     RegForm regFrm = new RegForm();
                     regFrm.Size = new Size(1200, 675);
                     regFrm.reference = this;
                     this.Hide();
                     regFrm.Show();
-                    
                 }
                 else if (role == "Sc")                                                      //If User is Supervising Custodian
                 {

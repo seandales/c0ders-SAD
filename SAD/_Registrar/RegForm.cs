@@ -24,6 +24,65 @@ namespace WindowsFormsApp4
             InitializeComponent();
             readDataStud();
         }
+        //
+        //-------->Form Initialization<--------
+        //
+        public RegForm(String role)
+        {
+            InitializeComponent();
+            loginName = role;
+        }
+        private void RegForm_Load(object sender, EventArgs e)
+        {
+            label1.Text = "Welcome back, " + loginName;
+
+            //Sets All Panels to Fill
+            homePanel.Dock = DockStyle.Fill;
+            studentsPanel.Dock = DockStyle.Fill;
+
+            //Hides All Other Panels
+            studentsPanel.Visible = false;
+        }
+        //
+        //-------->Navigation Buttons<--------
+        //
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            //Switches Button BackColors
+            homeButton.BackColor = Color.FromArgb(57, 213, 255);
+            staffsButton.BackColor = Color.Transparent;
+
+            //Switches Panel Visibility
+            homePanel.Visible = true;
+            studentsPanel.Visible = false;
+
+            //Changes Label
+            navigationLabel.Text = "Home";
+        }
+        private void studentsButton_Click(object sender, EventArgs e)
+        {
+            //Switches Button BackColors
+            homeButton.BackColor = Color.Transparent;
+            staffsButton.BackColor = Color.FromArgb(57, 213, 255);
+
+            //Switches Panel Visibility
+            studentsPanel.Visible = true;
+            homePanel.Visible = false;
+
+            //Changes Label
+            navigationLabel.Text = "Staffs";
+        }
+        //
+        //-------->Exit Buttons<--------
+        //
+        private void signOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void RegForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            reference.Show();
+        }
 
 
         private void btnAddStud_Click(object sender, EventArgs e)
