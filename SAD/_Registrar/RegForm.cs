@@ -170,6 +170,7 @@ namespace WindowsFormsApp4
 
         private void btnEditStud_Click(object sender, EventArgs e)
         {
+            /*
             EditStudentcs f = new EditStudentcs();
             if (checkStudArchive.Checked == false)
             {
@@ -239,6 +240,7 @@ private void btnEditStud_Click(object sender, EventArgs e)
    f.Show();
 }
 */
+        }
 
         public void readDataStud()
         {
