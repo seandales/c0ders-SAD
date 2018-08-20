@@ -87,6 +87,11 @@ namespace WindowsFormsApp4
 
         private void btnAddStud_Click(object sender, EventArgs e)
         {
+            AddStudent addStudentFrm = new AddStudent();
+            addStudentFrm.reference = this;
+
+
+            /*
             Boolean flag = false;
             if (comboGender.SelectedItem == null || comboGender.SelectedIndex == 0)
             {
@@ -145,7 +150,7 @@ namespace WindowsFormsApp4
                 MessageBox.Show(" error");
             }
 
-
+            */
 
 
         }
@@ -153,20 +158,12 @@ namespace WindowsFormsApp4
         MySqlDataAdapter da, da2;
         DataTable dt, dt2;
 
+        /*
         private void btnStudCancel_Click(object sender, EventArgs e)
         {
             clearStudFields();
         }
-
-        private void archiveStud_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void comboGradeLevel_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        */
 
         private void btnEditStud_Click(object sender, EventArgs e)
         {
@@ -285,6 +282,7 @@ private void btnEditStud_Click(object sender, EventArgs e)
             //dt.Rows[0].Vi
 
         }
+        /*
         public void clearStudFields()
         {
             txtFn.Clear();
@@ -295,6 +293,6 @@ private void btnEditStud_Click(object sender, EventArgs e)
             combostatus.SelectedIndex = combostatus.Items.IndexOf(0);
             txtSearchStud.Clear();
         }
-
+        */
     }
 }

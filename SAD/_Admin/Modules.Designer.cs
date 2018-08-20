@@ -154,9 +154,9 @@
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.Location = new System.Drawing.Point(592, 21);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(117, 20);
+            this.checkBox1.Size = new System.Drawing.Size(167, 20);
             this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.Text = " View Archived";
             this.checkBox1.UseVisualStyleBackColor = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
@@ -169,7 +169,7 @@
             this.editButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editButton.ImageKey = "(none)";
             this.editButton.ImageList = this.smallerIcons;
-            this.editButton.Location = new System.Drawing.Point(478, 11);
+            this.editButton.Location = new System.Drawing.Point(409, 7);
             this.editButton.Name = "editButton";
             this.editButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.editButton.Size = new System.Drawing.Size(89, 34);
@@ -604,9 +604,9 @@
             this.checkBox2.BackColor = System.Drawing.Color.Transparent;
             this.checkBox2.Location = new System.Drawing.Point(553, 16);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(117, 20);
+            this.checkBox2.Size = new System.Drawing.Size(167, 20);
             this.checkBox2.TabIndex = 16;
-            this.checkBox2.Text = "checkBox2";
+            this.checkBox2.Text = " View Archived";
             this.checkBox2.UseVisualStyleBackColor = false;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
@@ -1007,7 +1007,7 @@
             this.MinimizeBox = false;
             this.Name = "Modules";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Admin";
+            this.Text = "View Archived";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Modules_FormClosing);
             this.Load += new System.EventHandler(this.Modules_Load);
             this.accountsPanel.ResumeLayout(false);

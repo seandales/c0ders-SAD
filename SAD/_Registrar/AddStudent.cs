@@ -12,6 +12,7 @@ namespace WindowsFormsApp4
 {
     public partial class AddStudent : Form
     {
+        public RegForm reference { set; get; }
         public AddStudent()
         {
             InitializeComponent();
