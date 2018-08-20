@@ -87,7 +87,7 @@ namespace WindowsFormsApp4
 
         private void btnAddStud_Click(object sender, EventArgs e)
         {
-            AddStudent addStudentFrm = new AddStudent();
+            AddStudent addStudentFrm = new AddStudent(); 
             addStudentFrm.reference = this;
 
 
