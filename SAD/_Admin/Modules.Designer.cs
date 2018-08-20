@@ -595,6 +595,7 @@
             this.staffsPanel.Name = "staffsPanel";
             this.staffsPanel.Size = new System.Drawing.Size(1046, 816);
             this.staffsPanel.TabIndex = 12;
+            this.staffsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.staffsPanel_Paint);
             // 
             // checkBox2
             // 

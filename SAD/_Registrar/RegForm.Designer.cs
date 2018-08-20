@@ -47,6 +47,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.combostatus = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.comboGradeLevel = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboGender = new System.Windows.Forms.ComboBox();
@@ -66,8 +68,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.archiveStud = new System.Windows.Forms.DataGridView();
             this.datagridStud = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.combostatus = new System.Windows.Forms.ComboBox();
             this.topPanel.SuspendLayout();
             this.sidePanel.SuspendLayout();
             this.homePanel.SuspendLayout();
@@ -329,6 +329,31 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Add Student";
             // 
+            // combostatus
+            // 
+            this.combostatus.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combostatus.FormattingEnabled = true;
+            this.combostatus.Items.AddRange(new object[] {
+            "",
+            "0",
+            "1"});
+            this.combostatus.Location = new System.Drawing.Point(33, 367);
+            this.combostatus.Name = "combostatus";
+            this.combostatus.Size = new System.Drawing.Size(116, 25);
+            this.combostatus.TabIndex = 28;
+            this.combostatus.SelectedIndexChanged += new System.EventHandler(this.comboGradeLevel_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(30, 347);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 17);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Status";
+            // 
             // comboGradeLevel
             // 
             this.comboGradeLevel.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -565,31 +590,6 @@
             this.datagridStud.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridStud.Size = new System.Drawing.Size(748, 548);
             this.datagridStud.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(30, 347);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 17);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Status";
-            // 
-            // combostatus
-            // 
-            this.combostatus.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combostatus.FormattingEnabled = true;
-            this.combostatus.Items.AddRange(new object[] {
-            "",
-            "0",
-            "1"});
-            this.combostatus.Location = new System.Drawing.Point(33, 367);
-            this.combostatus.Name = "combostatus";
-            this.combostatus.Size = new System.Drawing.Size(116, 25);
-            this.combostatus.TabIndex = 28;
-            this.combostatus.SelectedIndexChanged += new System.EventHandler(this.comboGradeLevel_SelectedIndexChanged);
             // 
             // RegForm
             // 

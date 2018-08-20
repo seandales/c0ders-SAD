@@ -655,13 +655,12 @@ namespace WindowsFormsApp4
 
                 }
             }
-
-            this.Hide();
+            
             //ddStaffForm addForm = new AddStaffForm();
             f.reference = this;
             //addForm.butAdd.Enabled = false;
             // addForm.butAdd.Enabled = true;
-            f.Show();
+            f.ShowDialog();
         }
 
         DataTable dtSearch = new DataTable();
@@ -688,6 +687,12 @@ namespace WindowsFormsApp4
 
         MySqlDataAdapter ad2;
         DataTable newdt2;
+
+        private void staffsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             using (MySqlConnection conn = conRef.connectFunc())
@@ -754,12 +759,11 @@ namespace WindowsFormsApp4
                 }
             }
         
-            this.Hide();
             //ddStaffForm addForm = new AddStaffForm();
             f.reference = this;
             //addForm.butAdd.Enabled = false;
             // addForm.butAdd.Enabled = true;
-            f.Show();
+            f.ShowDialog();
          }
 
 

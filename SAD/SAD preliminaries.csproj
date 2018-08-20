@@ -52,14 +52,14 @@
     <Compile Include="AddStaffForm.Designer.cs">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddStudentQueries.cs" />
-    <Compile Include="DbConnect.cs" />
-    <Compile Include="EditStaff.cs">
+    <Compile Include="AddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditStaff.Designer.cs">
-      <DependentUpon>EditStaff.cs</DependentUpon>
+    <Compile Include="AddStudent.Designer.cs">
+      <DependentUpon>AddStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddStudentQueries.cs" />
+    <Compile Include="DbConnect.cs" />
     <Compile Include="_Admin\EditStaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,8 +193,8 @@
     <EmbeddedResource Include="AddStaffForm.resx">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditStaff.resx">
-      <DependentUpon>EditStaff.cs</DependentUpon>
+    <EmbeddedResource Include="AddStudent.resx">
+      <DependentUpon>AddStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="_Admin\EditAccountForm.resx">
       <DependentUpon>EditAccountForm.cs</DependentUpon>
