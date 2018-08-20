@@ -145,7 +145,7 @@
             this.accountsPanel.Controls.Add(this.displayPanel);
             this.accountsPanel.Location = new System.Drawing.Point(130, 70);
             this.accountsPanel.Name = "accountsPanel";
-            this.accountsPanel.Size = new System.Drawing.Size(1070, 775);
+            this.accountsPanel.Size = new System.Drawing.Size(1047, 627);
             this.accountsPanel.TabIndex = 7;
             this.accountsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.accountsPanel_Paint);
             // 
@@ -596,16 +596,16 @@
             this.staffsPanel.Controls.Add(this.btnStaffEdit);
             this.staffsPanel.Controls.Add(this.txtStaffSearch);
             this.staffsPanel.Controls.Add(this.panel4);
-            this.staffsPanel.Location = new System.Drawing.Point(252, 734);
+            this.staffsPanel.Location = new System.Drawing.Point(891, 703);
             this.staffsPanel.Name = "staffsPanel";
-            this.staffsPanel.Size = new System.Drawing.Size(1337, 915);
+            this.staffsPanel.Size = new System.Drawing.Size(1046, 816);
             this.staffsPanel.TabIndex = 12;
             this.staffsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.staffsPanel_Paint);
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(570, 1);
+            this.checkBox2.Location = new System.Drawing.Point(553, 16);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(117, 20);
             this.checkBox2.TabIndex = 16;
@@ -951,7 +951,7 @@
             this.txtStaffSearch.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtStaffSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStaffSearch.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStaffSearch.Location = new System.Drawing.Point(138, 9);
+            this.txtStaffSearch.Location = new System.Drawing.Point(146, 10);
             this.txtStaffSearch.Name = "txtStaffSearch";
             this.txtStaffSearch.Size = new System.Drawing.Size(272, 34);
             this.txtStaffSearch.TabIndex = 11;

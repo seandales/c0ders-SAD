@@ -54,6 +54,12 @@
     </Compile>
     <Compile Include="AddStudentQueries.cs" />
     <Compile Include="DbConnect.cs" />
+    <Compile Include="_Registrar\EditStudentcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Registrar\EditStudentcs.Designer.cs">
+      <DependentUpon>EditStudentcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="_Admin\EditStaffForm.cs">
       <SubType>Form</SubType>
     </Compile>

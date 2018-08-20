@@ -142,6 +142,8 @@ namespace WindowsFormsApp4
         private void showPref()
         {
             this.Hide();
+            reference.clearAccountFields();
+            reference.clearStaffFields();
             reference.Show();
         }
         private void clearFields()

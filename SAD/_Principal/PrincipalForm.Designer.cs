@@ -40,9 +40,11 @@
             this.signOutButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.homePanel = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.topPanel.SuspendLayout();
             this.sidePanel.SuspendLayout();
             this.homePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // smallerIcons
@@ -181,6 +183,14 @@
             this.homePanel.Size = new System.Drawing.Size(200, 100);
             this.homePanel.TabIndex = 14;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(408, 165);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(581, 406);
+            this.dataGridView1.TabIndex = 15;
+            // 
             // PrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 16F);
@@ -189,6 +199,7 @@
             this.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.PanelBG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1200, 675);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.homePanel);
@@ -205,6 +216,7 @@
             this.sidePanel.ResumeLayout(false);
             this.homePanel.ResumeLayout(false);
             this.homePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,5 +233,6 @@
         private System.Windows.Forms.Button signOutButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel homePanel;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
