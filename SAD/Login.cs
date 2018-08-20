@@ -118,7 +118,7 @@ namespace WindowsFormsApp4
         //
         private void passwordTextBox_Enter(object sender, EventArgs e)
         {
-            if (passwordTextBox.Text == "pass")
+            if (passwordTextBox.Text == "pass" && passwordTextBox.ForeColor == Color.Silver)
             {
                 passwordTextBox.Text = "";
                 passwordTextBox.ForeColor = Color.Black;
@@ -137,7 +137,7 @@ namespace WindowsFormsApp4
         //
         private void userNameTextBox_Enter(object sender, EventArgs e)
         {
-            if (userNameTextBox.Text == "username")
+            if (userNameTextBox.Text == "username" && userNameTextBox.ForeColor == Color.Silver)
             {
                 userNameTextBox.Text = "";
                 userNameTextBox.ForeColor = Color.Black;
