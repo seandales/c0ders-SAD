@@ -145,9 +145,8 @@
             this.accountsPanel.Controls.Add(this.displayPanel);
             this.accountsPanel.Location = new System.Drawing.Point(130, 70);
             this.accountsPanel.Name = "accountsPanel";
-            this.accountsPanel.Size = new System.Drawing.Size(1047, 627);
+            this.accountsPanel.Size = new System.Drawing.Size(1082, 627);
             this.accountsPanel.TabIndex = 7;
-            this.accountsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.accountsPanel_Paint);
             // 
             // checkBox1
             // 
@@ -208,7 +207,6 @@
             this.addPanel.Size = new System.Drawing.Size(292, 550);
             this.addPanel.TabIndex = 15;
             this.addPanel.Click += new System.EventHandler(this.addPanel_Click);
-            this.addPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.addPanel_Paint);
             this.addPanel.Enter += new System.EventHandler(this.addPanel_Enter);
             // 
             // panel1
@@ -251,7 +249,6 @@
             this.comboRoleAccounts.Name = "comboRoleAccounts";
             this.comboRoleAccounts.Size = new System.Drawing.Size(116, 25);
             this.comboRoleAccounts.TabIndex = 28;
-            this.comboRoleAccounts.SelectedIndexChanged += new System.EventHandler(this.comboRoleAccounts_SelectedIndexChanged);
             // 
             // roleLabel
             // 
@@ -410,7 +407,6 @@
             this.archive1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.archive1.Size = new System.Drawing.Size(748, 548);
             this.archive1.TabIndex = 1;
-            this.archive1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.archive1_CellContentClick_1);
             // 
             // accountListGridView
             // 
@@ -449,7 +445,6 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1799, 60);
             this.topPanel.TabIndex = 5;
-            this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint_1);
             // 
             // ExitButton
             // 
@@ -600,7 +595,6 @@
             this.staffsPanel.Name = "staffsPanel";
             this.staffsPanel.Size = new System.Drawing.Size(1046, 816);
             this.staffsPanel.TabIndex = 12;
-            this.staffsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.staffsPanel_Paint);
             // 
             // checkBox2
             // 
@@ -655,7 +649,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(335, 549);
             this.panel2.TabIndex = 15;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.Enter += new System.EventHandler(this.panel2_Enter);
             // 
             // panel3
@@ -724,7 +717,6 @@
             this.comboRoleStaffs.Name = "comboRoleStaffs";
             this.comboRoleStaffs.Size = new System.Drawing.Size(116, 25);
             this.comboRoleStaffs.TabIndex = 28;
-            this.comboRoleStaffs.SelectedIndexChanged += new System.EventHandler(this.comboRoleStaffs_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -776,7 +768,6 @@
             this.civilStatusLabel.Size = new System.Drawing.Size(125, 17);
             this.civilStatusLabel.TabIndex = 23;
             this.civilStatusLabel.Text = "Civil Status:";
-            this.civilStatusLabel.Click += new System.EventHandler(this.civilStatusLabel_Click);
             // 
             // comboGender
             // 
@@ -790,7 +781,6 @@
             this.comboGender.Name = "comboGender";
             this.comboGender.Size = new System.Drawing.Size(113, 25);
             this.comboGender.TabIndex = 22;
-            this.comboGender.SelectedIndexChanged += new System.EventHandler(this.comboGender_SelectedIndexChanged);
             // 
             // genderLabel
             // 
@@ -814,7 +804,6 @@
             this.dateTimeBirthdate.Size = new System.Drawing.Size(222, 26);
             this.dateTimeBirthdate.TabIndex = 20;
             this.dateTimeBirthdate.Value = new System.DateTime(2018, 8, 2, 0, 0, 0, 0);
-            this.dateTimeBirthdate.ValueChanged += new System.EventHandler(this.dateTimeBirthdate_ValueChanged);
             // 
             // bdayLabel
             // 
@@ -992,7 +981,6 @@
             this.staffListGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.staffListGridView.Size = new System.Drawing.Size(748, 548);
             this.staffListGridView.TabIndex = 0;
-            this.staffListGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffListGridView_CellContentClick);
             this.staffListGridView.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.staffListGridView_CellMouseDown);
             this.staffListGridView.Enter += new System.EventHandler(this.staffListGridView_Enter);
             // 

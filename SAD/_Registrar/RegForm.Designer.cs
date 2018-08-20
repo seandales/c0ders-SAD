@@ -41,7 +41,7 @@
             this.signOutButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.homePanel = new System.Windows.Forms.Panel();
-            this.staffsPanel = new System.Windows.Forms.Panel();
+            this.studentsPanel = new System.Windows.Forms.Panel();
             this.checkStudArchive = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -69,7 +69,7 @@
             this.topPanel.SuspendLayout();
             this.sidePanel.SuspendLayout();
             this.homePanel.SuspendLayout();
-            this.staffsPanel.SuspendLayout();
+            this.studentsPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -114,6 +114,7 @@
             this.ExitButton.Size = new System.Drawing.Size(60, 60);
             this.ExitButton.TabIndex = 5;
             this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.signOutButton_Click);
             // 
             // Icons
             // 
@@ -161,7 +162,7 @@
             this.staffsButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.staffsButton.ImageKey = "Accounts.png";
             this.staffsButton.ImageList = this.Icons;
-            this.staffsButton.Location = new System.Drawing.Point(-2, 127);
+            this.staffsButton.Location = new System.Drawing.Point(0, 125);
             this.staffsButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.staffsButton.Name = "staffsButton";
             this.staffsButton.Size = new System.Drawing.Size(125, 125);
@@ -169,6 +170,7 @@
             this.staffsButton.Text = "\r\nStaffs";
             this.staffsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.staffsButton.UseVisualStyleBackColor = false;
+            this.staffsButton.Click += new System.EventHandler(this.studentsButton_Click);
             // 
             // homeButton
             // 
@@ -191,6 +193,7 @@
             this.homeButton.Text = "\r\nHome";
             this.homeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.homeButton.UseVisualStyleBackColor = false;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
             // signOutButton
             // 
@@ -213,6 +216,7 @@
             this.signOutButton.Text = "\r\nSign Out";
             this.signOutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.signOutButton.UseVisualStyleBackColor = false;
+            this.signOutButton.Click += new System.EventHandler(this.signOutButton_Click);
             // 
             // label1
             // 
@@ -231,25 +235,25 @@
             this.homePanel.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.PanelBG;
             this.homePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.homePanel.Controls.Add(this.label1);
-            this.homePanel.Location = new System.Drawing.Point(1153, 67);
+            this.homePanel.Location = new System.Drawing.Point(555, 95);
             this.homePanel.Name = "homePanel";
             this.homePanel.Size = new System.Drawing.Size(200, 100);
             this.homePanel.TabIndex = 14;
             // 
-            // staffsPanel
+            // studentsPanel
             // 
-            this.staffsPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("staffsPanel.BackgroundImage")));
-            this.staffsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.staffsPanel.Controls.Add(this.checkStudArchive);
-            this.staffsPanel.Controls.Add(this.label8);
-            this.staffsPanel.Controls.Add(this.panel2);
-            this.staffsPanel.Controls.Add(this.btnEditStud);
-            this.staffsPanel.Controls.Add(this.txtSearchStud);
-            this.staffsPanel.Controls.Add(this.panel4);
-            this.staffsPanel.Location = new System.Drawing.Point(152, 107);
-            this.staffsPanel.Name = "staffsPanel";
-            this.staffsPanel.Size = new System.Drawing.Size(1142, 596);
-            this.staffsPanel.TabIndex = 15;
+            this.studentsPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("studentsPanel.BackgroundImage")));
+            this.studentsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.studentsPanel.Controls.Add(this.checkStudArchive);
+            this.studentsPanel.Controls.Add(this.label8);
+            this.studentsPanel.Controls.Add(this.panel2);
+            this.studentsPanel.Controls.Add(this.btnEditStud);
+            this.studentsPanel.Controls.Add(this.txtSearchStud);
+            this.studentsPanel.Controls.Add(this.panel4);
+            this.studentsPanel.Location = new System.Drawing.Point(152, 107);
+            this.studentsPanel.Name = "studentsPanel";
+            this.studentsPanel.Size = new System.Drawing.Size(1142, 628);
+            this.studentsPanel.TabIndex = 15;
             // 
             // checkStudArchive
             // 
@@ -564,7 +568,7 @@
             this.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.PanelBG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1353, 929);
-            this.Controls.Add(this.staffsPanel);
+            this.Controls.Add(this.studentsPanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.homePanel);
@@ -576,13 +580,15 @@
             this.Name = "RegForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegForm_FormClosing);
+            this.Load += new System.EventHandler(this.RegForm_Load);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             this.sidePanel.ResumeLayout(false);
             this.homePanel.ResumeLayout(false);
             this.homePanel.PerformLayout();
-            this.staffsPanel.ResumeLayout(false);
-            this.staffsPanel.PerformLayout();
+            this.studentsPanel.ResumeLayout(false);
+            this.studentsPanel.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -606,7 +612,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel homePanel;
         private System.Windows.Forms.Button staffsButton;
-        private System.Windows.Forms.Panel staffsPanel;
+        private System.Windows.Forms.Panel studentsPanel;
         private System.Windows.Forms.CheckBox checkStudArchive;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel2;
