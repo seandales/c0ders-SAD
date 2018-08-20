@@ -94,5 +94,10 @@ namespace WindowsFormsApp4
         {
 
         }
+
+        private void btnStaffAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
