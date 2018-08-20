@@ -130,8 +130,12 @@ namespace WindowsFormsApp4
 
         private void btnCancelEditStaff_Click(object sender, EventArgs e)
         {
+            Modules obj = new Modules();
             clearFields();
             showPref();
+            
+            
+
             
         }
 
