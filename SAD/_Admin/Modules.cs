@@ -85,9 +85,10 @@ namespace WindowsFormsApp4 {
 
             //Changes Label
             navigationLabel.Text = "Staffs";
+            
             editButton.Enabled = false;
             btnAdd.Enabled = false;
-            checkBox1.Checked = false;
+            checkBox2.Checked = false;
             readData();
         }
         private void accountsButton_Click(object sender, EventArgs e)

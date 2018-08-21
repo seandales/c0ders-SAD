@@ -151,12 +151,13 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.Location = new System.Drawing.Point(592, 21);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(117, 20);
+            this.checkBox1.Size = new System.Drawing.Size(167, 20);
             this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Text = " View Archived";
+            this.checkBox1.UseVisualStyleBackColor = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // editButton
@@ -168,7 +169,7 @@
             this.editButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editButton.ImageKey = "(none)";
             this.editButton.ImageList = this.smallerIcons;
-            this.editButton.Location = new System.Drawing.Point(478, 11);
+            this.editButton.Location = new System.Drawing.Point(409, 7);
             this.editButton.Name = "editButton";
             this.editButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.editButton.Size = new System.Drawing.Size(89, 34);
@@ -367,7 +368,7 @@
             // txtSearchAccounts
             // 
             this.txtSearchAccounts.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchAccounts.Location = new System.Drawing.Point(178, 12);
+            this.txtSearchAccounts.Location = new System.Drawing.Point(131, 9);
             this.txtSearchAccounts.Name = "txtSearchAccounts";
             this.txtSearchAccounts.Size = new System.Drawing.Size(272, 34);
             this.txtSearchAccounts.TabIndex = 11;
@@ -381,9 +382,9 @@
             this.searchLabel.ForeColor = System.Drawing.Color.Black;
             this.searchLabel.Location = new System.Drawing.Point(6, 12);
             this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(148, 27);
+            this.searchLabel.Size = new System.Drawing.Size(131, 27);
             this.searchLabel.TabIndex = 14;
-            this.searchLabel.Text = "Search: ";
+            this.searchLabel.Text = "Search:";
             // 
             // displayPanel
             // 
@@ -600,12 +601,13 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
+            this.checkBox2.BackColor = System.Drawing.Color.Transparent;
             this.checkBox2.Location = new System.Drawing.Point(553, 16);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(117, 20);
+            this.checkBox2.Size = new System.Drawing.Size(167, 20);
             this.checkBox2.TabIndex = 16;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.Text = " View Archived";
+            this.checkBox2.UseVisualStyleBackColor = false;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // label8
@@ -616,9 +618,9 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(6, 16);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(148, 27);
+            this.label8.Size = new System.Drawing.Size(131, 27);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Search: ";
+            this.label8.Text = "Search:";
             // 
             // panel2
             // 
@@ -942,7 +944,7 @@
             this.txtStaffSearch.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtStaffSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStaffSearch.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStaffSearch.Location = new System.Drawing.Point(146, 10);
+            this.txtStaffSearch.Location = new System.Drawing.Point(137, 11);
             this.txtStaffSearch.Name = "txtStaffSearch";
             this.txtStaffSearch.Size = new System.Drawing.Size(272, 34);
             this.txtStaffSearch.TabIndex = 11;
@@ -1006,7 +1008,7 @@
             this.MinimizeBox = false;
             this.Name = "Modules";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Admin";
+            this.Text = "View Archived";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Modules_FormClosing);
             this.Load += new System.EventHandler(this.Modules_Load);
             this.accountsPanel.ResumeLayout(false);
