@@ -591,9 +591,9 @@
             this.staffsPanel.Controls.Add(this.btnStaffEdit);
             this.staffsPanel.Controls.Add(this.txtStaffSearch);
             this.staffsPanel.Controls.Add(this.panel4);
-            this.staffsPanel.Location = new System.Drawing.Point(891, 703);
+            this.staffsPanel.Location = new System.Drawing.Point(816, 467);
             this.staffsPanel.Name = "staffsPanel";
-            this.staffsPanel.Size = new System.Drawing.Size(1046, 816);
+            this.staffsPanel.Size = new System.Drawing.Size(1046, 761);
             this.staffsPanel.TabIndex = 12;
             this.staffsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.staffsPanel_Paint);
             // 
@@ -853,6 +853,7 @@
             this.btnStaffCancel.Text = "Cancel";
             this.btnStaffCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnStaffCancel.UseVisualStyleBackColor = false;
+            this.btnStaffCancel.Click += new System.EventHandler(this.btnStaffCancel_Click);
             // 
             // txtLn
             // 

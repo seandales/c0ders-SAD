@@ -266,6 +266,7 @@
             this.checkStudArchive.TabIndex = 16;
             this.checkStudArchive.Text = "Show Archive";
             this.checkStudArchive.UseVisualStyleBackColor = true;
+            this.checkStudArchive.CheckedChanged += new System.EventHandler(this.checkStudArchive_CheckedChanged);
             // 
             // label8
             // 
@@ -360,9 +361,16 @@
             this.comboGradeLevel.FormattingEnabled = true;
             this.comboGradeLevel.Items.AddRange(new object[] {
             "",
-            "1grade\t",
-            "2grade\t",
-            "3grade"});
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
             this.comboGradeLevel.Location = new System.Drawing.Point(33, 319);
             this.comboGradeLevel.Name = "comboGradeLevel";
             this.comboGradeLevel.Size = new System.Drawing.Size(116, 25);

@@ -170,18 +170,20 @@ namespace WindowsFormsApp4
 
         private void btnEditStud_Click(object sender, EventArgs e)
         {
-            /*
-            EditStudentcs f = new EditStudentcs();
+
+            EditStudent f = new EditStudent();
             if (checkStudArchive.Checked == false)
             {
-                for (int i = 0; i < accountListGridView.SelectedRows.Count; i++)
+                for (int i = 0; i < datagridStud.SelectedRows.Count; i++)
                 {
-                    f.userId = Convert.ToInt32(accountListGridView.SelectedRows[i].Cells[0].Value.ToString());
-                    f.textBox1.Text = (accountListGridView.SelectedRows[i].Cells[0].Value.ToString());
-                    f.txtEditUserName.Text = (accountListGridView.SelectedRows[i].Cells[1].Value.ToString());
-                    f.txtEditPass1.Text = accountListGridView.SelectedRows[i].Cells[2].Value.ToString();
-                    f.comboEditRole.Text = accountListGridView.SelectedRows[i].Cells[3].Value.ToString();
-                    f.comboStatus.Text = accountListGridView.SelectedRows[i].Cells[5].Value.ToString();
+                    f.studId = Convert.ToInt32(datagridStud.SelectedRows[i].Cells[0].Value.ToString());
+                    f.txtFn.Text = (datagridStud.SelectedRows[i].Cells[1].Value.ToString());
+                    f.txtMn.Text = (datagridStud.SelectedRows[i].Cells[2].Value.ToString());
+                    f.txtLn.Text = datagridStud.SelectedRows[i].Cells[3].Value.ToString();
+                    f.dateTimeBirthdate.Text = datagridStud.SelectedRows[i].Cells[4].Value.ToString();
+                    f.comboGender.Text = datagridStud.SelectedRows[i].Cells[5].Value.ToString();
+                    f.comboGradeLevel.Text = datagridStud.SelectedRows[i].Cells[6].Value.ToString();
+                    f.combostatus.Text = datagridStud.SelectedRows[i].Cells[8].Value.ToString();
 
                     //f.dateTimePickerBirthdate.Text = accountListGridView.SelectedRows[i].Cells[3].Value.ToString();
                     //f.dateTimePicker1.Text = accountListGridView.SelectedRows[i].Cells[4].Value.ToString();
@@ -191,16 +193,20 @@ namespace WindowsFormsApp4
 
                 }
             }
+
             if (checkStudArchive.Checked == true)
             {
-                for (int i = 0; i < archive1.SelectedRows.Count; i++)
+                for (int i = 0; i < archiveStud.SelectedRows.Count; i++)
                 {
-                    f.userId = Convert.ToInt32(archive1.SelectedRows[i].Cells[0].Value.ToString());
-                    f.textBox1.Text = (archive1.SelectedRows[i].Cells[0].Value.ToString());
-                    f.txtEditUserName.Text = (archive1.SelectedRows[i].Cells[1].Value.ToString());
-                    f.txtEditPass1.Text = archive1.SelectedRows[i].Cells[2].Value.ToString();
-                    f.comboEditRole.Text = archive1.SelectedRows[i].Cells[3].Value.ToString();
-                    f.comboStatus.Text = archive1.SelectedRows[i].Cells[5].Value.ToString();
+                    //f.userId = Convert.ToInt32(archive1.SelectedRows[i].Cells[0].Value.ToString());
+                    f.studId = Convert.ToInt32(archiveStud.SelectedRows[i].Cells[0].Value.ToString());
+                    f.txtFn.Text = (archiveStud.SelectedRows[i].Cells[1].Value.ToString());
+                    f.txtMn.Text = (archiveStud.SelectedRows[i].Cells[2].Value.ToString());
+                    f.txtLn.Text = archiveStud.SelectedRows[i].Cells[3].Value.ToString();
+                    f.dateTimeBirthdate.Text = archiveStud.SelectedRows[i].Cells[4].Value.ToString();
+                    f.comboGender.Text = archiveStud.SelectedRows[i].Cells[5].Value.ToString();
+                    f.comboGradeLevel.Text = archiveStud.SelectedRows[i].Cells[6].Value.ToString();
+                    f.combostatus.Text = archiveStud.SelectedRows[i].Cells[8].Value.ToString();
 
                     //f.dateTimePickerBirthdate.Text = accountListGridView.SelectedRows[i].Cells[3].Value.ToString();
                     //f.dateTimePicker1.Text = accountListGridView.SelectedRows[i].Cells[4].Value.ToString();
@@ -209,38 +215,85 @@ namespace WindowsFormsApp4
 
 
                 }
+                //ddStaffForm addForm = new AddStaffForm();
+        
             }
+            f.reference = this;
+            //addForm.butAdd.Enabled = false;
+            // addForm.butAdd.Enabled = true;
+            f.ShowDialog();
+        }
+
+        private void checkStudArchive_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkStudArchive.Checked == true)
+            {
+                readArchive();
+            }
+            if (checkStudArchive.Checked == false)
+            {
+                readDataStud();
+            }
+        }
+        public void readArchive()
+        {
+
+
+            datagridStud.Visible = false;
+            datagridStud.Enabled = false;
+
+            archiveStud.Visible = true;
+            archiveStud.Enabled = true;
+            datagridStud.ClearSelection();
+            archiveStud.ClearSelection();
+
+        }
 
         /*
-private void btnEditStud_Click(object sender, EventArgs e)
+       private void btnEditStud_Click(object sender, EventArgs e)
+       {
+          EditAccountForm f = new EditAccountForm();
+          for (int i = 0; i < stud.SelectedRows.Count; i++)
+          {
+              f.userId = Convert.ToInt32(accountListGridView.SelectedRows[i].Cells[0].Value.ToString());
+              f.textBox1.Text = (accountListGridView.SelectedRows[i].Cells[0].Value.ToString());
+              f.txtEditUserName.Text = (accountListGridView.SelectedRows[i].Cells[1].Value.ToString());
+              f.txtEditPass1.Text = accountListGridView.SelectedRows[i].Cells[2].Value.ToString();
+              f.comboEditRole.Text = accountListGridView.SelectedRows[i].Cells[3].Value.ToString();
+              f.comboStatus.Text = accountListGridView.SelectedRows[i].Cells[5].Value.ToString();
+
+              //f.dateTimePickerBirthdate.Text = accountListGridView.SelectedRows[i].Cells[3].Value.ToString();
+              //f.dateTimePicker1.Text = accountListGridView.SelectedRows[i].Cells[4].Value.ToString();
+              //f.comboStatus.Text = accountListGridView.SelectedRows[i].Cells[5].Value.ToString();
+
+
+
+          }
+
+          this.Hide();
+          //ddStaffForm addForm = new AddStaffForm();
+          f.reference = this;
+          //addForm.butAdd.Enabled = false;
+          // addForm.butAdd.Enabled = true;
+          f.Show();
+       }
+       */
+
+
+        /*
+private void checkStudArchive_CheckedChanged(object sender, EventArgs e)
 {
-   EditAccountForm f = new EditAccountForm();
-   for (int i = 0; i < stud.SelectedRows.Count; i++)
+   if (archiveStud.Checked == true)
    {
-       f.userId = Convert.ToInt32(accountListGridView.SelectedRows[i].Cells[0].Value.ToString());
-       f.textBox1.Text = (accountListGridView.SelectedRows[i].Cells[0].Value.ToString());
-       f.txtEditUserName.Text = (accountListGridView.SelectedRows[i].Cells[1].Value.ToString());
-       f.txtEditPass1.Text = accountListGridView.SelectedRows[i].Cells[2].Value.ToString();
-       f.comboEditRole.Text = accountListGridView.SelectedRows[i].Cells[3].Value.ToString();
-       f.comboStatus.Text = accountListGridView.SelectedRows[i].Cells[5].Value.ToString();
-
-       //f.dateTimePickerBirthdate.Text = accountListGridView.SelectedRows[i].Cells[3].Value.ToString();
-       //f.dateTimePicker1.Text = accountListGridView.SelectedRows[i].Cells[4].Value.ToString();
-       //f.comboStatus.Text = accountListGridView.SelectedRows[i].Cells[5].Value.ToString();
-
-
-
+       readArchive();
    }
-
-   this.Hide();
-   //ddStaffForm addForm = new AddStaffForm();
-   f.reference = this;
-   //addForm.butAdd.Enabled = false;
-   // addForm.butAdd.Enabled = true;
-   f.Show();
+   if (archiveStud.Checked == false)
+   {
+       readDataStud();
+   }
 }
 */
-        }
+
 
         public void readDataStud()
         {

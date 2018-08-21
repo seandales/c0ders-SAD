@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace WindowsFormsApp4
-{
+namespace WindowsFormsApp4 { 
+
     public partial class Modules : Form
     {
         //public Staff_Manag_Form reference { get; set; }
@@ -689,6 +689,11 @@ namespace WindowsFormsApp4
         DataTable newdt2;
 
         private void staffsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnStaffCancel_Click(object sender, EventArgs e)
         {
 
         }

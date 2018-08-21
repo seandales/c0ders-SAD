@@ -52,14 +52,14 @@
     <Compile Include="AddStaffForm.Designer.cs">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddStudent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddStudent.Designer.cs">
-      <DependentUpon>AddStudent.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddStudentQueries.cs" />
     <Compile Include="DbConnect.cs" />
+    <Compile Include="_Registrar\EditStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Registrar\EditStudent.Designer.cs">
+      <DependentUpon>EditStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="_Admin\EditStaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,9 +187,6 @@
     <EmbeddedResource Include="AddStaffForm.resx">
       <DependentUpon>AddStaffForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddStudent.resx">
-      <DependentUpon>AddStudent.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="_Admin\EditAccountForm.resx">
       <DependentUpon>EditAccountForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RecordDeliveryForm.resx">
       <DependentUpon>RecordDeliveryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Registrar\EditStudent.resx">
+      <DependentUpon>EditStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="_Registrar\RegForm.resx">
       <DependentUpon>RegForm.cs</DependentUpon>
