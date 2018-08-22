@@ -8,24 +8,46 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+
 namespace WindowsFormsApp4
 {
-    public partial class EditStudent : Form
+    public partial class EditStud : Form
     {
+
         public int studId;
         public RegForm reference { get; set; }
+        // public int userId;
+        public String username, password, role;
+
         private DbConnect conRef = new DbConnect();
-        //public int studId;
-        public EditStudent()
+        public EditStud()
         {
             InitializeComponent();
-            dateTimeBirthdate.CustomFormat = "dd-MM-yyyy";
-            textBox1.Text = studId.ToString();
         }
 
-        private void EditStudent_Load(object sender, EventArgs e)
+        private void btnStudCancel_Click(object sender, EventArgs e)
         {
-
+            reference.checkStudArchive.Checked = false;
+            clearStudFields();
+            reference.clearRegForm();
+            showPrev();
+        }
+        private void showPrev()
+        {
+            this.Hide();
+            //reference.clea();
+            //reference.clearStaffFields();
+            reference.Show();
+        }
+        private void clearStudFields()
+        {
+            txtFn.Text = "";
+            txtMn.Text = "";
+            txtLn.Text = "";
+            dateTimeBirthdate.ResetText();
+            comboGender.SelectedIndex = comboGender.Items.IndexOf(0);
+            comboGradeLevel.SelectedIndex = comboGradeLevel.Items.IndexOf(0);
+            combostatus.SelectedIndex = combostatus.Items.IndexOf(0);
         }
 
         private void btnAddStud_Click(object sender, EventArgs e)
@@ -40,7 +62,13 @@ namespace WindowsFormsApp4
             }
             if (comboGradeLevel.SelectedItem == null)
             {
-                MessageBox.Show("please specify the gradelevel of the user");
+                MessageBox.Show("please specify the gradelvel of the user");
+                flag = true;
+
+            }
+            if (combostatus.SelectedItem == null)
+            {
+                MessageBox.Show("please specify the status of the user");
                 flag = true;
 
             }
@@ -55,8 +83,17 @@ namespace WindowsFormsApp4
             else if (flag == false)
             {
                 Modules frm = new Modules();
+
+                // MySqlConnection con = conRef.connectFunc();
                 String query1 = ("UPDATE student_table SET firstname = @firstname, middlename = @middlename, lastname = @lastname, birthdate = @birthdate," +
-                    "gender = @gender, idgradelevel = @gradelevel, studstatus = @studstatus WHERE idstudent = @idstudent");
+                    "gender = @gender, idgradelevel = @idgradelevel, studstatus = @studstatus WHERE idstudent = @idStud ");
+                /*
+                String query1 = ("UPDATE staff_table SET firstname ='" + txtEditStaffFn.Text + "', middlename = '" + txtEditStaffMn.Text +
+                    "', lastname ='" + txtEditStaffLn.Text + "', birthdate = @birthdate,
+                    "' gender ='" + comboBoxGender.Text + "', civilstatus ='" + comboBoxCivilStatus.Text  +
+                    "', staffstatus ='" + comboBoxStaffStatus.Text + "', staffRole = '" + comboBoxRole.Text + "' " +
+                    "WHERE idStaff ='" +staffId+ "' ");
+                    */
                 MySqlConnection con = conRef.connectFunc();
                 using (MySqlCommand cmd = new MySqlCommand(query1, con))
                 {
@@ -65,14 +102,12 @@ namespace WindowsFormsApp4
                     cmd.Parameters.AddWithValue("@lastname", txtLn.Text);
                     cmd.Parameters.AddWithValue("@birthdate", dateTimeBirthdate.Value.Date);
                     cmd.Parameters.AddWithValue("@gender", comboGender.Text);
-                    cmd.Parameters.AddWithValue("@gradelevel", comboGradeLevel.Text);
+                    cmd.Parameters.AddWithValue("@idgradelevel", comboGradeLevel.Text);
                     cmd.Parameters.AddWithValue("@studstatus", combostatus.Text);
-                    cmd.Parameters.AddWithValue("@idstudent", studId);
-                    /*
-                    cmd.Parameters.AddWithValue("@staffstatus", comboBoxStaffStatus.Text);
-                    cmd.Parameters.AddWithValue("@staffrole", comboBoxRole.Text);
-                    cmd.Parameters.AddWithValue("@idStaff", staffId);
-                    */
+                    cmd.Parameters.AddWithValue("@idStud", studId);
+
+
+
                     con.Open();
                     int result = cmd.ExecuteNonQuery();
                     //checking for errors
@@ -87,8 +122,10 @@ namespace WindowsFormsApp4
                     }
                     con.Close();
                     reference.readDataStud();
-                    clearfields();
-                    showPref();
+                    reference.checkStudArchive.Checked = false;
+                    clearStudFields();
+                    showPrev();
+
                 }
 
                 //Form();
@@ -98,40 +135,12 @@ namespace WindowsFormsApp4
             {
                 MessageBox.Show(" error");
             }
-        }
-        private void clearfields()
-        {
-            txtFn.Text = "";
-            txtMn.Text = "";
-            txtLn.Text = "";
-            dateTimeBirthdate.ResetText();
-            comboGender.SelectedIndex = comboGender.Items.IndexOf(0);
-            //comboRoleAccounts.SelectedIndex = comboRoleAccounts.Items.IndexOf(0);
 
 
-            txtFn.Clear();
-            txtMn.Clear();
-            txtLn.Clear();
-            dateTimeBirthdate.ResetText();
-
-            comboGender.SelectedIndex = comboGender.Items.IndexOf(0);
-            comboGradeLevel.SelectedIndex = comboGradeLevel.Items.IndexOf(0);
-            combostatus.SelectedIndex = combostatus.Items.IndexOf(0);
-            //comboRoleAccounts.SelectedIndex = comboRoleAccounts.Items.IndexOf(0);
-            //txtStaffSearch.Clear();
-        }
-        private void showPref()
-        {
-            this.Hide();
-            reference.clearStudFields();
-            //reference.clearStaffFields();
-            reference.Show();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
         }
+
+
     }
- 
+
 }

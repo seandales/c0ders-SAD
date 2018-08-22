@@ -15,6 +15,7 @@ namespace WindowsFormsApp4 {
     {
         //public Staff_Manag_Form reference { get; set; }
         DbConnect conRef = new DbConnect();
+        DbConnect connect = new DbConnect();
 
         //Staff_Manag_Form frmObject = new Staff_Manag_Form();
         public Login reference { get; set; }
@@ -31,7 +32,7 @@ namespace WindowsFormsApp4 {
             InitializeComponent();
             loginName = role;
             btnAdd.Enabled = false;
-            editButton.Enabled = false;
+            btnEditUser.Enabled = false;
             btnStaffAdd.Enabled = false;
             btnStaffEdit.Enabled = false;
             /*
@@ -70,6 +71,14 @@ namespace WindowsFormsApp4 {
 
             //Changes Label
             navigationLabel.Text = "Home";
+
+            //jarrod fucks around here
+            btnEditUser.Enabled = false;
+            btnAdd.Enabled = false;
+            checkStaffArchive.Checked = false;
+            clearStaffFields();
+            clearAccountFields();
+            readData();
         }
         private void staffsButton_Click(object sender, EventArgs e)
         {
@@ -86,9 +95,12 @@ namespace WindowsFormsApp4 {
             //Changes Label
             navigationLabel.Text = "Staffs";
             
-            editButton.Enabled = false;
+            //jarrod fucks around here
+            btnEditUser.Enabled = false;
             btnAdd.Enabled = false;
-            checkBox2.Checked = false;
+            checkStaffArchive.Checked = false;
+            clearStaffFields();
+            clearAccountFields();
             readData();
         }
         private void accountsButton_Click(object sender, EventArgs e)
@@ -105,11 +117,18 @@ namespace WindowsFormsApp4 {
 
             //Changes Label
             navigationLabel.Text = "Accounts";
-            editButton.Enabled = false;
+            btnEditUser.Enabled = false;
             btnAdd.Enabled = false;
-            checkBox1.Checked = false;
+            checkUserArchive.Checked = false;
 
+            //jarrod fucks around here
+            btnEditUser.Enabled = false;
+            btnAdd.Enabled = false;
+            checkStaffArchive.Checked = false;
+            clearStaffFields();
+            clearAccountFields();
             readData();
+
         }
         //
         //-------->Exit Buttons<--------
@@ -142,12 +161,12 @@ namespace WindowsFormsApp4 {
             */
 
         }
-        DbConnect connect = new DbConnect();
-        MySqlDataAdapter da, da2, da3, da4;
-        DataTable dt, dt2, dt3, dt4;
+
 
         public void readData()
         {
+            MySqlDataAdapter da, da2, da3, da4;
+            DataTable dt, dt2, dt3, dt4;
             MySqlConnection con = connect.connectFunc();
             String query = "SELECT * FROM users_table WHERE statususer = 1";
             String query2 = "SELECT * FROM staff_table WHERE staffstatus = 1";
@@ -210,7 +229,7 @@ namespace WindowsFormsApp4 {
 
         private void Textbox_TextChanged(object sender, EventArgs e)
         {
-            editButton.Enabled = false;
+            btnEditUser.Enabled = false;
             if (String.IsNullOrWhiteSpace(txtPass.Text) || String.IsNullOrWhiteSpace(txtPass2.Text) || String.IsNullOrWhiteSpace(txtUser.Text)) {
                 btnAdd.Enabled = false;
 
@@ -236,7 +255,8 @@ namespace WindowsFormsApp4 {
             txtPass2.Text = ("");
             txtUser.Text = ("");
             comboRoleAccounts.SelectedIndex = comboRoleAccounts.Items.IndexOf(0);
-            txtStaffSearch.Clear();
+            txtSearchAccounts.Clear();
+            
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -304,7 +324,7 @@ namespace WindowsFormsApp4 {
 
         private void accountListGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            editButton.Enabled = true;
+            btnEditUser.Enabled = true;
         }
         int id;
         public String username1, password1, role1;
@@ -566,7 +586,7 @@ namespace WindowsFormsApp4 {
 
         private void accountListGridView_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
-            editButton.Enabled = true;
+            btnEditUser.Enabled = true;
         }
 
         private void accountListGridView_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
@@ -592,7 +612,7 @@ namespace WindowsFormsApp4 {
         }
         public void disableAccountEditButton()
         {
-            editButton.Enabled = false;
+            btnEditUser.Enabled = false;
 
         }
 
@@ -618,7 +638,7 @@ namespace WindowsFormsApp4 {
         private void editButton_Click(object sender, EventArgs e)
         {
             EditAccountForm f = new EditAccountForm();
-            if (checkBox1.Checked == false)
+            if (checkUserArchive.Checked == false)
             {
                 for (int i = 0; i < accountListGridView.SelectedRows.Count; i++)
                 {
@@ -637,7 +657,7 @@ namespace WindowsFormsApp4 {
 
                 }
             }
-            if (checkBox1.Checked == true)
+            if (checkUserArchive.Checked == true)
             {
                 for (int i = 0; i < archive1.SelectedRows.Count; i++)
                 {
@@ -664,20 +684,48 @@ namespace WindowsFormsApp4 {
             f.ShowDialog();
         }
 
-        DataTable dtSearch = new DataTable();
-
-        MySqlDataAdapter ad;
+    
         private void searchAccounts_TextChanged(object sender, EventArgs e)
         {
-            using (MySqlConnection conn = conRef.connectFunc())
+            if (checkUserArchive.Checked == true)
             {
-                conn.Open();
-                string query = ("SELECT * FROM users_table WHERE username LIKE '" + txtSearchAccounts.Text + "%'");
-                ad = new MySqlDataAdapter(query, conn);
-                dt = new DataTable();
-                ad.Fill(dt);
-                accountListGridView.DataSource = dt;
-                editButton.Enabled = true;
+                using (MySqlConnection conn = conRef.connectFunc())
+                {
+                    conn.Open();
+                    string query = ("SELECT * FROM users_table WHERE username LIKE '" + txtSearchAccounts.Text + "%' AND statususer = 0");
+                    MySqlDataAdapter test;
+                    DataTable test2;
+                    test = new MySqlDataAdapter(query, conn);
+                    test2 = new DataTable();
+                    test.Fill(test2);
+                    archive1.DataSource = test2;
+                    btnEditUser.Enabled = true;
+                }
+            }
+            if (checkUserArchive.Checked == false)
+            {
+                using (MySqlConnection conn = conRef.connectFunc())
+                {
+                    conn.Open();
+                    string query = ("SELECT * FROM users_table WHERE username LIKE '" + txtSearchAccounts.Text + "%' AND statususer = 1");
+                    MySqlDataAdapter testing1;
+                    DataTable testing2;
+                    testing1 = new MySqlDataAdapter(query, conn);
+                    testing2 = new DataTable();
+                    testing1.Fill(testing2);
+                    accountListGridView.DataSource = testing2;
+                    btnEditUser.Enabled = true;
+                }
+            }
+            else
+            {
+                if (String.IsNullOrWhiteSpace(txtSearchAccounts.Text))
+                {
+                    btnEditUser.Enabled = false;
+                    archive1.ClearSelection();
+                    staffListGridView.ClearSelection();
+
+                }
             }
             //DataView DV = new DataView(dt);
             //DV.RowFilter = string.Format("username LIKE '%[0]%'", txtSearchAccounts.Text);
@@ -686,8 +734,6 @@ namespace WindowsFormsApp4 {
 
         }
 
-        MySqlDataAdapter ad2;
-        DataTable newdt2;
 
         private void staffsPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -699,30 +745,58 @@ namespace WindowsFormsApp4 {
 
         }
 
+        private void archive2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            using (MySqlConnection conn = conRef.connectFunc())
+            if (checkStaffArchive.Checked == false)
             {
-                conn.Open();
-                string query = ("SELECT * FROM staff_table WHERE firstname LIKE '" + txtStaffSearch.Text + "%'");
-                ad2 = new MySqlDataAdapter(query, conn);
-                newdt2 = new DataTable();
-                ad2.Fill(newdt2);
-                staffListGridView.DataSource = newdt2;
-                editButton.Enabled = true;
+                using (MySqlConnection conn = conRef.connectFunc())
+                {
+                    conn.Open();
+                    string query = ("SELECT * FROM staff_table WHERE firstname LIKE '" + txtStaffSearch.Text + "%' AND staffstatus = 1");
+
+                    MySqlDataAdapter ad2;
+                    DataTable newdt2;
+                    ad2 = new MySqlDataAdapter(query, conn);
+                    newdt2 = new DataTable();
+                    ad2.Fill(newdt2);
+                    staffListGridView.DataSource = newdt2;
+                    btnEditUser.Enabled = true;
+                }
+            }
+            if (checkStaffArchive.Checked == true)
+            {
+                using (MySqlConnection conn = conRef.connectFunc())
+                {
+                    conn.Open();
+                    string query = ("SELECT * FROM staff_table WHERE firstname LIKE '" + txtStaffSearch.Text + "%' AND staffstatus = 0");
+                    MySqlDataAdapter ad2;
+                    DataTable newdt2;
+                    ad2 = new MySqlDataAdapter(query, conn);
+                    newdt2 = new DataTable();
+                    ad2.Fill(newdt2);
+                    archive2.DataSource = newdt2;
+                    btnEditUser.Enabled = true;
+                }
+
             }
             if (String.IsNullOrWhiteSpace(txtStaffSearch.Text))
-            {
+            { 
                 btnStaffEdit.Enabled = false;
                 accountListGridView.ClearSelection();
             }
+
         }
 
         private void btnStaffEdit_Click(object sender, EventArgs e)
         {
 
             EditStaffForm f = new EditStaffForm();
-            if (checkBox2.Checked == false)
+            if (checkStaffArchive.Checked == false)
             {
                 for (int i = 0; i < staffListGridView.SelectedRows.Count; i++)
                 {
@@ -744,7 +818,7 @@ namespace WindowsFormsApp4 {
 
                 }
             }
-            if (checkBox2.Checked == true)
+            if (checkStaffArchive.Checked == true)
             {
                 for (int i = 0; i < archive2.SelectedRows.Count; i++)
                 { 
@@ -776,11 +850,11 @@ namespace WindowsFormsApp4 {
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox2.Checked == true)
+            if (checkStaffArchive.Checked == true)
             {
                 readArchive();
             }
-            if (checkBox2.Checked == false)
+            if (checkStaffArchive.Checked == false)
             {
                 readData();
             }
@@ -807,11 +881,11 @@ namespace WindowsFormsApp4 {
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox1.Checked == true)
+            if(checkUserArchive.Checked == true)
             {
                 readArchive();
             }
-            if(checkBox1.Checked == false)
+            if(checkUserArchive.Checked == false)
             {
                 readData();
             }

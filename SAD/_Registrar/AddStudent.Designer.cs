@@ -81,9 +81,9 @@
             this.comboGradeLevel.FormattingEnabled = true;
             this.comboGradeLevel.Items.AddRange(new object[] {
             "",
-            "1grade\t",
-            "2grade\t",
-            "3grade"});
+            "1",
+            "2",
+            "3"});
             this.comboGradeLevel.Location = new System.Drawing.Point(45, 409);
             this.comboGradeLevel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.comboGradeLevel.Name = "comboGradeLevel";
@@ -258,6 +258,7 @@
             this.btnStudCancel.Text = "Cancel";
             this.btnStudCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnStudCancel.UseVisualStyleBackColor = false;
+            this.btnStudCancel.Click += new System.EventHandler(this.btnStudCancel_Click);
             // 
             // btnAddStud
             // 
@@ -275,6 +276,7 @@
             this.btnAddStud.Text = "Add";
             this.btnAddStud.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAddStud.UseVisualStyleBackColor = false;
+            this.btnAddStud.Click += new System.EventHandler(this.btnAddStud_Click);
             // 
             // AddStudent
             // 
@@ -304,6 +306,7 @@
             this.Name = "AddStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddStudent";
+            this.Load += new System.EventHandler(this.AddStudent_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);

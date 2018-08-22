@@ -58,6 +58,9 @@ namespace WindowsFormsApp4
 
             //Changes Label
             navigationLabel.Text = "Home";
+
+            //Jarrod fucks around here
+            txtSearchStud.Clear();
         }
         private void studentsButton_Click(object sender, EventArgs e)
         {
@@ -71,6 +74,10 @@ namespace WindowsFormsApp4
 
             //Changes Label
             navigationLabel.Text = "Staffs";
+
+            //jarrod fucks around here
+            txtSearchStud.Clear();
+
         }
         //
         //-------->Exit Buttons<--------
@@ -87,70 +94,10 @@ namespace WindowsFormsApp4
 
         private void btnAddStud_Click(object sender, EventArgs e)
         {
-            AddStudent addStudentFrm = new AddStudent(); 
-            addStudentFrm.reference = this;
+            AddStudent f = new AddStudent();
+            f.reference = this;
+            f.ShowDialog();
 
-
-            /*
-            Boolean flag = false;
-            if (comboGender.SelectedItem == null || comboGender.SelectedIndex == 0)
-            {
-                MessageBox.Show("please specify the gender of the user");
-                flag = true;
-
-            }
-            if (comboGradeLevel.SelectedItem == null || comboGradeLevel.SelectedItem == null)
-            {
-                MessageBox.Show("please specify the grade level of the student");
-            }
-            if (combostatus.SelectedItem == null || combostatus.SelectedItem == null)
-            {
-                MessageBox.Show("please specify the grade level of the student");
-            }
-
-
-
-            else if (flag == false)
-            {
-                int number = 1;
-                String query1 = ("INSERT INTO student_table (firstname,middlename,lastname, birthdate, gender,  idgradelevel, sectionname, studstatus)" +
-                    " VALUES (@firstname, @middlename, @lastname, @birthdate, @gender, @idgradelevel, @sectionname, @studstatus)");
-                MySqlConnection con = conRef.connectFunc();
-                using (MySqlCommand cmd = new MySqlCommand(query1, con))
-                {
-                    cmd.Parameters.AddWithValue("@firstname", txtFn.Text);
-                    cmd.Parameters.AddWithValue("@middlename", txtMn.Text);
-                    cmd.Parameters.AddWithValue("@lastname", txtLn.Text);
-                    cmd.Parameters.AddWithValue("@birthdate", dateTimeBirthdate.Value.Date);
-                    cmd.Parameters.AddWithValue("@gender", comboGender.Text);
-                    cmd.Parameters.AddWithValue("@idgradelevel", comboGradeLevel.SelectedIndex);
-                    cmd.Parameters.AddWithValue("@sectionname", 1);
-                    cmd.Parameters.AddWithValue("@studstatus", combostatus.Text);
-                    con.Open();
-                    int result = cmd.ExecuteNonQuery();
-                    //checking for errors
-                    if (result < 0)
-                    {
-                        Console.WriteLine("Error inserting data into student table!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("succesfully inserted into student table");
-
-                    }
-                    con.Close();
-                    readDataStud();
-                    clearStudFields();
-                }
-
-                //Form();
-            }
-            else
-            {
-                MessageBox.Show(" error");
-            }
-
-            */
 
 
         }
@@ -168,7 +115,7 @@ namespace WindowsFormsApp4
         private void btnEditStud_Click(object sender, EventArgs e)
         {
 
-            EditStudent f = new EditStudent();
+            EditStud f = new EditStud();
             if (checkStudArchive.Checked == false)
             {
                 for (int i = 0; i < datagridStud.SelectedRows.Count; i++)
@@ -216,6 +163,7 @@ namespace WindowsFormsApp4
         
             }
             f.reference = this;
+            clearRegForm()
             //addForm.butAdd.Enabled = false;
             // addForm.butAdd.Enabled = true;
             f.ShowDialog();
@@ -232,6 +180,76 @@ namespace WindowsFormsApp4
                 readDataStud();
             }
         }
+
+        private void checkStudArchive_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (checkStudArchive.Checked == true)
+            {
+                readArchive();
+                btnEditStud.Enabled = false;
+            }
+            if (checkStudArchive.Checked == false)
+            {
+                readDataStud();
+                btnEditStud.Enabled = false;
+
+            }
+        }
+
+        private void txtSearchStud_TextChanged(object sender, EventArgs e)
+        {
+            if (checkStudArchive.Checked == true)
+            {
+                using (MySqlConnection conn = conRef.connectFunc())
+                {
+                    conn.Open();
+                    string query = ("SELECT * FROM student_table WHERE firstname LIKE '" + txtSearchStud.Text + "%' AND studstatus = 0");
+                    MySqlDataAdapter ad2;
+                    DataTable newdt2;
+                    ad2 = new MySqlDataAdapter(query, conn);
+                    newdt2 = new DataTable();
+                    ad2.Fill(newdt2);
+                    archiveStud.DataSource = newdt2;
+                    btnEditStud.Enabled = true;
+                }
+            }
+            if (checkStudArchive.Checked == false)
+            {
+                using (MySqlConnection conn = conRef.connectFunc())
+                {
+                    conn.Open();
+                    string query = ("SELECT * FROM student_table WHERE firstname LIKE '" + txtSearchStud.Text + "%' AND studstatus = 1");
+                    MySqlDataAdapter ad3;
+                    DataTable newdt3;
+                    ad3 = new MySqlDataAdapter(query, conn);
+                    newdt3 = new DataTable();
+                    ad3.Fill(newdt3);
+                    datagridStud.DataSource = newdt3;
+                    btnEditStud.Enabled = true;
+                }
+             
+            }
+            else
+            {
+                if (String.IsNullOrWhiteSpace(txtSearchStud.Text))
+                {
+                    btnEditStud.Enabled = false;
+                    datagridStud.ClearSelection();
+                }
+            }
+        }
+
+        private void archiveStud_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            btnEditStud.Enabled = true;
+        }
+
+        private void datagridStud_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            btnEditStud.Enabled = true;
+
+        }
+
         public void readArchive()
         {
 
@@ -334,6 +352,10 @@ private void checkStudArchive_CheckedChanged(object sender, EventArgs e)
             archiveStud.ClearSelection();
             //dt.Rows[0].Vi
 
+        }
+        public void clearRegForm()
+        {
+            txtSearchStud.Clear();
         }
         /*
         public void clearStudFields()

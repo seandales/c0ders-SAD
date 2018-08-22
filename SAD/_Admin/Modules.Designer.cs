@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Icons = new System.Windows.Forms.ImageList(this.components);
             this.accountsPanel = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.editButton = new System.Windows.Forms.Button();
+            this.checkUserArchive = new System.Windows.Forms.CheckBox();
+            this.btnEditUser = new System.Windows.Forms.Button();
             this.smallerIcons = new System.Windows.Forms.ImageList(this.components);
             this.addPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -64,7 +64,7 @@
             this.homeButton = new System.Windows.Forms.Button();
             this.signOutButton = new System.Windows.Forms.Button();
             this.staffsPanel = new System.Windows.Forms.Panel();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkStaffArchive = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -137,8 +137,8 @@
             // 
             this.accountsPanel.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.PanelBG;
             this.accountsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.accountsPanel.Controls.Add(this.checkBox1);
-            this.accountsPanel.Controls.Add(this.editButton);
+            this.accountsPanel.Controls.Add(this.checkUserArchive);
+            this.accountsPanel.Controls.Add(this.btnEditUser);
             this.accountsPanel.Controls.Add(this.addPanel);
             this.accountsPanel.Controls.Add(this.txtSearchAccounts);
             this.accountsPanel.Controls.Add(this.searchLabel);
@@ -148,36 +148,36 @@
             this.accountsPanel.Size = new System.Drawing.Size(1082, 627);
             this.accountsPanel.TabIndex = 7;
             // 
-            // checkBox1
+            // checkUserArchive
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Location = new System.Drawing.Point(592, 21);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(167, 20);
-            this.checkBox1.TabIndex = 17;
-            this.checkBox1.Text = " View Archived";
-            this.checkBox1.UseVisualStyleBackColor = false;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkUserArchive.AutoSize = true;
+            this.checkUserArchive.BackColor = System.Drawing.Color.Transparent;
+            this.checkUserArchive.Location = new System.Drawing.Point(592, 21);
+            this.checkUserArchive.Name = "checkUserArchive";
+            this.checkUserArchive.Size = new System.Drawing.Size(167, 20);
+            this.checkUserArchive.TabIndex = 17;
+            this.checkUserArchive.Text = " View Archived";
+            this.checkUserArchive.UseVisualStyleBackColor = false;
+            this.checkUserArchive.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // editButton
+            // btnEditUser
             // 
-            this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(75)))));
-            this.editButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(100)))), ((int)(((byte)(0)))));
-            this.editButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editButton.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton.ImageKey = "(none)";
-            this.editButton.ImageList = this.smallerIcons;
-            this.editButton.Location = new System.Drawing.Point(409, 7);
-            this.editButton.Name = "editButton";
-            this.editButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.editButton.Size = new System.Drawing.Size(89, 34);
-            this.editButton.TabIndex = 16;
-            this.editButton.Text = "Edit";
-            this.editButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.editButton.UseVisualStyleBackColor = false;
-            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            this.btnEditUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(207)))), ((int)(((byte)(75)))));
+            this.btnEditUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(100)))), ((int)(((byte)(0)))));
+            this.btnEditUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.btnEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditUser.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditUser.ImageKey = "(none)";
+            this.btnEditUser.ImageList = this.smallerIcons;
+            this.btnEditUser.Location = new System.Drawing.Point(409, 7);
+            this.btnEditUser.Name = "btnEditUser";
+            this.btnEditUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnEditUser.Size = new System.Drawing.Size(89, 34);
+            this.btnEditUser.TabIndex = 16;
+            this.btnEditUser.Text = "Edit";
+            this.btnEditUser.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnEditUser.UseVisualStyleBackColor = false;
+            this.btnEditUser.Click += new System.EventHandler(this.editButton_Click);
             // 
             // smallerIcons
             // 
@@ -586,7 +586,7 @@
             // 
             this.staffsPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("staffsPanel.BackgroundImage")));
             this.staffsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.staffsPanel.Controls.Add(this.checkBox2);
+            this.staffsPanel.Controls.Add(this.checkStaffArchive);
             this.staffsPanel.Controls.Add(this.label8);
             this.staffsPanel.Controls.Add(this.panel2);
             this.staffsPanel.Controls.Add(this.btnStaffEdit);
@@ -598,17 +598,17 @@
             this.staffsPanel.TabIndex = 12;
             this.staffsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.staffsPanel_Paint);
             // 
-            // checkBox2
+            // checkStaffArchive
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox2.Location = new System.Drawing.Point(553, 16);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(167, 20);
-            this.checkBox2.TabIndex = 16;
-            this.checkBox2.Text = " View Archived";
-            this.checkBox2.UseVisualStyleBackColor = false;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.checkStaffArchive.AutoSize = true;
+            this.checkStaffArchive.BackColor = System.Drawing.Color.Transparent;
+            this.checkStaffArchive.Location = new System.Drawing.Point(553, 16);
+            this.checkStaffArchive.Name = "checkStaffArchive";
+            this.checkStaffArchive.Size = new System.Drawing.Size(167, 20);
+            this.checkStaffArchive.TabIndex = 16;
+            this.checkStaffArchive.Text = " View Archived";
+            this.checkStaffArchive.UseVisualStyleBackColor = false;
+            this.checkStaffArchive.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // label8
             // 
@@ -972,6 +972,7 @@
             this.archive2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.archive2.Size = new System.Drawing.Size(748, 548);
             this.archive2.TabIndex = 1;
+            this.archive2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.archive2_CellContentClick);
             // 
             // staffListGridView
             // 
@@ -1097,9 +1098,9 @@
         private System.Windows.Forms.TextBox txtStaffSearch;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button editButton;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Button btnEditUser;
+        public System.Windows.Forms.CheckBox checkUserArchive;
+        public System.Windows.Forms.CheckBox checkStaffArchive;
         private System.Windows.Forms.DataGridView archive1;
         private System.Windows.Forms.DataGridView staffListGridView;
         private System.Windows.Forms.DataGridView archive2;
