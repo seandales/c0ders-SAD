@@ -419,6 +419,7 @@ namespace WindowsFormsApp4 {
                 }
                 //Inserting into accounts table
 
+
                 String query2 = "INSERT INTO users_table (username,password,roleuser, idStaff, statususer) VALUES (@username, @password, @roleuser, @idStaff, @statususer)";
                 using (MySqlCommand cmd = new MySqlCommand(query2, con))
                 {
@@ -918,6 +919,12 @@ namespace WindowsFormsApp4 {
             
             
         }
+
+        private void topPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         public void clearStaffFields()
         {
             txtFn.Text = "";

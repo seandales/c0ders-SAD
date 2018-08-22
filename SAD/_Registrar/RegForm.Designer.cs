@@ -86,6 +86,7 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1228, 60);
             this.topPanel.TabIndex = 13;
+            this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
             // 
             // ExitButton
             // 
@@ -426,7 +427,7 @@
             this.MinimizeBox = false;
             this.Name = "RegForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RegForm";
+            this.Text = ".";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegForm_FormClosing);
             this.Load += new System.EventHandler(this.RegForm_Load);
             this.topPanel.ResumeLayout(false);

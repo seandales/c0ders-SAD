@@ -114,9 +114,9 @@
             this.comboGradeLevel.FormattingEnabled = true;
             this.comboGradeLevel.Items.AddRange(new object[] {
             "",
-            "1",
-            "2",
-            "3"});
+            "Grade 1",
+            "Grade 2",
+            "Grade 3"});
             this.comboGradeLevel.Location = new System.Drawing.Point(257, 385);
             this.comboGradeLevel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.comboGradeLevel.Name = "comboGradeLevel";

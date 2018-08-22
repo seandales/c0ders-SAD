@@ -446,6 +446,7 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1799, 60);
             this.topPanel.TabIndex = 5;
+            this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
             // 
             // ExitButton
             // 

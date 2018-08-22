@@ -19,8 +19,8 @@ namespace WindowsFormsApp4
         {
             con.connectFunc();
             InitializeComponent();
-            userNameTextBox.Text = "registrar";
-            passwordTextBox.Text = "registrar";
+            userNameTextBox.Text = "Principal";
+            passwordTextBox.Text = "Principal";
         }
         //
         //-------->Login Button<--------
@@ -54,11 +54,11 @@ namespace WindowsFormsApp4
                 }
                 else if (role == "Principal")                                               //If User is Principal
                 {
-                    HRMForm hrmFrm = new HRMForm(role);
-                    hrmFrm.Size = new Size(1200, 675);
-                    hrmFrm.reference = this;
+                    PrincipalForm principal = new PrincipalForm();
+                    principal.Size = new Size(1200, 675);
+                    principal.reference = this;
                     this.Hide();
-                    hrmFrm.Show();
+                    principal.Show();
                 }
                 else if (role == "Hrm")                                                     //If User is Human Resource Manager
                 {

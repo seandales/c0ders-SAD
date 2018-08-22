@@ -114,6 +114,8 @@ namespace WindowsFormsApp4
 
         private void btnEditStud_Click(object sender, EventArgs e)
         {
+            int one = 1;
+            int zero = 0;
 
             EditStud f = new EditStud();
             if (checkStudArchive.Checked == false)
@@ -127,7 +129,7 @@ namespace WindowsFormsApp4
                     f.dateTimeBirthdate.Text = datagridStud.SelectedRows[i].Cells[4].Value.ToString();
                     f.comboGender.Text = datagridStud.SelectedRows[i].Cells[5].Value.ToString();
                     f.comboGradeLevel.Text = datagridStud.SelectedRows[i].Cells[6].Value.ToString();
-                    f.combostatus.Text = datagridStud.SelectedRows[i].Cells[8].Value.ToString();
+                    f.combostatus.Text = one.ToString();
 
                     //f.dateTimePickerBirthdate.Text = accountListGridView.SelectedRows[i].Cells[3].Value.ToString();
                     //f.dateTimePicker1.Text = accountListGridView.SelectedRows[i].Cells[4].Value.ToString();
@@ -142,28 +144,21 @@ namespace WindowsFormsApp4
             {
                 for (int i = 0; i < archiveStud.SelectedRows.Count; i++)
                 {
-                    //f.userId = Convert.ToInt32(archive1.SelectedRows[i].Cells[0].Value.ToString());
-                    f.studId = Convert.ToInt32(archiveStud.SelectedRows[i].Cells[0].Value.ToString());
-                    f.txtFn.Text = (archiveStud.SelectedRows[i].Cells[1].Value.ToString());
-                    f.txtMn.Text = (archiveStud.SelectedRows[i].Cells[2].Value.ToString());
-                    f.txtLn.Text = archiveStud.SelectedRows[i].Cells[3].Value.ToString();
-                    f.dateTimeBirthdate.Text = archiveStud.SelectedRows[i].Cells[4].Value.ToString();
-                    f.comboGender.Text = archiveStud.SelectedRows[i].Cells[5].Value.ToString();
-                    f.comboGradeLevel.Text = archiveStud.SelectedRows[i].Cells[6].Value.ToString();
-                    f.combostatus.Text = archiveStud.SelectedRows[i].Cells[8].Value.ToString();
-
-                    //f.dateTimePickerBirthdate.Text = accountListGridView.SelectedRows[i].Cells[3].Value.ToString();
-                    //f.dateTimePicker1.Text = accountListGridView.SelectedRows[i].Cells[4].Value.ToString();
-                    //f.comboStatus.Text = accountListGridView.SelectedRows[i].Cells[5].Value.ToString();
-
-
+                    f.studId = Convert.ToInt32(datagridStud.SelectedRows[i].Cells[0].Value.ToString());
+                    f.txtFn.Text = (datagridStud.SelectedRows[i].Cells[1].Value.ToString());
+                    f.txtMn.Text = (datagridStud.SelectedRows[i].Cells[2].Value.ToString());
+                    f.txtLn.Text = datagridStud.SelectedRows[i].Cells[3].Value.ToString();
+                    f.dateTimeBirthdate.Text = datagridStud.SelectedRows[i].Cells[4].Value.ToString();
+                    f.comboGender.Text = datagridStud.SelectedRows[i].Cells[5].Value.ToString();
+                    f.comboGradeLevel.Text = datagridStud.SelectedRows[i].Cells[6].Value.ToString();
+                    f.combostatus.Text = zero.ToString();
 
                 }
                 //ddStaffForm addForm = new AddStaffForm();
         
             }
             f.reference = this;
-            clearRegForm()
+            clearRegForm();
             //addForm.butAdd.Enabled = false;
             // addForm.butAdd.Enabled = true;
             f.ShowDialog();
@@ -203,7 +198,8 @@ namespace WindowsFormsApp4
                 using (MySqlConnection conn = conRef.connectFunc())
                 {
                     conn.Open();
-                    string query = ("SELECT * FROM student_table WHERE firstname LIKE '" + txtSearchStud.Text + "%' AND studstatus = 0");
+                    
+                    string query = ("SELECT idstudent, firstname, middlename, lastname, birthdate, gender, gradename FROM student_table LEFT JOIN grade_level ON student_table.idgradelevel = grade_level.idgrade_level WHERE firstname LIKE '" + txtSearchStud.Text + "%' AND studstatus = 0");
                     MySqlDataAdapter ad2;
                     DataTable newdt2;
                     ad2 = new MySqlDataAdapter(query, conn);
@@ -218,7 +214,7 @@ namespace WindowsFormsApp4
                 using (MySqlConnection conn = conRef.connectFunc())
                 {
                     conn.Open();
-                    string query = ("SELECT * FROM student_table WHERE firstname LIKE '" + txtSearchStud.Text + "%' AND studstatus = 1");
+                    string query = ("SELECT idstudent, firstname, middlename, lastname, birthdate, gender, gradename FROM student_table LEFT JOIN grade_level ON student_table.idgradelevel = grade_level.idgrade_level WHERE firstname LIKE '" + txtSearchStud.Text + "%' AND studstatus = 1");
                     MySqlDataAdapter ad3;
                     DataTable newdt3;
                     ad3 = new MySqlDataAdapter(query, conn);
@@ -261,6 +257,11 @@ namespace WindowsFormsApp4
             archiveStud.Enabled = true;
             datagridStud.ClearSelection();
             archiveStud.ClearSelection();
+
+        }
+
+        private void topPanel_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 
@@ -313,8 +314,8 @@ private void checkStudArchive_CheckedChanged(object sender, EventArgs e)
         public void readDataStud()
         {
             MySqlConnection con = connect.connectFunc();
-            String query1 = "SELECT * FROM student_table WHERE studstatus = 1";
-            String query2 = "SELECT * FROM student_table WHERE studstatus = 0";
+            String query1 = "SELECT idstudent, firstname, middlename, lastname, birthdate, gender, gradename FROM student_table LEFT JOIN grade_level ON student_table.idgradelevel = grade_level.idgradelevel WHERE studstatus = 1";
+            String query2 = "SELECT idstudent, firstname, middlename, lastname, birthdate, gender, gradename FROM student_table LEFT JOIN grade_level ON student_table.idgradelevel = grade_level.idgradelevel WHERE studstatus = 0";
 
             dt = new DataTable();
             dt2 = new DataTable();
