@@ -101,10 +101,7 @@ namespace WindowsFormsApp4
 
 
         }
-        DbConnect connect = new DbConnect();
-        MySqlDataAdapter da, da2;
-        DataTable dt, dt2;
-
+ 
         /*
         private void btnStudCancel_Click(object sender, EventArgs e)
         {
@@ -313,6 +310,10 @@ private void checkStudArchive_CheckedChanged(object sender, EventArgs e)
 
         public void readDataStud()
         {
+            DbConnect connect = new DbConnect();
+            MySqlDataAdapter da, da2;
+            DataTable dt, dt2;
+
             MySqlConnection con = connect.connectFunc();
             String query1 = "SELECT idstudent, firstname, middlename, lastname, birthdate, gender, gradename FROM student_table LEFT JOIN grade_level ON student_table.idgradelevel = grade_level.idgradelevel WHERE studstatus = 1";
             String query2 = "SELECT idstudent, firstname, middlename, lastname, birthdate, gender, gradename FROM student_table LEFT JOIN grade_level ON student_table.idgradelevel = grade_level.idgradelevel WHERE studstatus = 0";

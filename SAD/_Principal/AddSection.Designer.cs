@@ -36,6 +36,9 @@
             this.comboGradeLevelSection = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboSupervisor = new System.Windows.Forms.ComboBox();
+            this.datagridviewSupervisors = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridviewSupervisors)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddSection
@@ -46,7 +49,7 @@
             this.btnAddSection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddSection.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddSection.ImageKey = "(none)";
-            this.btnAddSection.Location = new System.Drawing.Point(331, 290);
+            this.btnAddSection.Location = new System.Drawing.Point(211, 290);
             this.btnAddSection.Name = "btnAddSection";
             this.btnAddSection.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnAddSection.Size = new System.Drawing.Size(100, 34);
@@ -54,6 +57,7 @@
             this.btnAddSection.Text = "Add";
             this.btnAddSection.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAddSection.UseVisualStyleBackColor = false;
+            this.btnAddSection.Click += new System.EventHandler(this.btnAddSection_Click);
             // 
             // btnSectionCancel
             // 
@@ -63,7 +67,7 @@
             this.btnSectionCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSectionCancel.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSectionCancel.ImageKey = "(none)";
-            this.btnSectionCancel.Location = new System.Drawing.Point(225, 290);
+            this.btnSectionCancel.Location = new System.Drawing.Point(64, 290);
             this.btnSectionCancel.Name = "btnSectionCancel";
             this.btnSectionCancel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnSectionCancel.Size = new System.Drawing.Size(100, 34);
@@ -134,13 +138,45 @@
             this.comboSupervisor.Size = new System.Drawing.Size(121, 21);
             this.comboSupervisor.TabIndex = 76;
             // 
+            // datagridviewSupervisors
+            // 
+            this.datagridviewSupervisors.AllowUserToAddRows = false;
+            this.datagridviewSupervisors.AllowUserToDeleteRows = false;
+            this.datagridviewSupervisors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridviewSupervisors.Location = new System.Drawing.Point(464, 69);
+            this.datagridviewSupervisors.Name = "datagridviewSupervisors";
+            this.datagridviewSupervisors.ReadOnly = true;
+            this.datagridviewSupervisors.Size = new System.Drawing.Size(309, 206);
+            this.datagridviewSupervisors.TabIndex = 77;
+            this.datagridviewSupervisors.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(220)))), ((int)(((byte)(129)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(1)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(65)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ImageKey = "(none)";
+            this.button1.Location = new System.Drawing.Point(193, 397);
+            this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button1.Size = new System.Drawing.Size(100, 34);
+            this.button1.TabIndex = 75;
+            this.button1.Text = "Add";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnAddSection_Click);
+            // 
             // AddSection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 788);
+            this.Controls.Add(this.datagridviewSupervisors);
             this.Controls.Add(this.comboSupervisor);
             this.Controls.Add(this.comboGradeLevelSection);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAddSection);
             this.Controls.Add(this.btnSectionCancel);
             this.Controls.Add(this.txtSectionName);
@@ -150,6 +186,7 @@
             this.Name = "AddSection";
             this.Text = "AddSection";
             this.Load += new System.EventHandler(this.AddSection_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.datagridviewSupervisors)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,6 +201,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboGradeLevelSection;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboSupervisor;
+        public System.Windows.Forms.ComboBox comboSupervisor;
+        public System.Windows.Forms.DataGridView datagridviewSupervisors;
+        private System.Windows.Forms.Button button1;
     }
 }

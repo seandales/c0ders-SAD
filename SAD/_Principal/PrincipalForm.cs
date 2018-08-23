@@ -140,10 +140,19 @@ namespace WindowsFormsApp4
 
         private void btnAddSection_Click(object sender, EventArgs e)
         {
+            
             AddSection f = new AddSection();
+
+
             f.reference = this;
+
+            f.ReadSupervisorsTable();
+            //fillComboBoxSuperivisor();
+
             f.ShowDialog();
         }
+        //fill supervisor combo box in Add Section
+
 
         private void btnEditStud_Click(object sender, EventArgs e)
         {
@@ -198,6 +207,11 @@ namespace WindowsFormsApp4
             f.ShowDialog();
         }
         */
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
