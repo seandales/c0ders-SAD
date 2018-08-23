@@ -155,6 +155,7 @@
             this.datagridviewSupervisors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridviewSupervisors.Size = new System.Drawing.Size(309, 206);
             this.datagridviewSupervisors.TabIndex = 77;
+            this.datagridviewSupervisors.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridviewSupervisors_CellClick);
             this.datagridviewSupervisors.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridviewSupervisors_CellContentClick);
             this.datagridviewSupervisors.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagridviewSupervisors_CellMouseDown);
             // 

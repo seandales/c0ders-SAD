@@ -259,7 +259,9 @@ namespace WindowsFormsApp4
         private void datagridviewSupervisors_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-           // if (datagridviewSupervisors.DefaultCellStyle.BackColor == Color.Green)
+            System.Drawing.Color c = datagridviewSupervisors.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor;
+            MessageBox.Show(c.ToString());
+            if (c == Color.Green)
             {
                 for (int i = 0; i < datagridviewSupervisors.SelectedRows.Count; i++)
                 {
@@ -278,18 +280,65 @@ namespace WindowsFormsApp4
 
                 }
             }
-
-            
         }
 
-        private void datagridviewSupervisors_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e) {
- 
-               
-          }
-
-
-
+            
         
+
+        private void datagridviewSupervisors_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e) {
+            /*
+            System.Drawing.Color c = datagridviewSupervisors.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor;
+            MessageBox.Show(c.ToString());
+            if (c == Color.Green)
+            {
+                for (int i = 0; i < datagridviewSupervisors.SelectedRows.Count; i++)
+                {
+                    //f.userId = Convert.ToInt32(datagridviewSupervisors.SelectedRows[i].Cells[0].Value.ToString());
+                    comboSupervisor.Text = (datagridviewSupervisors.SelectedRows[i].Cells[1].Value.ToString());
+                    comboGradeLevelSection.Text = (datagridviewSupervisors.SelectedRows[i].Cells[2].Value.ToString());
+                    
+                    txtEditPass1.Text = datagridviewSupervisors.SelectedRows[i].Cells[2].Value.ToString();
+                    comboEditRole.Text = datagridviewSupervisors.SelectedRows[i].Cells[3].Value.ToString();
+                    comboStatus.Text = datagridviewSupervisors.SelectedRows[i].Cells[5].Value.ToString();
+                    
+
+                    //f.dateTimePickerBirthdate.Text = accountListGridView.SelectedRows[i].Cells[3].Value.ToString();
+                    //f.dateTimePicker1.Text = accountListGridView.SelectedRows[i].Cells[4].Value.ToString();
+                    //f.comboStatus.Text = accountListGridView.SelectedRows[i].Cells[5].Value.ToString();
+
+                }
+            }
+            */
+    
+
+        }
+
+        private void datagridviewSupervisors_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            /*
+            Color c = datagridviewSupervisors.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor;
+            MessageBox.Show(c.ToString());
+            */
+            if (datagridviewSupervisors.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor == Color.Green)
+            {
+                for (int i = 0; i < datagridviewSupervisors.SelectedRows.Count; i++)
+                {
+                    //f.userId = Convert.ToInt32(datagridviewSupervisors.SelectedRows[i].Cells[0].Value.ToString());
+                    comboSupervisor.Text = (datagridviewSupervisors.SelectedRows[i].Cells[1].Value.ToString());
+                    comboGradeLevelSection.Text = (datagridviewSupervisors.SelectedRows[i].Cells[2].Value.ToString());
+                    /*
+                    txtEditPass1.Text = datagridviewSupervisors.SelectedRows[i].Cells[2].Value.ToString();
+                    comboEditRole.Text = datagridviewSupervisors.SelectedRows[i].Cells[3].Value.ToString();
+                    comboStatus.Text = datagridviewSupervisors.SelectedRows[i].Cells[5].Value.ToString();
+                    */
+
+                    //f.dateTimePickerBirthdate.Text = accountListGridView.SelectedRows[i].Cells[3].Value.ToString();
+                    //f.dateTimePicker1.Text = accountListGridView.SelectedRows[i].Cells[4].Value.ToString();
+                    //f.comboStatus.Text = accountListGridView.SelectedRows[i].Cells[5].Value.ToString();
+
+                }
+            }
+        }
     }
 }
 
