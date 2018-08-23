@@ -75,6 +75,7 @@
             this.btnSectionCancel.Text = "Cancel";
             this.btnSectionCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSectionCancel.UseVisualStyleBackColor = false;
+            this.btnSectionCancel.Click += new System.EventHandler(this.btnSectionCancel_Click);
             // 
             // txtSectionName
             // 
@@ -113,6 +114,11 @@
             // comboGradeLevelSection
             // 
             this.comboGradeLevelSection.FormattingEnabled = true;
+            this.comboGradeLevelSection.Items.AddRange(new object[] {
+            "",
+            "1st grade",
+            "2nd grade",
+            "3rd grade"});
             this.comboGradeLevelSection.Location = new System.Drawing.Point(62, 205);
             this.comboGradeLevelSection.Name = "comboGradeLevelSection";
             this.comboGradeLevelSection.Size = new System.Drawing.Size(121, 21);
@@ -146,9 +152,11 @@
             this.datagridviewSupervisors.Location = new System.Drawing.Point(464, 69);
             this.datagridviewSupervisors.Name = "datagridviewSupervisors";
             this.datagridviewSupervisors.ReadOnly = true;
+            this.datagridviewSupervisors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridviewSupervisors.Size = new System.Drawing.Size(309, 206);
             this.datagridviewSupervisors.TabIndex = 77;
-            this.datagridviewSupervisors.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.datagridviewSupervisors.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridviewSupervisors_CellContentClick);
+            this.datagridviewSupervisors.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagridviewSupervisors_CellMouseDown);
             // 
             // button1
             // 
@@ -166,7 +174,7 @@
             this.button1.Text = "Add";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnAddSection_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AddSection
             // 
@@ -186,6 +194,7 @@
             this.Name = "AddSection";
             this.Text = "AddSection";
             this.Load += new System.EventHandler(this.AddSection_Load);
+            this.Shown += new System.EventHandler(this.AddSection_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewSupervisors)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -58,7 +58,7 @@ namespace WindowsFormsApp4
                     cmd.Parameters.AddWithValue("@lastname", txtLn.Text);
                     cmd.Parameters.AddWithValue("@birthdate", dateTimeBirthdate.Value.Date);
                     cmd.Parameters.AddWithValue("@gender", comboGender.Text);
-                    cmd.Parameters.AddWithValue("@idgradelevel", comboGradeLevel.Text);
+                    cmd.Parameters.AddWithValue("@idgradelevel", comboGradeLevel.SelectedIndex);
                     cmd.Parameters.AddWithValue("@studstatus", combostatus.Text);
                     ///cmd.Parameters.AddWithValue("@staffrole", comboRoleStaffs.Text);
 

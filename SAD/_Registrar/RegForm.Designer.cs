@@ -373,6 +373,7 @@
             this.archiveStud.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.archiveStud.Size = new System.Drawing.Size(748, 548);
             this.archiveStud.TabIndex = 1;
+            this.archiveStud.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.archiveStud_CellContentClick);
             this.archiveStud.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.archiveStud_CellMouseDown);
             // 
             // datagridStud

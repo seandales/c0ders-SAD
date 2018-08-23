@@ -16,5 +16,20 @@ namespace WindowsFormsApp4
         {
             InitializeComponent();
         }
+
+        private void EditSection_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddSection_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSectionCancel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

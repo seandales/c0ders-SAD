@@ -36,6 +36,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboSupervisor
@@ -70,6 +72,7 @@
             this.btnAddSection.Text = "Add";
             this.btnAddSection.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAddSection.UseVisualStyleBackColor = false;
+            this.btnAddSection.Click += new System.EventHandler(this.btnAddSection_Click);
             // 
             // btnSectionCancel
             // 
@@ -87,6 +90,7 @@
             this.btnSectionCancel.Text = "Cancel";
             this.btnSectionCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSectionCancel.UseVisualStyleBackColor = false;
+            this.btnSectionCancel.Click += new System.EventHandler(this.btnSectionCancel_Click);
             // 
             // txtSectionName
             // 
@@ -134,11 +138,20 @@
             this.label7.TabIndex = 78;
             this.label7.Text = "Section Name:";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(518, 52);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(258, 220);
+            this.dataGridView1.TabIndex = 85;
+            // 
             // EditSection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboSupervisor);
             this.Controls.Add(this.comboGradeLevelSection);
             this.Controls.Add(this.btnAddSection);
@@ -149,6 +162,8 @@
             this.Controls.Add(this.label7);
             this.Name = "EditSection";
             this.Text = "EditSection";
+            this.Load += new System.EventHandler(this.EditSection_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,5 +179,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -359,17 +359,22 @@ private void checkStudArchive_CheckedChanged(object sender, EventArgs e)
         {
             txtSearchStud.Clear();
         }
-        /*
-        public void clearStudFields()
+
+        private void archiveStud_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtFn.Clear();
-            txtMn.Clear();
-            txtLn.Clear();
-            comboGender.SelectedIndex = comboGender.Items.IndexOf(0);
-            comboGradeLevel.SelectedIndex = comboGradeLevel.Items.IndexOf(0);
-            combostatus.SelectedIndex = combostatus.Items.IndexOf(0);
-            txtSearchStud.Clear();
+
         }
-        */
+        /*
+public void clearStudFields()
+{
+   txtFn.Clear();
+   txtMn.Clear();
+   txtLn.Clear();
+   comboGender.SelectedIndex = comboGender.Items.IndexOf(0);
+   comboGradeLevel.SelectedIndex = comboGradeLevel.Items.IndexOf(0);
+   combostatus.SelectedIndex = combostatus.Items.IndexOf(0);
+   txtSearchStud.Clear();
+}
+*/
     }
 }

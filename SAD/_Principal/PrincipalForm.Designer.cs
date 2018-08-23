@@ -52,7 +52,7 @@
             this.addUserLabel = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnEditStud = new System.Windows.Forms.Button();
-            this.txtSearchStud = new System.Windows.Forms.TextBox();
+            this.txtSearchSection = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.archiveSection = new System.Windows.Forms.DataGridView();
             this.datagridSection = new System.Windows.Forms.DataGridView();
@@ -264,7 +264,7 @@
             this.studentsPanel.Controls.Add(this.panel1);
             this.studentsPanel.Controls.Add(this.label8);
             this.studentsPanel.Controls.Add(this.btnEditStud);
-            this.studentsPanel.Controls.Add(this.txtSearchStud);
+            this.studentsPanel.Controls.Add(this.txtSearchSection);
             this.studentsPanel.Controls.Add(this.panel4);
             this.studentsPanel.Controls.Add(this.btnAddSection);
             this.studentsPanel.Location = new System.Drawing.Point(138, 111);
@@ -375,15 +375,16 @@
             this.btnEditStud.UseVisualStyleBackColor = false;
             this.btnEditStud.Click += new System.EventHandler(this.btnEditStud_Click);
             // 
-            // txtSearchStud
+            // txtSearchSection
             // 
-            this.txtSearchStud.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtSearchStud.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearchStud.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchStud.Location = new System.Drawing.Point(172, 11);
-            this.txtSearchStud.Name = "txtSearchStud";
-            this.txtSearchStud.Size = new System.Drawing.Size(272, 34);
-            this.txtSearchStud.TabIndex = 11;
+            this.txtSearchSection.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtSearchSection.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearchSection.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchSection.Location = new System.Drawing.Point(172, 11);
+            this.txtSearchSection.Name = "txtSearchSection";
+            this.txtSearchSection.Size = new System.Drawing.Size(272, 34);
+            this.txtSearchSection.TabIndex = 11;
+            this.txtSearchSection.TextChanged += new System.EventHandler(this.txtSearchSection_TextChanged);
             // 
             // panel4
             // 
@@ -400,8 +401,7 @@
             this.archiveSection.AllowUserToAddRows = false;
             this.archiveSection.AllowUserToDeleteRows = false;
             this.archiveSection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.archiveSection.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.archiveSection.Location = new System.Drawing.Point(0, 0);
+            this.archiveSection.Location = new System.Drawing.Point(77, 30);
             this.archiveSection.Name = "archiveSection";
             this.archiveSection.ReadOnly = true;
             this.archiveSection.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -421,6 +421,7 @@
             this.datagridSection.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridSection.Size = new System.Drawing.Size(748, 548);
             this.datagridSection.TabIndex = 0;
+            this.datagridSection.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridSection_CellContentClick);
             // 
             // btnAddSection
             // 
@@ -504,7 +505,7 @@
         private System.Windows.Forms.Label addUserLabel;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnEditStud;
-        private System.Windows.Forms.TextBox txtSearchStud;
+        private System.Windows.Forms.TextBox txtSearchSection;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView archiveSection;
         private System.Windows.Forms.DataGridView datagridSection;

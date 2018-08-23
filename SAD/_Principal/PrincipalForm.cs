@@ -68,7 +68,7 @@ namespace WindowsFormsApp4
                 */
             String query1 = "SELECT idstudent, firstname, middlename, lastname, birthdate, gender, gradename FROM student_table LEFT JOIN grade_level ON student_table.idgradelevel = grade_level.idgradelevel WHERE studstatus = 1";
 
-            String query = "SELECT idsection, sectionname, firstname, middlename, lastname, gradename FROM sections LEFT JOIN supervisors ON sections.idsupervisor = supervisors.idsupervisor " +
+            String query = "SELECT idsection, sectionname, fullname, gradename FROM sections LEFT JOIN supervisors ON sections.idsupervisor = supervisors.idsupervisor " +
                 "LEFT JOIN grade_level ON sections.idgradelevel = grade_level.idgradelevel WHERE sectionstatus = 1";
             String query2 = "SELECT * FROM sections";
 
@@ -132,10 +132,10 @@ namespace WindowsFormsApp4
         {
             readData();
         }
-
-        private void archiveSection_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        
+        public void clearTxtSearchSection()
         {
-
+            txtSearchSection.Clear();
         }
 
         private void btnAddSection_Click(object sender, EventArgs e)
@@ -147,8 +147,35 @@ namespace WindowsFormsApp4
             f.reference = this;
 
             f.ReadSupervisorsTable();
-            //fillComboBoxSuperivisor();
+            f.datagridviewSupervisors.Rows[0].DefaultCellStyle.BackColor = Color.Red;
 
+            //fillComboBoxSuperivisor();
+            f.comboSupervisor.Items.Clear();
+            for(int i = 0; i < f.datagridviewSupervisors.ColumnCount; i++)
+            {
+                /*
+                f.datagridviewSupervisors.Rows[i].DefaultCellStyle.BackColor = Color.Green;
+                
+                //int val = i(f.datagridviewSupervisors.Rows[i].Cells[3].Value);
+                MessageBox.Show(val.ToString());
+                if(val == 1)
+                {
+                    f.datagridviewSupervisors.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                }
+                else 
+                {
+                    f.datagridviewSupervisors.Rows[i].DefaultCellStyle.BackColor = Color.Green;
+                    f.comboSupervisor.Items.Add(f.datagridviewSupervisors.Rows[i].Cells[1].Value.ToString());
+
+                }
+                */
+                
+            }
+            
+             
+
+            
+            
             f.ShowDialog();
         }
         //fill supervisor combo box in Add Section
@@ -210,6 +237,21 @@ namespace WindowsFormsApp4
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void archiveSection_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtSearchSection_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void datagridSection_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
